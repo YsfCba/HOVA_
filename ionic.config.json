@@ -1,0 +1,7 @@
+{
+  "name": "hova",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
