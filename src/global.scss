@@ -24,3 +24,31 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* SWIPER CSS */
+@import "~swiper/swiper-bundle.min.css";
+
+/* LAYOUT TWO SIDES STYLE */
+.two-sides-top {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .top-side {
+    position: absolute;
+    top: 0;
+    height: 87%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 97%);
+    background: #2fdf75;
+  }
+
+  .bottom-side {
+    position: absolute;
+    bottom: 0;
+    height: 33%;
+    width: 100%;
+    clip-path: polygon(0 54%, 100% 0, 100% 100%, 0 100%);
+    background: #3a7be0;
+  }
+}

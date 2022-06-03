@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="two-sides-top">
+    <div class="top-side">
+      <section *ngIf="inProgressPrograms?.length">
+        <h1>Programme{{inProgressPrograms?.length > 1 ? 's' : ''}} en cours</h1>
+        <ng-container *ngIf="inProgressPrograms.length === 1; else swiperPrograms">
+          <ng-container [ngTemplateOutlet]="programView" [ngTemplateOutletContext]="{ program : inProgressPrograms[0]}"></ng-container>
+        </ng-container>
+      </section>
+    </div>
+    <div class="bottom-side"></div>
+  </div>
+</ion-content>
+
+<ng-template #swiperPrograms>
+  <swiper [config]="swiperConfig">
+    <ng-template swiperSlide *ngFor="let program of inProgressPrograms">
+      <ng-container [ngTemplateOutlet]="programView" [ngTemplateOutletContext]="{ program : program }"></ng-container>
+    </ng-template>
+  </swiper>
+</ng-template>
+
+<ng-template #programView let-program="program">
+  <div class="in-progress-program" >
+    <p class="ion-text-end ion-padding-end ion-no-margin">{{program.name}}</p>
+    <p class="ion-text-end ion-padding-end ion-no-margin">{{program.date}}</p>
+    <ul>
+      <li *ngFor="let seance of program.seances" class="seance" [ngClass]="{'done' : seance.done}">{{seance.name}}</li>
+    </ul>
+  </div>
+</ng-template>
