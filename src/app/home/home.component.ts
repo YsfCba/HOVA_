@@ -14,13 +14,16 @@ export class HomeComponent implements OnInit {
       path: ['profil']
     },
     {
-      label: 'Programmes',
-      path: ['programs']
+      label: 'GO !',
+      path: ['settings']
+
     },
     {
-      label: 'Paramètres',
-      path: ['settings']
-    },
+      label: 'Programmes',
+      path: ['programs']
+
+    }
+    
   ];
   constructor(private router: Router) { }
 

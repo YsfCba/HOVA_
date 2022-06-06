@@ -33,14 +33,19 @@
   position: relative;
   height: 100%;
   width: 100%;
+  color: rgb(255, 255, 255);
+  //filter: brightness(30%);
 
   .top-side {
-    position: absolute;
+    position: absolute; 
     top: 0;
     height: 87%;
     width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 97%);
-    background: #2fdf75;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 97%);
+    background-image: url(/assets/img/jogging-geb70f8fbc_1920.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+
   }
 
   .bottom-side {
@@ -48,7 +53,17 @@
     bottom: 0;
     height: 33%;
     width: 100%;
-    clip-path: polygon(0 54%, 100% 0, 100% 100%, 0 100%);
-    background: #3a7be0;
+    clip-path: polygon(0 52%, 102% 15%, 100% 100%, 0 100%);;
+    background: #000000;
   }
+
+  .title_home{
+    display: flex;
+    justify-content: content;
+    align-content: center;
+    z-index: 2;
+    color: white;
+
+  }
+
 }

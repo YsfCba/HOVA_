@@ -1,5 +1,7 @@
 <ion-content>
   <div class="buttons">
-    <button tappable *ngFor="let link of links" (click)="goTo(link.path)">{{link.label}}</button>
+    <button tappable *ngFor="let link of links" (click)="goTo(link.path)">
+      {{link.label}}
+    </button>
   </div>
 </ion-content>

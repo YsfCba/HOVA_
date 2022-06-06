@@ -1,6 +1,10 @@
 <ion-content>
   <div class="two-sides-top">
     <div class="top-side">
+      <!-- --------------- -->
+      <h1 class="title_home"> Programme </h1>
+      <!-- --------------- -->
+
       <section *ngIf="inProgressPrograms?.length">
         <h1>Programme{{inProgressPrograms?.length > 1 ? 's' : ''}} en cours</h1>
         <ng-container *ngIf="inProgressPrograms.length === 1; else swiperPrograms">

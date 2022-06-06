@@ -5,8 +5,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: rgb(255, 255, 255);
+  
 }
+
 button {
   position: absolute;
   color: white;
@@ -22,22 +24,37 @@ button {
   &:nth-child(1) {
     height: 40%;
     top: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 50%);
     align-items: flex-start;
     padding-top: 5rem;
+    background-image: url(/assets/img/sports-ge79a6b89a_640.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    //box-shadow: 4px 10px 10px rgb(170, 150, 150);
+    
   }
 
   &:nth-child(2) {
     height: 60%;
-    clip-path: polygon(0 0, 100% 34%, 100% 66%, 0 100%);
+    clip-path: polygon(0 0, 100% 24%, 100% 80%, 0 100%);
     z-index: 10;
+    background-image: url(/assets/img/homme-soulevant-une-haltere-dans-une-salle-de-musculation.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+   //box-shadow: 4px 10px 10px rgb(211, 200, 200);
+
   }
 
   &:nth-child(3) {
     height: 40%;
     bottom: 0;
-    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 57%, 100% 20%, 100% 100%, 0 100%);
     align-items: flex-end;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
+    background-image: url(/assets/img/gamification-fitness-park-concept-salle-sport-experience-digitale1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    //box-shadow: 4px 10px 10px rgb(170, 150, 150);
+
   }
 }
