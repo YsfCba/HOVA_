@@ -7,7 +7,7 @@ export enum ExerciseCategory {
 export interface IProgram {
   name: string;
   seances: ISeance[];
-  date?: string;
+  date?: Date;
 }
 
 export interface ISeance {
