@@ -4,9 +4,13 @@ import { ProgramsRoutingModule } from './programs-routing.module';
 import { ProgramsHomeComponent } from './programs-home/programs-home.component';
 import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from '../shared/shared.module';
+import { ProgramsFormComponent } from './programs-form/programs-form.component';
 
 @NgModule({
-  declarations: [ProgramsHomeComponent],
+  declarations: [
+    ProgramsHomeComponent,
+    ProgramsFormComponent
+  ],
   imports: [
     CommonModule,
     ProgramsRoutingModule,

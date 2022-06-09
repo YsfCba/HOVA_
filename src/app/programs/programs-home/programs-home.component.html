@@ -5,20 +5,16 @@
       <h1 class="title_home">Programme </h1>
 
 
-      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark"
-          id="basic" (click)="tabChange('basic')">
-        <span>BASIC</span>
-      </ion-button>
-
-      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark"
-        id="custom" (click)="tabChange('custom')">
-        <span>CUSTOM</span>
-      </ion-button>
-
-
-
-
-
+      <div class="btn_programs">
+        <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark"
+            id="basic" (click)="tabChange('basic')">
+          <span>BASIC</span>
+        </ion-button>
+        <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark"
+          id="custom" (click)="tabChange('custom')">
+          <span>CUSTOM</span>
+        </ion-button>
+      </div>
 
       <div id="target2" class="collapse" *ngIf="id ==='basic'">
         <ion-card *ngFor="let program of programsList">
@@ -39,24 +35,27 @@
 
       <div id="target1" class="collapse" *ngIf="id ==='custom'">
 
-        <ion-card *ngFor="let program of programsList">
-          <ion-input>
-            
-          </ion-input>
+        <ion-card *ngFor="let program of programsList" >
+          <ion-item>
+            <ion-label></ion-label>
+            <ion-button color="dark" slot="end">
+              <ion-icon name="chevron-forward-sharp"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-card-content>
+            <ion-icon name="barbell"> </ion-icon> 
+          </ion-card-content>
         </ion-card>
 
       </div>
 
 
-    
-
-
-
-
-
-
   </div>
-  <div class="bottom-side"></div>
+  <div class="bottom-side">
+    <a class="btn-add-program" [routerLink]="['/programs/createProgramme']"> 
+      <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-8.png" alt="">
+    </a>
+  </div>
 
 
   </div>

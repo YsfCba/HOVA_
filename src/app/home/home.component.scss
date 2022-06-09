@@ -38,7 +38,7 @@ button {
     height: 60%;
     clip-path: polygon(0 0, 100% 24%, 100% 80%, 0 100%);
     z-index: 10;
-    background-image: url(/assets/img/homme-soulevant-une-haltere-dans-une-salle-de-musculation.png);
+    background-image: url('/assets/img/homme-soulevant-une-haltere-dans-une-salle-de-musculation.png');
     background-repeat:no-repeat;
     background-size: cover;
    //box-shadow: 4px 10px 10px rgb(211, 200, 200);
@@ -51,7 +51,7 @@ button {
     clip-path: polygon(0 57%, 100% 20%, 100% 100%, 0 100%);
     align-items: flex-end;
     padding-bottom: 3rem;
-    background-image: url(/assets/img/gamification-fitness-park-concept-salle-sport-experience-digitale1.jpg);
+    background-image: url('/assets/img/gamification-fitness-park-concept-salle-sport-experience-digitale1.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     //box-shadow: 4px 10px 10px rgb(170, 150, 150);
