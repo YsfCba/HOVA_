@@ -1,42 +1,104 @@
 <ion-content>
-  <ion-icon name="arrow-back-outline"></ion-icon>
-
   <div class="two-sides-top">
     <div class="top-side">
 
-      <h1 class="title_home"> Programme </h1>
+      <h1 class="title_home">Programme </h1>
 
-      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark">
+
+      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark"
+          id="basic" (click)="tabChange('basic')">
         <span>BASIC</span>
       </ion-button>
-      <div id="target2" class="collapse">
 
-        <ion-item *ngFor="let program of programsList">
+      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark"
+        id="custom" (click)="tabChange('custom')">
+        <span>CUSTOM</span>
+      </ion-button>
 
-          <ion-label>
-            <h2>{{program.name}}</h2>
-            <h3>{{program.seances.length}} {{program.seances.length > 1 ? 'séances' : 'seance'}} | {{currentDate}} </h3>
-          </ion-label>
-        </ion-item>
 
+
+
+
+
+      <div id="target2" class="collapse" *ngIf="id ==='basic'">
+        <ion-card *ngFor="let program of programsList">
+          <ion-item>
+            <ion-label>{{program.name}}</ion-label>
+            <ion-button color="dark" slot="end">
+              <ion-icon name="chevron-forward-sharp"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-card-content>
+            <ion-icon name="barbell"> </ion-icon> | {{program.seances.length}}
+            {{program.seances.length > 1 ? 'séances' : 'seance'}} | {{program.date}}
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+
+
+      <div id="target1" class="collapse" *ngIf="id ==='custom'">
+
+        <ion-card *ngFor="let program of programsList">
+          <ion-input>
+            
+          </ion-input>
+        </ion-card>
 
       </div>
-    </div>
+
+
+    
 
 
 
 
 
-    <!-- <section *ngIf="inProgressPrograms?.length">
+
+  </div>
+  <div class="bottom-side"></div>
+
+
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section *ngIf="inProgressPrograms?.length">
         <h1>Programme{{inProgressPrograms?.length > 1 ? 's' : ''}} en cours</h1>
         <ng-container *ngIf="inProgressPrograms.length === 1; else swiperPrograms">
           <ng-container [ngTemplateOutlet]="programView" [ngTemplateOutletContext]="{ program : inProgressPrograms[0]}"></ng-container>
         </ng-container>
       </section> -->
 
-    <div class="bottom-side"></div>
-  </div>
-</ion-content>
+
 
 <!-- <ng-template #swiperPrograms>
   <swiper [config]="swiperConfig">

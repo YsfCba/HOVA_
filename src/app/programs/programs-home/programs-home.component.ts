@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IProgram } from '../../shared/models/program.interface';
 import SwiperCore, {SwiperOptions} from 'swiper';
-import { mockProgramMasseExpress } from 'src/app/shared/mocks/program.mock';
+import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2 } from 'src/app/shared/mocks/program.mock';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-programs-home',
@@ -13,41 +14,53 @@ export class ProgramsHomeComponent implements OnInit {
   public inProgressPrograms: IProgram[] = [];
   public swiperConfig: SwiperOptions = {
     slidesPerView: 1,
-    pagination: true
+    pagination: true,
+    
   };
-
-  currentDate: string;
+  
+  isSelected: Boolean = true;
   
 
-  constructor() {
-    const dateOptions: Intl.DateTimeFormatOptions = {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric'
-    };
-    const Travel = { dateOptions };
-    const someDateObject = new Date();
-    this.currentDate = someDateObject.toLocaleDateString('fr-FR', Travel.dateOptions);
-  }
+
+  // currentDate: string;
+
+  // constructor() {
+  //   const dateOptions: Intl.DateTimeFormatOptions = {
+  //     weekday: 'long',
+  //     month: 'long',
+  //     day: 'numeric'
+  //   };
+  //   const Travel = { dateOptions };
+  //   const someDateObject = new Date();
+  //   this.currentDate = someDateObject.toLocaleDateString('fr-FR', Travel.dateOptions);
+  // 
   
 
   ngOnInit() {
      this.getInProgressPrograms();
      this.getdate();
+
+     
      
   }
+  
 
   getInProgressPrograms() {
-    this.programsList.push(mockProgramMasseExpress);
+    this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1,mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody );
     console.log(mockProgramMasseExpress.name);
   }
 
   getdate() {
     let madate = mockProgramMasseExpress.date;
     console.log(madate);
+    console.log(this.isSelected);
   }
+  id:any = "mission"
+  tabChange(ids:any){
+    this.id = ids;
 
   
-  
+
+}
 }
 
