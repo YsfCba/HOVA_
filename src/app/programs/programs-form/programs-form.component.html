@@ -2,20 +2,33 @@
   <div class="two-sides-top">
     <div class="top-side">
 
-      <ion-content>
+
+      <div class="container">
         <h1 class="title_home">Programme </h1>
+        <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2>
+          <label position="floating">Nom du programme</label>
+          <input type="text" name="nomProgramme" id="">
+        
+      </div>
 
-        <ion-title>
-          Customiser vos programmes <br> avec HOVA !
-        </ion-title>
+      <!-- <div class="info_program_custom">
+          <ion-card *ngFor="let programCustom of programsCustomList">
+            <ion-item>
+              <ion-label> Seance {{programCustom.id}}</ion-label>
+              <ion-button color="dark" slot="end">
+                <ion-icon name="chevron-forward-sharp"></ion-icon>
+              </ion-button>
+            </ion-item>
+            <ion-card-content>
+              <ion-conten *ngIf="programCustom.GroupeMusculaire > 1">
+                {{programCustom.GroupeMusculaire}}
+              </ion-content>
+              
+            </ion-card-content>
+          </ion-card>
+        </div>
 
-
-
-        <ion-item>
-          <ion-label position="floating">Nom du programme</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-content>
+      </div> -->
 
 
     </div>
@@ -26,3 +39,4 @@
     </div>
 
   </div>
+</ion-content>

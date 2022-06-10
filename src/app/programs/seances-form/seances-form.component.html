@@ -1,143 +1,57 @@
+<header>
+  
+        <h1> Séance 1</h1>
+</header>
+
+
 <ion-content>
   <div class="two-sides-top">
     <div class="top-side">
 
-      <h1 class="title_home">Séance 1</h1>
+      <ion-label>Groupes musculaires</ion-label>
+      <ion-select color="danger" value="brown" okText="Validé" multiple>
+        <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
+        <ion-select-option value="Deltoide">Deltoide</ion-select-option>
+        <ion-select-option value="Biceps">Biceps</ion-select-option>
+        <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
+        <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
+        <ion-select-option value="Oblique">Oblique</ion-select-option>
+        <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
+        <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
+        <ion-select-option value="Trapeze">Trapeze</ion-select-option>
+        <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
+        <ion-select-option value="Triceps">Triceps</ion-select-option>
+        <ion-select-option value="Lombaires">Lombaires</ion-select-option>
+        <ion-select-option value="Fessiers">Fessiers</ion-select-option>
+        <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
+        <ion-select-option value="Mollet">Mollet</ion-select-option>
+      </ion-select>
 
 
-      <!--          
-        <label for="">Groupe Musculaire : </label>
-        <select matNativeControl required>
-          <option value="Pectoraux">Pectoraux</option>
-          <option value="Deltoide">Deltoide</option>
-          <option value="Biceps">Biceps</option>
-          <option value="AvantBras">Avant-Bras</option>
-          <option value="GrandDroit">Grand Droit</option>
-          <option value="Oblique">Oblique</option>
-          <option value="Quadriceps">Quadriceps</option>
-          <option value="Adducteurs">Adducteurs</option>
-          <option value="Trapeze">Trapeze</option>
-          <option value="Dorsaux">Dorsaux</option>
-          <option value="Triceps">Triceps</option>
-          <option value="Lombaires">Lombaires</option>
-          <option value="Fessiers">Fessiers</option>
-          <option value="Ischiojambiers">Ischio-jambiers</option>
-          <option value="Mollet">Mollet</option>
-        </select>
 
-        <fieldset>
-          <legend>Materiel</legend>
-      
-          
-            <input type="radio" id="huey" name="drone" value="huey" checked>
-            <label for="huey">Avec</label>
-          
-            <input type="radio" id="dewey" name="drone" value="dewey">
-            <label for="dewey">Sans</label>
-        
-        </fieldset>
+      <ion-label>Materiel</ion-label>
+      <ion-select value="Materiel" okText="Validé">
+        <ion-select-option value="Avec">Avec</ion-select-option>
+        <ion-select-option value="Sans">Sans</ion-select-option>
+      </ion-select>
 
-
-       -->
-      <ion-card>
-        <ion-list>
-          <ion-item>
-            <ion-label>Groupe musculaire</ion-label>
-            <ion-select value="brown" okText="Validé" multiple>
-              <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
-              <ion-select-option value="Deltoide">Deltoide</ion-select-option>
-              <ion-select-option value="Biceps">Biceps</ion-select-option>
-              <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
-              <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
-              <ion-select-option value="Oblique">Oblique</ion-select-option>
-              <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
-              <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
-              <ion-select-option value="Trapeze">Trapeze</ion-select-option>
-              <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
-              <ion-select-option value="Triceps">Triceps</ion-select-option>
-              <ion-select-option value="Lombaires">Lombaires</ion-select-option>
-              <ion-select-option value="Fessiers">Fessiers</ion-select-option>
-              <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
-              <ion-select-option value="Mollet">Mollet</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-card>
-
-      <ion-card>
-        <ion-list>
-          <ion-item>
-            <ion-label>Materiel</ion-label>
-            <ion-select value="brown" okText="Validé">
-              <ion-select-option value="Avec">Avec </ion-select-option>
-              <ion-select-option value="Sans">Sans</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-card>
-
-      <!-- <ion-card>
-           <ion-list>
-            <ion-item>
-              <ion-label>Groupe musculaire</ion-label>
-              <ion-select value="brown" okText="Validé"  multiple *ngFor="let exercice of exerciceList">
-                <ion-select-option value="choices">{{exercice.name}}</ion-select-option>
-               
-              </ion-select>
-            </ion-item>
-          </ion-list> 
-          </ion-card> -->
+      <ion-label>Exercices</ion-label>
+      <ion-select value="Exercices" okText="Validé">
+        <ion-select-option value="Avec">name</ion-select-option>
+        <ion-select-option value="Sans">name</ion-select-option>
+      </ion-select>
 
 
 
 
+      <ion-label>Temps de récupération</ion-label>
+      <ion-range color="dark" min="0" step="5" max="90" snaps="true" [pin]="true"></ion-range>
 
-      <ion-card>
-        <ion-list>
-          <ion-title>
-              Timer
-            </ion-title>
-          <ion-item>
-            
-            <ion-range min="20" max="80" step="2">
-              <ion-icon size="small" slot="start" name="timer-outline"></ion-icon>
-              <ion-icon slot="end" name="timer-outline"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </ion-list>
-      </ion-card>
+      <ion-label>Séries</ion-label>
+      <ion-range color="dark" min="0" step="1" max="20" snaps="true" [pin]="true"></ion-range>
 
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- 
-      <h4>Groupe Musculaire</h4>
-      <form-field>
-        <label>Toppings</label>
-        <select [formControl]="toppings" value="topping" multiple>
-
-          <option value="Dorsaux">Dorsaux</option>
-          <option value="Triceps">Triceps</option>
-          <option value="Lombaires">Lombaires</option>
-          <option value="Triceps">Triceps</option>
-          <option value="Lombaires">Lombaires</option>
-          <option value="Triceps">Triceps</option>
-          <option value="Lombaires">Lombaires</option>
-          <option value="Triceps">Triceps</option>
-          <option value="Lombaires">Lombaires</option>
-          <option *ngFor="let topping of toppingList" value="topping">{{topping}}</option>
-        </select>
-      </form-field> -->
-
+      <ion-label>Repetitions</ion-label>
+      <ion-range color="dark" min="0" step="1" max="50" snaps="true" [pin]="true"></ion-range>
 
 
 
@@ -146,9 +60,9 @@
 
     </div>
     <div class="bottom-side">
-      <!-- <a class="btn-add-program" [routerLink]="['/programs/createProgramme']"> 
-      <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-8.png" alt="">
-    </a> -->
+      <a class="btn-add-program" [routerLink]="['/programs/createProgramme']">
+        <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
+      </a>
     </div>
 
 

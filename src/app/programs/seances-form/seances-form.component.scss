@@ -1,8 +1,35 @@
-p,
-label {
-    font: 1rem 'Fira Sans', sans-serif;
+ion-label{
+    display: flex;
+    justify-content: center;
+    //background-color: aqua;
+}
+h1{
+    text-align: center;
+}
+ion-select{
+    //background-color: rgb(126, 20, 57);
+    margin: 0px 15px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px black;
+}
+ion-range{
+    margin: 10px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px black;
+
 }
 
-input {
-    margin: .4rem;
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    font-size: 1rem;
+    padding: 10px;
+}
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
 }

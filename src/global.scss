@@ -29,16 +29,20 @@
 @import "~swiper/swiper-bundle.min.css";
 
 /* LAYOUT TWO SIDES STYLE */
+header{
+  background-color: white;
+}
+
 
 .two-sides-top {
   
   height: 100%;
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   //filter: brightness(30%);
 
   .title_home {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
   }
@@ -50,7 +54,7 @@
     height: 90%;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 82%, 0 97.3%);
-    background-color: rgb(147, 43, 43);
+    background-color: rgb(255, 255, 255);
     //background-image: url('assets/img/gamification-fitness-park-concept-salle-sport-experience-digitale1.jpg');
     // background-repeat:no-repeat;
     // background-size: cover;
@@ -84,10 +88,11 @@
     cursor: pointer;
   }
 
-  .title_home {
-    color: rgb(255, 255, 255);
+  h1 {
     display: flex;
     justify-content: center;
+    text-align: center;
+
   }
 
 }
