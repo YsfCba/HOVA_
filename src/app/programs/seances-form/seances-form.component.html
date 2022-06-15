@@ -8,59 +8,54 @@
   <div class="two-sides-top">
     <div class="top-side">
 
-      <ion-label>Groupes musculaires</ion-label>
-      <ion-select color="danger" value="brown" okText="Validé" multiple>
-        <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
-        <ion-select-option value="Deltoide">Deltoide</ion-select-option>
-        <ion-select-option value="Biceps">Biceps</ion-select-option>
-        <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
-        <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
-        <ion-select-option value="Oblique">Oblique</ion-select-option>
-        <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
-        <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
-        <ion-select-option value="Trapeze">Trapeze</ion-select-option>
-        <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
-        <ion-select-option value="Triceps">Triceps</ion-select-option>
-        <ion-select-option value="Lombaires">Lombaires</ion-select-option>
-        <ion-select-option value="Fessiers">Fessiers</ion-select-option>
-        <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
-        <ion-select-option value="Mollet">Mollet</ion-select-option>
-      </ion-select>
-
-
-
-      <ion-label>Materiel</ion-label>
-      <ion-select value="Materiel" okText="Validé">
-        <ion-select-option value="Avec">Avec</ion-select-option>
-        <ion-select-option value="Sans">Sans</ion-select-option>
-      </ion-select>
-
-      <ion-label>Exercices</ion-label>
-      <ion-select value="Exercices" okText="Validé">
-        <ion-select-option value="Avec">name</ion-select-option>
-        <ion-select-option value="Sans">name</ion-select-option>
-      </ion-select>
-
-
-
-
-      <ion-label>Temps de récupération</ion-label>
-      <ion-range color="dark" min="0" step="5" max="90" snaps="true" [pin]="true"></ion-range>
-
-      <ion-label>Séries</ion-label>
-      <ion-range color="dark" min="0" step="1" max="20" snaps="true" [pin]="true"></ion-range>
-
-      <ion-label>Repetitions</ion-label>
-      <ion-range color="dark" min="0" step="1" max="50" snaps="true" [pin]="true"></ion-range>
-
-
-
+      <form action="submit">
+        
+        <ion-label>Groupes musculaires</ion-label>
+        <ion-select color="danger" value="brown" okText="Validé" multiple>
+          <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
+          <ion-select-option value="Deltoide">Deltoide</ion-select-option>
+          <ion-select-option value="Biceps">Biceps</ion-select-option>
+          <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
+          <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
+          <ion-select-option value="Oblique">Oblique</ion-select-option>
+          <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
+          <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
+          <ion-select-option value="Trapeze">Trapeze</ion-select-option>
+          <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
+          <ion-select-option value="Triceps">Triceps</ion-select-option>
+          <ion-select-option value="Lombaires">Lombaires</ion-select-option>
+          <ion-select-option value="Fessiers">Fessiers</ion-select-option>
+          <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
+          <ion-select-option value="Mollet">Mollet</ion-select-option>
+        </ion-select>
+        
+        <ion-label>Materiel</ion-label>
+        <ion-select value="Materiel" okText="Validé">
+          <ion-select-option value="Avec">Avec</ion-select-option>
+          <ion-select-option value="Sans">Sans</ion-select-option>
+        </ion-select>
+        
+        <ion-label>Exercices</ion-label>
+        <ion-select value="Exercices" okText="Validé">
+          <ion-select-option value="Avec">name</ion-select-option>
+          <ion-select-option value="Sans">name</ion-select-option>
+        </ion-select>
+        
+        <ion-label>Temps de récupération</ion-label>
+        <ion-range color="dark" min="0" step="1" max="90"  [pin]="true"></ion-range>
+        
+        <ion-label>Séries</ion-label>
+        <ion-range color="dark" min="0" step="1" max="20"  [pin]="true"></ion-range>
+        
+        <ion-label>Repetitions</ion-label>
+        <ion-range color="dark" min="0" step="1" max="50"  [pin]="true"></ion-range>
+      </form>
 
 
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" [routerLink]="['/programs/createProgramme']">
+      <a class="btn-add-program" action="submit" [routerLink]="['/programs/createProgramme']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>

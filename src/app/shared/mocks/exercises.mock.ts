@@ -10,7 +10,8 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 8,
     series: 4,
     breakTime: 90,
-    time: null
+    time: null,
+    detail: 'Le développé couché est un exercice poly-articulaire de force et de musculation qui consiste à soulever et abaisser une barre d\'haltères, développant principalement les pectoraux et les triceps, mais qui sollicite également d\'autres muscles comme le grand dorsal, le grand rond, les trapèzes, les deltoïdes antérieurs et les biceps. C\'est un des trois mouvements de base de la force athlétique avec les flexions sur jambe et le soulevé de terre.'
 
   },
   pectoralPress: {
@@ -20,7 +21,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   shoulderPress: {
@@ -30,7 +33,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   tricepsPulley: {
@@ -40,7 +45,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 12,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
 
@@ -51,7 +58,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 8,
     series: 4,
     breakTime: 90,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   lowRow: {
@@ -61,7 +70,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   pullDown: {
@@ -71,7 +82,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   bicepsPulley: {
@@ -81,7 +94,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 12,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+    
 
   },
 
@@ -92,7 +107,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 8,
     series: 4,
     breakTime: 90,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   legExtension: {
@@ -102,7 +119,8 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
 
   },
   legCurl: {
@@ -112,7 +130,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   abdosCrunch: {
@@ -122,7 +142,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 15,
     series: 3,
     breakTime: 45,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   
@@ -133,7 +155,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 20,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
 
   },
   run: {
@@ -143,7 +167,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: null,
     series: null,
     breakTime: null,
-    time: '15 min'
+    time: '15 min',
+    detail: ''
+
   },
   bike: {
     name: 'bike ',
@@ -153,6 +179,8 @@ export const mockExercises: {[key: string]: IExercise } = {
     series: null,
     breakTime: null,
     time: '20 min',
+    detail: ''
+
   },
   burpees: {
     name: 'burpees ',
@@ -161,7 +189,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 30,
     series: null,
     breakTime: null,
-    time: null
+    time: null,
+    detail: ''
+
   },
   squat: {
     name: 'squat ',
@@ -170,7 +200,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 30,
     series: null,
     breakTime: null,
-    time: null
+    time: null,
+    detail: ''
+
   },
   JumpingJack: {
     name: 'jumping jack ',
@@ -179,7 +211,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 50,
     series: null,
     breakTime: null,
-    time: null
+    time: null,
+    detail: ''
+
   },
   PushUps: {
     name: 'Push-ups',
@@ -188,7 +222,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 50,
     series: null,
     breakTime: null,
-    time: null
+    time: null,
+    detail: ''
+
   },
   AbsScissors: {
     name: 'Abs Scissors',
@@ -197,7 +233,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
   },
   AbsKickOut: {
     name: 'Abs Kick Out',
@@ -206,7 +244,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: 10,
     series: 3,
     breakTime: 60,
-    time: null
+    time: null,
+    detail: ''
+
   },
   plank: {
     name: 'Plank',
@@ -215,7 +255,9 @@ export const mockExercises: {[key: string]: IExercise } = {
     repetitions: null,
     series: 3,
     breakTime: 60,
-    time: '60s'
+    time: '60s',
+    detail: ''
+
   },
 
   

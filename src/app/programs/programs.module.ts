@@ -7,13 +7,17 @@ import { SharedModule } from '../shared/shared.module';
 import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import { SeancesFormComponent } from './seances-form/seances-form.component';
 import { ListSeancesComponent } from './list-seances/list-seances.component';
+import { DetailsExercicesComponent } from './details-exercices/details-exercices.component';
+import { ListExercicesComponent } from './list-exercices/list-exercices.component';
 
 @NgModule({
   declarations: [
     ProgramsHomeComponent,
     ProgramsFormComponent,
     SeancesFormComponent,
-    ListSeancesComponent
+    ListSeancesComponent,
+    ListExercicesComponent,
+    DetailsExercicesComponent
   ],
   imports: [
     CommonModule,

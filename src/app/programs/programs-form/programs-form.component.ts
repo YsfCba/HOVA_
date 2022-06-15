@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { IProgram } from '../../shared/models/program.interface';
+import SwiperCore, { SwiperOptions } from 'swiper';
+import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-programs-form',
@@ -6,14 +12,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./programs-form.component.scss'],
 })
 export class ProgramsFormComponent implements OnInit {
-
+  
+ 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400
-  };
 }
+
+

@@ -6,29 +6,15 @@
       <div class="container">
         <h1 class="title_home">Programme </h1>
         <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2>
-          <label position="floating">Nom du programme</label>
-          <input type="text" name="nomProgramme" id="">
-        
+        <form (ngSubmit)="getPrgramsCustom()">
+          <label>Nom du programme</label>
+          <input type="text" name="ProgramCustom" id="ProgramCustom" >
+        </form>
       </div>
 
-      <!-- <div class="info_program_custom">
-          <ion-card *ngFor="let programCustom of programsCustomList">
-            <ion-item>
-              <ion-label> Seance {{programCustom.id}}</ion-label>
-              <ion-button color="dark" slot="end">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-conten *ngIf="programCustom.GroupeMusculaire > 1">
-                {{programCustom.GroupeMusculaire}}
-              </ion-content>
-              
-            </ion-card-content>
-          </ion-card>
-        </div>
+      
 
-      </div> -->
+
 
 
     </div>

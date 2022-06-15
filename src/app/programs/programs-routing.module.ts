@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailsExercicesComponent } from './details-exercices/details-exercices.component';
+import { ListExercicesComponent } from './list-exercices/list-exercices.component';
 import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import {ProgramsHomeComponent} from './programs-home/programs-home.component';
@@ -22,6 +24,14 @@ const routes: Routes = [
     path: 'listSeances',
     component: ListSeancesComponent
   },
+  {
+    path: 'listExercices',
+    component: ListExercicesComponent
+  },
+  {
+    path: 'detailsExercices',
+    component: DetailsExercicesComponent
+  }
 ];
 
 @NgModule({

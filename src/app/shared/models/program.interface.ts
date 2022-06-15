@@ -26,4 +26,5 @@ export interface IExercise {
   time: string;
   weight?: number;
   done?: boolean;
+  detail: string;
 }
