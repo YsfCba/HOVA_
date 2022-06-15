@@ -5,7 +5,7 @@ const exerciceCategories = ExerciseCategory;
 export const mockExercises: {[key: string]: IExercise } = {
   benchPress: {
     name: 'Couché développé',
-    category: exerciceCategories.machine,
+    category: ExerciseCategory.machine,
     muscleGroup: ['pectoral', 'shoulders'],
     repetitions: 8,
     series: 4,
@@ -102,7 +102,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   legPress: {
     name: 'Leg Press',
-    category: exerciceCategories.machine,
+    category: ExerciseCategory.machine,
     muscleGroup: ['quadriceps', 'calves'],
     repetitions: 8,
     series: 4,
@@ -259,8 +259,5 @@ export const mockExercises: {[key: string]: IExercise } = {
     detail: ''
 
   },
-
-  
-
 
 };

@@ -13,6 +13,7 @@ export interface IProgram {
 export interface ISeance {
   name: string;
   exercises: IExercise[];
+  time: string;
   done?: boolean;
 }
 

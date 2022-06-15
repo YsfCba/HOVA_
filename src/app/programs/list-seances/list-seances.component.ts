@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IProgram } from '../../shared/models/program.interface';
+import { IProgram, ISeance } from '../../shared/models/program.interface';
 import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
+import { SwiperOptions } from 'swiper';
+import { mockSeancesProgram1 } from 'src/app/shared/mocks/seances.mock';
 
 
 @Component({
@@ -9,15 +11,42 @@ import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpre
   styleUrls: ['./list-seances.component.scss'],
 })
 export class ListSeancesComponent implements OnInit {
-  public programsList: IProgram[] = [];
+  public seancesList: ISeance[] = [];
+  public inProgressSeances: ISeance[] = [];
+  public swiperConfig: SwiperOptions = {
+    slidesPerView: 1,
+    pagination: true,
+
+  };
 
   constructor() { }
 
-  ngOnInit() {}
+
+  id: any = "mission";
+
+  ngOnInit() {
+    this.getInProgressSeances();
+
+  }
 
 
-  getInProgressPrograms() {
-    this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody);
-    console.log(mockProgramMasseExpress.name);
+  getInProgressSeances() {
+    this.seancesList.push(mockSeancesProgram1.pecAndShoulders, mockSeancesProgram1.backAndBiceps, mockSeancesProgram1.legs, mockSeancesProgram1.CardioRun, mockSeancesProgram1.CardioBike, mockSeancesProgram1.pecAndArms, mockSeancesProgram1.backAndShoulders, mockSeancesProgram1.legsMachine, mockSeancesProgram1.abs  );
+    //console.log(mockSeancesProgram1.pecAndShoulders.exercises[0].detail);
+    console.log(mockSeancesProgram1.pecAndShoulders.name);
+
+
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+

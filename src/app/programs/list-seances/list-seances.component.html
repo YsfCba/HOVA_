@@ -15,84 +15,20 @@
       <div class="programList">
 
         <ion-content>
-          <ion-card>
+          <ion-card *ngFor="let seance of seancesList">
             <ion-item>
-              <ion-label>Seance</ion-label>
+              <ion-label>{{seance.name}}</ion-label>
               <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
                 <ion-icon name="chevron-forward-sharp"></ion-icon>
               </ion-button>
             </ion-item>
             <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Seance</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
+              <ion-icon name="barbell"> </ion-icon> | {{seance.exercises.length}}
+              {{seance.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seance.time}}
             </ion-card-content>
           </ion-card>
         </ion-content>
+         
 
       </div>
 

@@ -4,7 +4,7 @@
     <h2>ExercicesName</h2>
   </div>
 
-  
+
 </header>
 
 <ion-content>
@@ -15,81 +15,21 @@
       <div class="exercicesList">
 
         <ion-content>
-          <ion-card>
+          <ion-card *ngFor="let exercice of exercicesList">
             <ion-item>
-              <ion-label>Exercice</ion-label>
+              <ion-label>{{exercice.name}}</ion-label>
               <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
+                <ion-icon name="information"></ion-icon>
               </ion-button>
             </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
+            <ion-card-content *ngIf="exercice.category == 'machine' ">
+              <ion-icon name="barbell"> </ion-icon> | {{exercice.series}} séries | {{exercice.repetitions}} reps 
             </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
+            <ion-card-content *ngIf="exercice.category == 'pulley' ">
+              <ion-icon name="barbell"> </ion-icon> | {{exercice.series}} séries | {{exercice.repetitions}} reps 
             </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/detailsExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> |
+            <ion-card-content *ngIf="exercice.category == 'bodyWeight' ">
+              <ion-icon name="accessibility"></ion-icon> | {{exercice.series}} séries | {{exercice.repetitions}} reps
             </ion-card-content>
           </ion-card>
         </ion-content>

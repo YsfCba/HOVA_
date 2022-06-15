@@ -9,7 +9,9 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.pectoralPress,
       mockExercises.shoulderPress,
       mockExercises.tricepsPulley,
-    ]
+    ],
+    time : '45 min'
+
   },
   backAndBiceps: {
     name: 'Back et biceps',
@@ -18,8 +20,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.lowRow,
       mockExercises.pullDown,
       mockExercises.bicepsPulley
-    ]
+    ],
+    time : '50 min'
   },
+
   legs: {
     name: 'Legs',
     exercises: [
@@ -28,8 +32,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.legCurl,
       mockExercises.abdosCrunch,
       mockExercises.walkingLunges
-    ]
+    ],
+    time : '55 min'
   },
+
   CardioRun: {
     name: 'Cardio Run',
     exercises: [
@@ -38,8 +44,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.squat,
       mockExercises.JumpingJack,
       mockExercises.PushUps
-    ]
+    ],
+    time : '45 min'
   },
+
   CardioBike: {
     name: 'Cardio Bike',
     exercises: [
@@ -48,8 +56,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.squat,
       mockExercises.JumpingJack,
       mockExercises.PushUps
-    ]
+    ],
+    time : '45 min'
   },
+
   pecAndArms: {
     name: 'Pec et Arms',
     exercises: [
@@ -58,8 +68,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.lowRow,
       mockExercises.tractionEasyChinDip,
       mockExercises.PushUps
-    ]
+    ],
+    time : '45 min'
   },
+
   backAndShoulders: {
     name: 'Back and Shoulders ',
     exercises: [
@@ -68,8 +80,10 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.lowRow,
       mockExercises.tractionEasyChinDip,
       mockExercises.PushUps
-    ]
+    ],
+    time : '45 min'
   },
+
   legsMachine: {
     name: 'Legs',
     exercises: [
@@ -78,7 +92,9 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.legCurl,
       mockExercises.abdosCrunch,
       mockExercises.walkingLunges
-    ]
+    ],
+    time : '45 min'
+
   },
   abs:{
     name: 'abs',
@@ -86,7 +102,8 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
       mockExercises.AbsScissors,
       mockExercises.AbsKickOut,
       mockExercises.plank,
-    ]
+    ],
+    time : '45 min'
   }
   
 
