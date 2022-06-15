@@ -1,4 +1,129 @@
-<header>
+<div class="two-sides-top">
+  <ion-content fullscreen class="ion-padding" scroll-y="false">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <img class="img_slide" src="/assets/img/sport2.jpg" />
+          <h2>{{exercicesList[0].name}}</h2>
+          <p>
+            {{exercicesList[0].detail}}
+          </p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <img class="img_slide" src="/assets/img/sport.jpg" />
+        <h2>{{exercicesList[12].name}}</h2>
+        <p>{{exercicesList[12].detail}}</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img class="img_slide" src="/assets/img/sport1.jpg" />
+        <h2>{{exercicesList[21].name}}</h2>
+        <p>{{exercicesList[21].detail}}</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="" />
+        <ul>
+          <li><ion-icon name="barbell-outline"></ion-icon> | Attention à ne pas porter trop lourd </li>
+          <li><ion-icon name="hourglass-outline"></ion-icon> | Attention a respecter le temps de repos</li>
+          <li><ion-icon name="trophy-outline"></ion-icon> A toi de jouer !</li>
+        </ul>
+        <h2>Retour aux séances</h2>
+        <ion-button fill="clear">back <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        </ion-button>
+
+      </ion-slide>
+    </ion-slides>
+
+
+
+
+
+
+  </ion-content>
+  <div class="bottom-side">
+    <a class="btn-add-program" [routerLink]="['']">
+      <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-3.png" alt="">
+    </a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <header>
   <div class="title_exercice_name">
     <h1>SeanceName</h1>
     <h2>ExercicesName</h2>
@@ -12,7 +137,7 @@
     <div class="top-side">
 
 
-      <div class="exercicesList">
+       <div class="exercicesList">
 
         <ion-content>
           <ion-card *ngFor="let exercice of exercicesList">
@@ -45,4 +170,4 @@
     </div>
 
   </div>
-</ion-content>
+</ion-content> -->

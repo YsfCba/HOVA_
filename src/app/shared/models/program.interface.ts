@@ -28,4 +28,5 @@ export interface IExercise {
   weight?: number;
   done?: boolean;
   detail: string;
+  img : string; 
 }
