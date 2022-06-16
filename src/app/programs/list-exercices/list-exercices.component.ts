@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
 import { IExercise } from 'src/app/shared/models/program.interface';
 import { SwiperOptions } from 'swiper';
@@ -17,7 +18,7 @@ export class ListExercicesComponent implements OnInit {
 
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   id: any = "mission";
