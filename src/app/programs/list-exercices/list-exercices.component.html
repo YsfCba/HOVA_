@@ -24,14 +24,34 @@
       </ion-slide>
 
       <ion-slide>
-        <img src="" />
-        <ul>
-          <li><ion-icon name="barbell-outline"></ion-icon> | Attention à ne pas porter trop lourd </li>
-          <li><ion-icon name="hourglass-outline"></ion-icon> | Attention a respecter le temps de repos</li>
-          <li><ion-icon name="trophy-outline"></ion-icon> A toi de jouer !</li>
-        </ul>
-        <h2>Retour aux séances</h2>
-        <ion-button [routerLink]="['/programs/listSeances']" fill="clear"> back <ion-icon slot="end" name="arrow-forward"></ion-icon>
+
+        <div>
+          <img class="settings_img" src="/assets/img/HOVA_logo.png" alt="">
+        </div>
+        
+        <ion-list>
+          <ion-item>
+            <ion-icon name="barbell-outline"></ion-icon>
+            <ion-label>
+              &nbsp; | Attention avec les charges
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="hourglass-outline"></ion-icon>
+            <ion-label>
+              &nbsp; | Respecter le temps de repos
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="water-outline"></ion-icon>
+            <ion-label>
+              &nbsp; | Hydrater vous bien !
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        
+        
+        <ion-button color="dark" [routerLink]="['/programs/listSeances']" fill="clear"> back <ion-icon slot="end" color="dark" name="arrow-forward"></ion-icon>
         </ion-button>
 
       </ion-slide>
@@ -44,7 +64,7 @@
 
   </ion-content>
   <div class="bottom-side">
-    <a class="btn-add-program" [routerLink]="['']">
+    <a class="btn-add-program" [routerLink]="['/settings/settingsHome']">
       <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-3.png" alt="">
     </a>
   </div>

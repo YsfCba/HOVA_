@@ -6,9 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings-home.component.scss'],
 })
 export class SettingsHomeComponent implements OnInit {
+  
+  time: number = 5;
 
   constructor() { }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    setInterval(() => { 
+      if (this.time > 0) 
+        this.time--; 
+      }, 
+    1000);
+  }
+  
 }
+
+
+

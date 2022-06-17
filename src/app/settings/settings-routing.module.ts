@@ -6,7 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: SettingsHomeComponent
-  }
+  },
+  {
+    path: 'settingsHome',
+    component: SettingsHomeComponent
+  },
+
+
 ];
 
 @NgModule({

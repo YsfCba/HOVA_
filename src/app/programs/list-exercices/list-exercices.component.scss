@@ -20,6 +20,10 @@
 ion-slides {
   height: 100%;
 }
+ion-button{
+  border: 1px solid black;
+  border-radius: 30px;
+}
 
 .swiper-slide {
   display: block;
@@ -57,4 +61,15 @@ p b {
 
 li{
   list-style: none;
+}
+
+ion-list{
+  margin-top: 0.5rem;
+  padding: auto;
+}
+
+.settings_img{
+  width: 50%;
+  height: 50%;
+
 }
