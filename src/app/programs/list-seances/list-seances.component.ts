@@ -12,7 +12,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-seances.component.scss'],
 })
 export class ListSeancesComponent implements OnInit {
-  public seancesList: ISeance[] = [];
+  public programsList: IProgram[] = [];
+  public inProgressPrograms: IProgram[] = [];
+
+
+  public seancesListMasseExpress: ISeance[] = [];
+  public seancesListWeightloss1: ISeance[] = [];
+  public seancesListWeightloss2: ISeance[] = [];
+  public seancesListAbdominalMuscles: ISeance[] = [];
+  public seancesListFullBody: ISeance[] = [];
+
+
+
   public inProgressSeances: ISeance[] = [];
   public swiperConfig: SwiperOptions = {
     slidesPerView: 1,
@@ -23,17 +34,30 @@ export class ListSeancesComponent implements OnInit {
   constructor(private router: Router) { }
 
 
-  id: any = "mission";
+  // id: any = "mission";
+  // nameMasseExpress: any = mockProgramMasseExpress.name;
+  // nameWeightloss1: any = mockProgramWeightloss1.name;
+  // nameWeightloss2: any = mockProgramWeightloss2.name;
 
   ngOnInit() {
     this.getInProgressSeances();
+    this.getInProgressPrograms();
 
+  }
+
+  getInProgressPrograms() {
+    this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody);
+    console.log();
   }
 
 
   getInProgressSeances() {
-    this.seancesList.push(mockSeancesProgram1.pecAndShoulders, mockSeancesProgram1.backAndBiceps, mockSeancesProgram1.legs, mockSeancesProgram1.CardioRun, mockSeancesProgram1.CardioBike, mockSeancesProgram1.pecAndArms, mockSeancesProgram1.backAndShoulders, mockSeancesProgram1.legsMachine, mockSeancesProgram1.abs  );
-    
+    this.seancesListMasseExpress.push(mockSeancesProgram1.pecAndShoulders, mockSeancesProgram1.backAndBiceps, mockSeancesProgram1.legs);
+    this.seancesListWeightloss1.push(mockSeancesProgram1.CardioRun);
+    this.seancesListWeightloss2.push(mockSeancesProgram1.CardioBike);
+    this.seancesListAbdominalMuscles.push(mockSeancesProgram1.abs);
+    this.seancesListFullBody.push(mockSeancesProgram1.pecAndArms, mockSeancesProgram1.backAndShoulders, mockSeancesProgram1.legsMachine);
+
     console.log(mockSeancesProgram1.pecAndShoulders.name);
   }
 }

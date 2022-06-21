@@ -6,20 +6,22 @@
       <div class="container">
         <h1 class="title_home">Programme </h1>
         <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2>
-        <form (ngSubmit)="getPrgramsCustom()">
-          <label>Nom du programme</label>
-          <input type="text" name="ProgramCustom" id="ProgramCustom" >
+
+        <form [formGroup]="programForm" (ngSubmit)="login()">
+          <div class="form-group">
+            <label>Nom du programme</label>
+            <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName">
+          </div>
+
         </form>
+
       </div>
-
-      
-
 
 
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" [routerLink]="['/programs/createSeance']">
+      <a type="submit" class="btn-add-program" [routerLink]="['/programs/createSeance']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-6.png" alt="">
       </a>
     </div>

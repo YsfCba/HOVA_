@@ -15,7 +15,7 @@ export const mockProgramMasseExpress: IProgram  = {
 };
 
 export const mockProgramWeightloss1: IProgram = {
-  name: 'weight loss',
+  name: 'weight loss1',
   seances: [
     mockSeancesProgram1.CardioRun,
   ],
@@ -23,7 +23,7 @@ export const mockProgramWeightloss1: IProgram = {
 };
 
 export const mockProgramWeightloss2: IProgram = {
-  name: 'weight loss',
+  name: 'weight loss2',
   seances: [
     mockSeancesProgram1.CardioBike,
   ],
@@ -42,7 +42,7 @@ export const mockProgramAbdominalMuscles: IProgram  = {
 
 export const mockProgramFullBody: IProgram  = {
 
-  name: 'Abdominal muscles',
+  name: 'Full body',
   seances: [
     mockSeancesProgram1.pecAndArms,
     mockSeancesProgram1.backAndShoulders,

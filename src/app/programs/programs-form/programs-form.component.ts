@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProgram } from '../../shared/models/program.interface';
-import SwiperCore, { SwiperOptions } from 'swiper';
-import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
-import { Router } from '@angular/router';
-
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -12,11 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./programs-form.component.scss'],
 })
 export class ProgramsFormComponent implements OnInit {
-  
+  programForm : FormGroup;
  
   constructor() { }
 
   ngOnInit() {
+    this.programForm = new FormGroup({
+      programName : new FormControl()
+    })
+  }
+
+  login(){
+    console.log(this.programForm.value);
   }
 
 

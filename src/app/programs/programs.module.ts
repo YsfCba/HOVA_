@@ -8,6 +8,7 @@ import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import { SeancesFormComponent } from './seances-form/seances-form.component';
 import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ListExercicesComponent } from './list-exercices/list-exercices.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListExercicesComponent } from './list-exercices/list-exercices.componen
     ProgramsFormComponent,
     SeancesFormComponent,
     ListSeancesComponent,
-    ListExercicesComponent
+    ListExercicesComponent,
+    ReactiveFormsModule
   ],
   imports: [
     CommonModule,
