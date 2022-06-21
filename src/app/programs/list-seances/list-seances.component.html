@@ -1,31 +1,31 @@
 <header>
   <div class="title_seance_name">
-    <h1>ProgrameName</h1>
+    <h1>{{program.name}}</h1>
   </div>
 </header>
 
 <ion-content>
   <div class="two-sides-top">
-    <div class="top-side">
-      <div class="programList" *ngFor="let program of programsList">
+    <div class="top-side" *ngIf="program">
 
-        
-        <ion-content *ngIf="program.name === 'Masse Express' ">
-          <ion-card *ngFor="let seance of seancesListAbdominalMuscles">
-            <ion-item>
-              <ion-label>{{seance.name}}</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> | {{seance.exercises.length}}
-              {{seance.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seance.time}}
-            </ion-card-content>
-          </ion-card>
-        </ion-content>
 
-        <ion-content *ngIf="program.name === 'weight loss1' ">
+
+      <ion-card *ngFor="let seance of program.seances">
+
+        <ion-item>
+          <ion-label>{{seance.name}}</ion-label>
+          <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
+            <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-card-content>
+          <ion-icon name="barbell"> </ion-icon> | {{seance.exercises.length}}
+          {{seance.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seance.time}}
+        </ion-card-content>
+      </ion-card>
+
+
+      <!-- <ion-content *ngIf="program.name === 'weight loss1' ">
           <ion-card *ngFor="let seances of seancesListWeightloss1">
             <ion-item>
               <ion-label>{{seances.name}}</ion-label>
@@ -84,10 +84,10 @@
               {{seances.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seances.time}}
             </ion-card-content>
           </ion-card>
-        </ion-content>
+        </ion-content> -->
 
 
-      </div>
+
 
     </div>
 

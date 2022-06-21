@@ -18,7 +18,7 @@ export class ProgramsFormComponent implements OnInit {
     })
   }
 
-  login(){
+  saveNameProg(){
     console.log(this.programForm.value);
   }
 

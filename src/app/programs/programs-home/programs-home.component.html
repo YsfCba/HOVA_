@@ -25,7 +25,7 @@
         <ion-card *ngFor="let program of programsList">
           <ion-item>
             <ion-label>{{program.name}}</ion-label>
-            <ion-button color="dark" slot="end" [routerLink]="['/programs/listSeances']">
+            <ion-button color="dark" slot="end" (click)="onClickDetails(program)">
               <ion-icon name="chevron-forward-sharp"></ion-icon>
             </ion-button>
           </ion-item>

@@ -22,6 +22,7 @@ const routes: Routes = [
   {
     path: 'listSeances',
     component: ListSeancesComponent
+
   },
   {
     path: 'listExercices',

@@ -12,10 +12,16 @@ export class SettingsHomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setInterval(() => { 
-      if (this.time > 0) 
+    const timer = setInterval(() => { 
+      if (this.time > 0)
+      { 
         this.time--; 
-      }, 
+      }
+      if (this.time === 0)
+      {
+      clearInterval(timer);
+      }     
+            },
     1000);
   }
   
