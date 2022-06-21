@@ -28,6 +28,13 @@ export class ListSeancesComponent implements OnInit {
     this.program = this.router.getCurrentNavigation().extras.state.program;
   }
 
+  onClickDetailsExo(seance : ISeance){
+    console.log(seance);
+    
+    
+    this.router.navigate(['/programs/listExercices'], {state: {seance}})
+    }
+
 }
 
 

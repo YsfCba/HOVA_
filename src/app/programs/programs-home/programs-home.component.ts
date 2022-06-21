@@ -28,27 +28,19 @@ export class ProgramsHomeComponent implements OnInit {
 
   ngOnInit() {
     this.getInProgressPrograms();
-    this.getdate();
 
   }
-
-
   getInProgressPrograms() {
     this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody);
     console.log(mockProgramMasseExpress.name);
   }
 
-  getdate() {
-    let madate = mockProgramMasseExpress.date;
-    console.log(madate);
-
-  }
-  onClickDetails(program : IProgram){
+  onClickDetails(program: IProgram) {
     console.log(program);
-    
-    
-    this.router.navigate(['/programs/listSeances'], {state: {program}})
-    }
+
+
+    this.router.navigate(['/programs/listSeances'], { state: { program } })
+  }
 
 
   tabChange(ids: any) {

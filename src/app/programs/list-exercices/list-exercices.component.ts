@@ -1,49 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
-import { IExercise } from 'src/app/shared/models/program.interface';
+import { NavController, NavParams } from '@ionic/angular';
+import { IExercise, ISeance } from 'src/app/shared/models/program.interface';
 import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-list-exercices',
   templateUrl: './list-exercices.component.html',
   styleUrls: ['./list-exercices.component.scss'],
+  providers: [NavParams]
+
 })
 export class ListExercicesComponent implements OnInit {
-  public exercicesList: IExercise[] = [];
-  public inProgressExercices: IExercise[] = [];
+public seance: ISeance; 
+
   public swiperConfig: SwiperOptions = {
     slidesPerView: 1,
     pagination: true,
 
   };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public navCtrl: NavController, public navParams: NavParams) { }
 
-
-  id: any = "mission";
 
   ngOnInit() {
-    this.getInProgressExercices();
-
-  }
-
-
-  getInProgressExercices() {
-    this.exercicesList.push(mockExercises.benchPress, 
-      mockExercises.pectoralPress, mockExercises.shoulderPress, 
-      mockExercises.tricepsPulley, mockExercises.tractionEasyChinDip, 
-      mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley, 
-      mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, 
-      mockExercises.abdosCrunch, mockExercises.walkingLunges, mockExercises.run, 
-      mockExercises.bike, mockExercises.burpees, mockExercises.squat, 
-      mockExercises.JumpingJack, mockExercises.PushUps, mockExercises.AbsScissors,
-       mockExercises.AbsKickOut, mockExercises.plank, );
-    //console.log(mockSeancesProgram1.pecAndShoulders.exercises[0].detail);
+    this.seance = this.router.getCurrentNavigation().extras.state.seance;
     
-      console.log(mockExercises.tricepsPulley.category);
-
   }
-  
-
+ 
 }

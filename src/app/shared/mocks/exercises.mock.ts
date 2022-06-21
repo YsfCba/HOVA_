@@ -12,7 +12,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 90,
     time: null,
     detail: 'Le développé couché est un exercice poly-articulaire de force et de musculation qui consiste à soulever et abaisser une barre d\'haltères, développant principalement les pectoraux et les triceps.',
-    img: ''
+    img: '/assets/img/athlete.jpg'
   },
   pectoralPress: {
     name: 'Pectoral Press',
@@ -36,7 +36,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'Le développé épaules est un mouvement de musculation de base qui fait travailler les épaules, plus précisément les faisceaux antérieur et moyen du deltoïde, et indirectement les triceps, les trapèzes, le haut de la poitrine et le dentelé antérieur. L\'exercice se fait à la machine ',
-    img: ''
+    img: '/assets/img/fitness-g2bcddbfb1_640.jpg'
 
 
   },
@@ -49,7 +49,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: '',
-    img: ''
+    img: '/assets/img/gamification-fitness-park-concept-salle-sport-experience-digitale1.jpg'
 
 
   },

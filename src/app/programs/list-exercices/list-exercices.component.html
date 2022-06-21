@@ -1,34 +1,20 @@
 <div class="two-sides-top">
   <ion-content fullscreen class="ion-padding" scroll-y="false">
-    <ion-slides>
-      <ion-slide>
+    <ion-slides class="swiper-slide">
+
+      <ion-slide *ngFor="let exercice of seance.exercises">
         <div class="slide">
-          <img class="img_slide" src="/assets/img/sport2.jpg" />
-          <h2>{{exercicesList[0].name}}</h2>
-          <p>
-            {{exercicesList[0].detail}}
-          </p>
+          <img class="img_slide" src="{{exercice.img}}">
+          <h2>{{exercice.name}}</h2>
+          <p>{{exercice.detail}}</p>
         </div>
       </ion-slide>
-
+      
       <ion-slide>
-        <img class="img_slide" src="/assets/img/sport.jpg" />
-        <h2>{{exercicesList[12].name}}</h2>
-        <p>{{exercicesList[12].detail}}</p>
-      </ion-slide>
-
-      <ion-slide>
-        <img class="img_slide" src="/assets/img/sport1.jpg" />
-        <h2>{{exercicesList[21].name}}</h2>
-        <p>{{exercicesList[21].detail}}</p>
-      </ion-slide>
-
-      <ion-slide>
-
         <div>
           <img class="settings_img" src="/assets/img/HOVA_logo.png" alt="">
         </div>
-        
+
         <ion-list>
           <ion-item>
             <ion-icon name="barbell-outline"></ion-icon>
@@ -49,9 +35,11 @@
             </ion-label>
           </ion-item>
         </ion-list>
-        
-        
-        <ion-button color="dark" [routerLink]="['/programs/listSeances']" fill="clear"> back <ion-icon slot="end" color="dark" name="arrow-forward"></ion-icon>
+
+
+        <ion-button color="dark" [routerLink]="['/programs/listSeances']" fill="clear">
+          back
+          <ion-icon slot="end" color="dark" name="arrow-forward"></ion-icon>
         </ion-button>
 
       </ion-slide>

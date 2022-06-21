@@ -14,7 +14,7 @@
 
         <ion-item>
           <ion-label>{{seance.name}}</ion-label>
-          <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
+          <ion-button color="dark" slot="end" (click)="onClickDetailsExo(seance)">
             <ion-icon name="chevron-forward-sharp"></ion-icon>
           </ion-button>
         </ion-item>
@@ -23,71 +23,6 @@
           {{seance.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seance.time}}
         </ion-card-content>
       </ion-card>
-
-
-      <!-- <ion-content *ngIf="program.name === 'weight loss1' ">
-          <ion-card *ngFor="let seances of seancesListWeightloss1">
-            <ion-item>
-              <ion-label>{{seances.name}}</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> | {{seances.exercises.length}}
-              {{seances.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seances.time}}
-            </ion-card-content>
-          </ion-card>
-        </ion-content>
-
-
-        <ion-content *ngIf="program.name === 'weight loss2' ">
-          <ion-card *ngFor="let seances of seancesListWeightloss2">
-            <ion-item>
-              <ion-label>{{seances.name}}</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> | {{seances.exercises.length}}
-              {{seances.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seances.time}}
-            </ion-card-content>
-          </ion-card>
-        </ion-content>
-
-        <ion-content *ngIf="program.name === 'Abdominal muscles' ">
-          <ion-card *ngFor="let seances of seancesListAbdominalMuscles">
-            <ion-item>
-              <ion-label>{{seances.name}}</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> | {{seances.exercises.length}}
-              {{seances.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seances.time}}
-            </ion-card-content>
-          </ion-card>
-        </ion-content>
-
-        <ion-content *ngIf="program.name === 'Full body' ">
-          <ion-card *ngFor="let seances of seancesListFullBody">
-            <ion-item>
-              <ion-label>{{seances.name}}</ion-label>
-              <ion-button color="dark" slot="end" [routerLink]="['/programs/listExercices']">
-                <ion-icon name="chevron-forward-sharp"></ion-icon>
-              </ion-button>
-            </ion-item>
-            <ion-card-content>
-              <ion-icon name="barbell"> </ion-icon> | {{seances.exercises.length}}
-              {{seances.exercises.length > 1 ? 'exercices' : 'exercice'}} | {{seances.time}}
-            </ion-card-content>
-          </ion-card>
-        </ion-content> -->
-
-
-
 
     </div>
 
