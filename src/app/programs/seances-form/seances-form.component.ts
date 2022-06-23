@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
 import { IExercise } from 'src/app/shared/models/program.interface';
@@ -23,11 +23,31 @@ export class SeancesFormComponent implements OnInit {
 
   ngOnInit() {
     this.getInProgressExercices();
+    this.increment();
+    this.decrement();
+
+
   }
 
   getInProgressExercices() {
-    this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress , mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley,  mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
+    this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress, mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley, mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
   }
 
-  
+
+  counterValue: number = 0;
+  counterChange = new EventEmitter();
+
+  increment() {
+    this.counterValue++;
+    this.counterChange.emit({
+      value: this.counterValue
+    });
+  }
+  decrement() {
+    this.counterValue--;
+    this.counterChange.emit({
+      value: this.counterValue
+    });
+  }
+
 }

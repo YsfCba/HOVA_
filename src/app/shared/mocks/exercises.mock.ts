@@ -12,7 +12,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 90,
     time: null,
     detail: 'Le développé couché est un exercice poly-articulaire de force et de musculation qui consiste à soulever et abaisser une barre d\'haltères, développant principalement les pectoraux et les triceps.',
-    img: '/assets/img_slide/DC.jpg'
+    img: '/assets/img_slide/developpe-couche.gif'
   },
   pectoralPress: {
     name: 'Pectoral Press',
@@ -49,7 +49,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: '',
-    img: '/assets/img_slide/Triceps Pulley.png'
+    img: '/assets/img_slide/Triceps_Pulley.gif'
 
 
   },
@@ -63,7 +63,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 90,
     time: null,
     detail: 'Les tractions assistées se font sur une chaise romaine avec un système d’assistance ou contre poids. Saisissez les poignées et positionnez les pieds ou les genoux sur le contrepoids (selon le type d’appareil). La prise s’appelle communément prise large pronation. Penchez vous légèrement en arrière et tractez votre poids en montant la poitrine vers le haut, sans décoller les pieds (ou les genoux) du contrepoids de la machine',
-    img: '/assets/img_slide/tractions_assistées.webp'
+    img: '/assets/img_slide/tractions_assistées.gif'
 
 
   },

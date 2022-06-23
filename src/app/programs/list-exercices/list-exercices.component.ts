@@ -19,13 +19,18 @@ public seance: ISeance;
     pagination: true,
 
   };
+  id: any = "mission";
 
   constructor(private router: Router, public navCtrl: NavController, public navParams: NavParams) { }
 
 
   ngOnInit() {
     this.seance = this.router.getCurrentNavigation().extras.state.seance;
-    
+  }
+
+  tabChange(ids: any) {
+    this.id = ids;
+
   }
  
 }

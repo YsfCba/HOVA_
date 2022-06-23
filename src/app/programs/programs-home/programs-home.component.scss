@@ -8,11 +8,12 @@ swiper.swiper {
 }
 
 h1 {
-  margin-top: 20px;
-  font-size: 26px;
+  margin-top: 40px;
+  font-size: 30px;
   text-align: center;
 
 }
+
 
 // .btn span {
 //   cursor: pointer;
@@ -39,7 +40,11 @@ h1 {
 //   right: 0;
 // }
 
-
+.btn_programs{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
 
 
 

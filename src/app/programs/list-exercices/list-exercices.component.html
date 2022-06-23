@@ -1,15 +1,29 @@
 <div class="two-sides-top">
   <ion-content fullscreen class="ion-padding" scroll-y="false">
-    <ion-slides class="swiper-slide">
+    <ion-slides>
 
-      <ion-slide *ngFor="let exercice of seance.exercises">
+      <ion-slide class="swiper-slide" *ngFor="let exercice of seance.exercises">
         <div class="slide">
           <img class="img_slide" src="{{exercice.img}}">
           <h2>{{exercice.name}}</h2>
-          <p>{{exercice.detail}}</p>
+         
+
+          <ion-label> <B>serie</B> : {{exercice.series}}</ion-label> <br>
+          <ion-label> <B>repetitions</B> : {{exercice.repetitions}}</ion-label> <br>
+          <ion-label> <B>breakTime</B> : {{exercice.breakTime}}s</ion-label>
+        </div> 
+        <ion-button color="dark" data-toggle="collapse" data-target="#detail">Détail</ion-button>
+
+        
+
+        
+        <div id="detail" class="collapse">
+          <ion-card>{{exercice.detail}}</ion-card>
         </div>
+
+
       </ion-slide>
-      
+
       <ion-slide>
         <div>
           <img class="settings_img" src="/assets/img/HOVA_logo.png" alt="">
@@ -37,7 +51,7 @@
         </ion-list>
 
 
-        <ion-button color="dark" [routerLink]="['/programs/listSeances']" fill="clear">
+        <ion-button class="btn_back_slide" color="dark" [routerLink]="['/programs/listSeances']" fill="clear">
           back
           <ion-icon slot="end" color="dark" name="arrow-forward"></ion-icon>
         </ion-button>

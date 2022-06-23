@@ -1,6 +1,6 @@
 <header>
-  
-        <h1> Séance 1</h1>
+
+  <h1> Séance 1</h1>
 </header>
 
 
@@ -8,49 +8,54 @@
   <div class="two-sides-top">
     <div class="top-side">
 
-        
-        <ion-label>Groupes musculaires</ion-label>
-        <ion-select color="danger" value="brown" okText="Validé" multiple>
-          <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
-          <ion-select-option value="Deltoide">Deltoide</ion-select-option>
-          <ion-select-option value="Biceps">Biceps</ion-select-option>
-          <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
-          <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
-          <ion-select-option value="Oblique">Oblique</ion-select-option>
-          <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
-          <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
-          <ion-select-option value="Trapeze">Trapeze</ion-select-option>
-          <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
-          <ion-select-option value="Triceps">Triceps</ion-select-option>
-          <ion-select-option value="Lombaires">Lombaires</ion-select-option>
-          <ion-select-option value="Fessiers">Fessiers</ion-select-option>
-          <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
-          <ion-select-option value="Mollet">Mollet</ion-select-option>
-        </ion-select>
-        
-        <ion-label>Materiel</ion-label>
-        <ion-select value="Materiel" okText="Validé">
-          <ion-select-option value="Avec">Avec</ion-select-option>
-          <ion-select-option value="Sans">Sans</ion-select-option>
-        </ion-select>
-        
-        <ion-label>Exercices</ion-label>
-        <ion-select value="Exercices" okText="Validé" multiple>
-          <ion-select-option value="Avec" *ngFor="let exercices of exercicesList" >
-            {{exercices.name}}
-          </ion-select-option>
-          
-        </ion-select>
-        
-        <ion-label>Temps de récupération</ion-label>
-        <ion-range color="dark" min="0" step="1" max="90"  [pin]="true"></ion-range>
-        
-        <ion-label>Séries</ion-label>
-        <ion-range color="dark" min="0" step="1" max="20"  [pin]="true"></ion-range>
-        
-        <ion-label>Repetitions</ion-label>
-        <ion-range color="dark" min="0" step="1" max="50"  [pin]="true"></ion-range>
+
+      <ion-label>Groupes musculaires</ion-label>
+      <ion-select color="danger" value="brown" okText="Validé" multiple>
+        <ion-select-option value="Pectoraux">Pectoraux</ion-select-option>
+        <ion-select-option value="Deltoide">Deltoide</ion-select-option>
+        <ion-select-option value="Biceps">Biceps</ion-select-option>
+        <ion-select-option value="AvantBras">Avant-Bras</ion-select-option>
+        <ion-select-option value="GrandDroit">Grand Droit</ion-select-option>
+        <ion-select-option value="Oblique">Oblique</ion-select-option>
+        <ion-select-option value="Quadriceps">Quadriceps</ion-select-option>
+        <ion-select-option value="Adducteurs">Adducteurs</ion-select-option>
+        <ion-select-option value="Trapeze">Trapeze</ion-select-option>
+        <ion-select-option value="Dorsaux">Dorsaux</ion-select-option>
+        <ion-select-option value="Triceps">Triceps</ion-select-option>
+        <ion-select-option value="Lombaires">Lombaires</ion-select-option>
+        <ion-select-option value="Fessiers">Fessiers</ion-select-option>
+        <ion-select-option value="Ischiojambiers">Ischio-jambiers</ion-select-option>
+        <ion-select-option value="Mollet">Mollet</ion-select-option>
+      </ion-select>
+
+
+
+      <ion-label>Materiel</ion-label>
+      <ion-select value="Materiel" okText="Validé">
+        <ion-select-option value="Avec">Avec</ion-select-option>
+        <ion-select-option value="Sans">Sans</ion-select-option>
+      </ion-select>
+
+      <ion-label>Exercices</ion-label>
+      <ion-select value="Exercices" okText="Validé" multiple>
+        <ion-select-option value="Avec" *ngFor="let exercices of exercicesList">
+          {{exercices.name}}
+        </ion-select-option>
+
+      </ion-select>
+
+      <ion-label>Temps de récupération</ion-label>
+      <ion-range color="dark" min="0" step="1" max="90" [pin]="true"></ion-range>
+
+      <ion-label>Séries</ion-label>
       
+      <ion-item>{{counterValue}}
+        <button (click)="decrement()"> - </button>
+        <button (click)="increment()"> + </button></ion-item>
+        
+      <ion-label>Repetitions</ion-label>
+      <ion-range color="dark" min="0" step="1" max="50" [pin]="true"></ion-range>
+
 
 
 
