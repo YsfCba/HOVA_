@@ -8,13 +8,14 @@
           <h2>{{exercice.name}}</h2>
          
 
-          <ion-label> <B>serie</B> : {{exercice.series}}</ion-label> <br>
-          <ion-label> <B>repetitions</B> : {{exercice.repetitions}}</ion-label> <br>
-          <ion-label> <B>breakTime</B> : {{exercice.breakTime}}s</ion-label>
+          <div class="info_exo">
+            <ion-label class="info_exo_detail" > <B>serie</B> : <span class="nbr_detail">{{exercice.series}}</span></ion-label> 
+            <ion-label class="info_exo_detail"> <B>repetitions</B> : <span class="nbr_detail">{{exercice.repetitions}}</span></ion-label>
+            <ion-label class="info_exo_detail"> <B>breakTime</B> : <span class="nbr_detail">{{exercice.breakTime}}</span>s</ion-label>
+          </div>
+
         </div> 
         <ion-button color="dark" data-toggle="collapse" data-target="#detail">Détail</ion-button>
-
-        
 
         
         <div id="detail" class="collapse">

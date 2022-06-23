@@ -17,13 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SeancesFormComponent,
     ListSeancesComponent,
     ListExercicesComponent,
-    ReactiveFormsModule
+    
   ],
   imports: [
     CommonModule,
     ProgramsRoutingModule,
     SwiperModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class ProgramsModule { }

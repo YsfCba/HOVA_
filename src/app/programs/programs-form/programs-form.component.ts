@@ -8,19 +8,19 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./programs-form.component.scss'],
 })
 export class ProgramsFormComponent implements OnInit {
-  programForm : FormGroup;
- 
-  constructor() { }
+  
+  myForm : FormGroup
+  constructor(fb: FormBuilder){
+    this.myForm= fb.group({
+        'programName' : [''],
+    });
+ }
+ onSubmit(value: string){
+   console.log(this.myForm.value);
+ }
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.programForm = new FormGroup({
-      programName : new FormControl()
-    })
-  }
-
-  saveNameProg(){
-    console.log(this.programForm.value);
-  }
+  
 
 
 }

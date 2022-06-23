@@ -7,17 +7,21 @@
         <h1 class="title_home">Programme </h1>
         <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2>
 
-          <div class="form-group">
+        <!-- <div class="form-group">
             <label>Nom du programme</label>
             <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName" required minlength="2">
-          </div>
+          </div> -->
 
-          
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+          <input type="text" placeholder="programName" [formControl]="myForm.controls['programName']">
+
+          <button type="submit">Submit</button>
+        </form>
 
       </div>
 
       <div>
-        <ion-card >
+        <ion-card>
 
           <ion-item>
             <ion-label></ion-label>
@@ -26,7 +30,8 @@
             </ion-button>
           </ion-item>
           <ion-card-content>
-            <ion-icon name="barbell"> </ion-icon></ion-card-content>
+            <ion-icon name="barbell"> </ion-icon>
+          </ion-card-content>
         </ion-card>
       </div>
 

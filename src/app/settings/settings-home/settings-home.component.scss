@@ -1,28 +1,26 @@
-.settings-title-home{
+.settings-title-home {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6rem;
+
+}
+
+.settings-title {
+  color: white;
+  // filter: brightness(1000%);
+}
+
+.chrono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 27rem;
+
+  h1 {
     color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 6rem;
-    
+    font-size: 110px;
+  }
+
 }
-
-.settings-title{
-    color: white;
-    // filter: brightness(1000%);
-}
-
-.chrono{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 27rem;
-
-    h1{
-        color: white;
-        font-size: 110px;
-    }
-    
-}
-
-
