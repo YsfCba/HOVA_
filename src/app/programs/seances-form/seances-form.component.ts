@@ -10,8 +10,8 @@ import { IExercise } from 'src/app/shared/models/program.interface';
 })
 
 export class SeancesFormComponent implements OnInit {
-  // public exercicesList: IExercise[] = [];
-  // public inProgressExercices: IExercise[] = [];
+  public exercicesList: IExercise[] = [];
+  public inProgressExercices: IExercise[] = [];
 
 
   constructor() { }
@@ -22,13 +22,12 @@ export class SeancesFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.getInProgressExercices();
   }
 
-
-  // getInProgressExercices() {
-  //   this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress , mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley,  mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
-  // }
+  getInProgressExercices() {
+    this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress , mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley,  mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
+  }
 
   
 }

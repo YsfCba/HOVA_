@@ -8,7 +8,6 @@
   <div class="two-sides-top">
     <div class="top-side">
 
-      <form action="submit">
         
         <ion-label>Groupes musculaires</ion-label>
         <ion-select color="danger" value="brown" okText="Validé" multiple>
@@ -36,7 +35,7 @@
         </ion-select>
         
         <ion-label>Exercices</ion-label>
-        <ion-select value="Exercices" okText="Validé" >
+        <ion-select value="Exercices" okText="Validé" multiple>
           <ion-select-option value="Avec" *ngFor="let exercices of exercicesList" >
             {{exercices.name}}
           </ion-select-option>
@@ -51,7 +50,7 @@
         
         <ion-label>Repetitions</ion-label>
         <ion-range color="dark" min="0" step="1" max="50"  [pin]="true"></ion-range>
-      </form>
+      
 
 
 
