@@ -42,6 +42,14 @@ export class ProgramsHomeComponent implements OnInit {
     this.router.navigate(['/programs/listSeances'], { state: { program } })
   }
 
+  test1() {
+    console.log('LALALAL')
+  }
+
+  test2() {
+    console.log('AAAAA')
+  }
+
 
   tabChange(ids: any) {
     this.id = ids;

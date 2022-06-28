@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, Validator, FormControl, FormGroup, NgForm } from '@angular/forms';
 import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
 import { IExercise } from 'src/app/shared/models/program.interface';
 
@@ -14,19 +14,53 @@ export class SeancesFormComponent implements OnInit {
   public inProgressExercices: IExercise[] = [];
 
 
-  constructor() { }
+
+  customProg = undefined;
 
 
-  public customFormatter(value: number) {
-    return `${value}%`;
+ groupeMusculaire = [
+    { id:1, value: 'Pectoraux' },
+    { id:2, value: 'Deltoide' }, 
+    { id:3, value: 'Biceps' },
+    { id:4, value: 'Avant-Bras' }, 
+    { id:5, value: 'Grand-dorsaux' }, 
+    { id:6, value: 'oblique' },
+    { id:7, value: 'Quadriceps' }, 
+    { id:8, value: 'Adducteurs' }, 
+    { id:9, value: 'trapeze' },
+    { id:10, value: 'dorsaux' }, 
+    { id:11, value: 'Triceps' }, 
+    { id:12, value: 'lombaire' },
+    { id:13, value: 'fessiers' }, 
+    {id:14, value: 'Ischio-jambiers' }, 
+    { id:15, value: 'mollet' }
+  ];
+
+  Materiels = [
+    { id: 1, value: 'Avec'},
+    { id: 2, value: 'Sans'},
+  ]
+
+
+ 
+
+  handleChange(ev) {
+    this.customProg = ev.target.value;
+    console.log(this.customProg);
+    
   }
+  // customForm = this.fb.group({
+  //   gm: new FormControl(),
+  //   materiel: new FormControl('male'),
+  // });
+
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.getInProgressExercices();
     this.increment();
     this.decrement();
-
-
   }
 
   getInProgressExercices() {
@@ -34,6 +68,7 @@ export class SeancesFormComponent implements OnInit {
   }
 
 
+  // function compteur
   counterValue: number = 0;
   counterChange = new EventEmitter();
 
@@ -48,6 +83,9 @@ export class SeancesFormComponent implements OnInit {
     this.counterChange.emit({
       value: this.counterValue
     });
+  // ---- ---- -- --- -- -- -
+
+
   }
 
 }

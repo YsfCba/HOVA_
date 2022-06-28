@@ -4,35 +4,27 @@
 
 
       <div class="container">
-        <h1 class="title_home">Programme </h1>
-        <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2>
+        <h1 class="title_home"> Nom du programme </h1>
+        <!-- <h2 class="slogan_home">Customiser vos programmes avec HOVA !</h2> -->
 
         <!-- <div class="form-group">
-            <label>Nom du programme</label>
-            <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName" required minlength="2">
-          </div> -->
+              <label>Nom du programme</label>
+              <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName" required minlength="2">
+            </div> -->
 
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
-          <input type="text" placeholder="programName" [formControl]="myForm.controls['programName']">
-
-          <button type="submit">Submit</button>
-        </form>
-
+        <div class="container_info">
+          <form [formGroup]="nameProg" (ngSubmit)="onSubmit(nameProg.value)">
+            <input desactive type="text" ([ngModel])="namePrograme" placeholder="Nom du programme"
+              [formControl]="nameProg.controls['programName']">
+          </form>
+          <ion-button color="dark">
+            <ion-icon name="pencil-sharp"></ion-icon>
+          </ion-button>
+        </div>
       </div>
 
       <div>
-        <ion-card>
 
-          <ion-item>
-            <ion-label></ion-label>
-            <ion-button color="dark" slot="end" [routerLink]="['']">
-              <ion-icon name="chevron-forward-sharp"></ion-icon>
-            </ion-button>
-          </ion-item>
-          <ion-card-content>
-            <ion-icon name="barbell"> </ion-icon>
-          </ion-card-content>
-        </ion-card>
       </div>
 
 

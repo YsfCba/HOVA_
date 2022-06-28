@@ -9,16 +9,26 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class ProgramsFormComponent implements OnInit {
   
-  myForm : FormGroup
+  nameProg : FormGroup;
+  namePrograme: string;
+
   constructor(fb: FormBuilder){
-    this.myForm= fb.group({
+    this.nameProg= fb.group({
         'programName' : [''],
     });
+    
  }
  onSubmit(value: string){
-   console.log(this.myForm.value);
+   this.namePrograme = this.nameProg.value;
+   console.log(this.namePrograme);
+   
  }
   ngOnInit() {}
+
+
+  getnameProg(nameP: string){
+    nameP= this.namePrograme; 
+  }
 
   
 

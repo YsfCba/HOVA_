@@ -8,7 +8,8 @@ import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import { SeancesFormComponent } from './seances-form/seances-form.component';
 import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ListExercicesComponent } from './list-exercices/list-exercices.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProgramsRoutingModule,
     SwiperModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
+    
+
   ]
 })
 export class ProgramsModule { }

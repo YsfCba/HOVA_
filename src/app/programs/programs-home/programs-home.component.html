@@ -10,12 +10,11 @@
       (click)="tabChange('basic')">
       <span>BASIC</span>
     </ion-button>
-    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="danger" id="custom"
+    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark" id="custom"
       (click)="tabChange('custom')">
       <span>CUSTOM</span>
     </ion-button>
   </div>
-
 </header>
 
 <ion-content class="no-scroll">
@@ -61,7 +60,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" [routerLink]="['/programs/createProgramme']">
+      <a class="btn-add-program" (click)="test1();test2()"[routerLink]="['/programs/createProgramme']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-8.png" alt="">
       </a>
     </div>
