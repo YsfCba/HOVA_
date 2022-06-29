@@ -10,6 +10,7 @@ import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ListExercicesComponent } from './list-exercices/list-exercices.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserModule } from '@angular/platform-browser';
     SwiperModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    IonicModule.forRoot()
     
 
   ]

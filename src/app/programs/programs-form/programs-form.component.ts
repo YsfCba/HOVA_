@@ -11,6 +11,7 @@ export class ProgramsFormComponent implements OnInit {
   
   nameProg : FormGroup;
   namePrograme: string;
+  nameProgInputChoice = true;
 
   constructor(fb: FormBuilder){
     this.nameProg= fb.group({
@@ -30,9 +31,12 @@ export class ProgramsFormComponent implements OnInit {
     nameP= this.namePrograme; 
   }
 
+  checkBoxClick(){
+  !this.nameProgInputChoice ? this.nameProgInputChoice = true : this.nameProgInputChoice = false;
+  }
   
-
-
+  
 }
+
 
 

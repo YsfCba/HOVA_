@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IProgram } from '../../shared/models/program.interface';
-import SwiperCore, { SwiperOptions } from 'swiper';
+import { SwiperOptions } from 'swiper';
 import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
 import { Router } from '@angular/router';
 
@@ -20,16 +20,17 @@ export class ProgramsHomeComponent implements OnInit {
   };
 
   constructor(private router: Router) {
-
+    
   }
 
   id: any = "mission";
-
+  
 
   ngOnInit() {
     this.getInProgressPrograms();
-
   }
+
+
   getInProgressPrograms() {
     this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody);
     console.log(mockProgramMasseExpress.name);
@@ -37,23 +38,11 @@ export class ProgramsHomeComponent implements OnInit {
 
   onClickDetails(program: IProgram) {
     console.log(program);
-
-
     this.router.navigate(['/programs/listSeances'], { state: { program } })
   }
 
-  test1() {
-    console.log('LALALAL')
-  }
-
-  test2() {
-    console.log('AAAAA')
-  }
-
-
   tabChange(ids: any) {
     this.id = ids;
-
   }
 
 }

@@ -1,126 +1,70 @@
 <header>
 
-  <div class="title_seance_name">
-    <h1>Programme </h1>
-  </div>
+    <div class="title_seance_name">
+      <h1>Programme </h1>
+    </div>
 
 
-  <div class="btn_programs">
-    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark" id="basic"
-      (click)="tabChange('basic')">
-      <span>BASIC</span>
-    </ion-button>
-    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark" id="custom"
-      (click)="tabChange('custom')">
-      <span>CUSTOM</span>
-    </ion-button>
-  </div>
+    <div class="btn_programs">
+      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark" id="basic"
+        (click)="tabChange('basic')">
+        <span>BASIC</span>
+      </ion-button>
+      <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark" id="custom"
+        (click)="tabChange('custom')">
+        <span>CUSTOM</span>
+      </ion-button>
+    </div>
 </header>
 
 <ion-content class="no-scroll">
-  <div class="two-sides-top">
-    <div class="top-side">
+    <div class="two-sides-top">
+      <div class="top-side">
 
 
-      <div id="target2" class="collapse" *ngIf="id ==='basic'">
-        <ion-card *ngFor="let program of programsList">
-          <ion-item>
-            <ion-label>{{program.name}}</ion-label>
-            <ion-button color="dark" slot="end" (click)="onClickDetails(program)">
-              <ion-icon name="chevron-forward-sharp"></ion-icon>
-            </ion-button>
-          </ion-item>
-          <ion-card-content>
-            <ion-icon name="barbell"> </ion-icon> | {{program.seances.length}}
-            {{program.seances.length > 1 ? 'séances' : 'seance'}} | {{program.date}}
-          </ion-card-content>
-        </ion-card>
+        <div id="target2" class="collapse" *ngIf="id ==='basic'">
+          <ion-card *ngFor="let program of programsList">
+            <ion-item>
+              <ion-label>{{program.name}}</ion-label>
+              <ion-button color="dark" slot="end" (click)="onClickDetails(program)">
+                <ion-icon name="chevron-forward-sharp"></ion-icon>
+              </ion-button>
+            </ion-item>
+            <ion-card-content>
+              <ion-icon name="barbell"> </ion-icon> | {{program.seances.length}}
+              {{program.seances.length > 1 ? 'séances' : 'seance'}} | {{program.date}}
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+
+
+
+
+        <div id="target1" class="collapse" *ngIf="id ==='custom'">
+
+          <ion-card *ngFor="let program of programsList">
+            <ion-item>
+              <ion-label></ion-label>
+              <ion-button color="danger" slot="end" [routerLink]="['/programs/listSeances']">
+                <ion-icon name="chevron-forward-sharp"></ion-icon>
+              </ion-button>
+            </ion-item>
+            <ion-card-content>
+              <ion-icon name="barbell"> </ion-icon>
+            </ion-card-content>
+          </ion-card>
+
+        </div>
+
+
       </div>
-
-
-
-
-
-      <div id="target1" class="collapse" *ngIf="id ==='custom'">
-
-        <ion-card *ngFor="let program of programsList">
-          <ion-item>
-            <ion-label></ion-label>
-            <ion-button color="danger" slot="end" [routerLink]="['/programs/listSeances']">
-              <ion-icon name="chevron-forward-sharp"></ion-icon>
-            </ion-button>
-          </ion-item>
-          <ion-card-content>
-            <ion-icon name="barbell"> </ion-icon>
-          </ion-card-content>
-        </ion-card>
-
+      <div class="bottom-side">
+        <a class="btn-add-program" [routerLink]="['/programs/createProgramme']">
+          <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-8.png" alt="">
+        </a>
       </div>
 
 
     </div>
-    <div class="bottom-side">
-      <a class="btn-add-program" (click)="test1();test2()"[routerLink]="['/programs/createProgramme']">
-        <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-8.png" alt="">
-      </a>
-    </div>
-
-
-  </div>
 </ion-content>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section *ngIf="inProgressPrograms?.length">
-        <h1>Programme{{inProgressPrograms?.length > 1 ? 's' : ''}} en cours</h1>
-        <ng-container *ngIf="inProgressPrograms.length === 1; else swiperPrograms">
-          <ng-container [ngTemplateOutlet]="programView" [ngTemplateOutletContext]="{ program : inProgressPrograms[0]}"></ng-container>
-        </ng-container>
-      </section> -->
-
-
-
-<!-- <ng-template #swiperPrograms>
-  <swiper [config]="swiperConfig">
-    <ng-template swiperSlide *ngFor="let program of inProgressPrograms">
-      <ng-container [ngTemplateOutlet]="programView" [ngTemplateOutletContext]="{ program : program }"></ng-container>
-    </ng-template>
-  </swiper>
-</ng-template> -->
-
-<!-- <ng-template #programView let-program="program">
-  <div class="in-progress-program">
-    <p class="ion-text-end ion-padding-end ion-no-margin">{{program.name}}</p>
-    <p class="ion-text-end ion-padding-end ion-no-margin">{{program.date}}</p>
-    <ul>
-      <li *ngFor="let seance of program.seances" class="seance" [ngClass]="{'done' : seance.done}">{{seance.name}}</li>
-    </ul>
-  </div>
-</ng-template> -->

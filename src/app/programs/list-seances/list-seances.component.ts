@@ -30,8 +30,6 @@ export class ListSeancesComponent implements OnInit {
 
   onClickDetailsExo(seance : ISeance){
     console.log(seance);
-    debugger
-    
     this.router.navigate(['/programs/listExercices'], {state: {seance}})
     }
 

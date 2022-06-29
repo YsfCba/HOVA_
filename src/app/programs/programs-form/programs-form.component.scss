@@ -1,9 +1,22 @@
 
 .container_info{
   display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: baseline;
+    /* height: 209px; */
+    padding-top: 33vh
 }
+
+h1{
+  font-size: 22px;
+  padding-right: 15px;
+}
+
+button{
+  background-color: white;
+}
+
+
 
 
 
