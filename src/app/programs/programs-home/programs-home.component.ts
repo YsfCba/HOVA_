@@ -3,6 +3,8 @@ import { IProgram } from '../../shared/models/program.interface';
 import { SwiperOptions } from 'swiper';
 import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -16,10 +18,11 @@ export class ProgramsHomeComponent implements OnInit {
   public swiperConfig: SwiperOptions = {
     slidesPerView: 1,
     pagination: true,
-
   };
+  private history: string[] = [];
 
-  constructor(private router: Router) {
+
+  constructor(private router: Router, private location: Location) {
     
   }
 
@@ -28,6 +31,15 @@ export class ProgramsHomeComponent implements OnInit {
 
   ngOnInit() {
     this.getInProgressPrograms();
+  }
+
+  back(): void {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.back()
+    } else {
+      this.router.navigateByUrl('/')
+    }
   }
 
 
