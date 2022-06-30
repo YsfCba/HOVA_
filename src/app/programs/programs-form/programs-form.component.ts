@@ -14,7 +14,7 @@ export class ProgramsFormComponent implements OnInit {
 
   nameProg: FormGroup;
   namePrograme: string;
-  nameProgInputChoice = true;
+  // nameProgInputChoice = true;
   private history: string[] = [];
 
 
@@ -30,10 +30,10 @@ export class ProgramsFormComponent implements OnInit {
     })
 
   }
+  ngOnInit() { }
+  
+  
   // Button back
-
-
-
   back(): void {
     this.history.pop()
     if (this.history.length > 0) {
@@ -48,9 +48,7 @@ export class ProgramsFormComponent implements OnInit {
     console.log(this.namePrograme);
 
   }
-  ngOnInit() { }
-
-
+  
   getnameProg(nameP: string) {
     nameP = this.namePrograme;
   }

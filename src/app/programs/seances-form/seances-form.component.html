@@ -2,65 +2,73 @@
   <div class="two-sides-top">
     <div class="top-side">
 
-      <ion-list>
-        <ion-item>
-          <ion-label>Groupes musculaires</ion-label>
-          <ion-select multiple placeholder="Groupe Musculaire" (ionChange)="handleChange($event)">
-            <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item lines="none">
-        </ion-item>
-      </ion-list>
+      <div>
+        <button class="btn_back" (click)="back()">
+          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
+        </button>
+        <h1>Name program</h1>
+      </div>
 
 
-      <ion-list>
-        <ion-item>
-          <ion-label>Materiel</ion-label>
-          <ion-select value="Materiel" okText="Validé" (ionChange)="handleChange($event)">
-            <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
-            </ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Exercices</ion-label>
-          <ion-select value="Exercices" okText="Validé" (ionChange)="handleChange($event)" multiple>
-            <ion-select-option [value]="exercices" *ngFor="let exercices of exercicesList">
-              {{exercices.name}}
-            </ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Temps de récupération</ion-label>
-          <ion-range color="dark" min="0" step="1" max="90" [pin]="true" (ionChange)="handleChange($event)"></ion-range>
-        </ion-item>
-      </ion-list>
-
-
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Séries</ion-label>
-          <ion-range color="dark" min="0" step="1" max="50" [pin]="true" (ionChange)="handleChange($event)"></ion-range>
-        </ion-item>
-      </ion-list>
-
-      
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Repetitions</ion-label>
-          <ion-range color="dark" min="0" step="1" max="50" [pin]="true" (ionChange)="handleChange($event)"></ion-range>
-        </ion-item>
-      </ion-list>
+      <form [formGroup]="">
+        <ion-list>
+          <ion-item>
+            <ion-label>Groupe Musculaire</ion-label>
+            <ion-select [multiple]="true" (ionChange)="handleChange($event)">
+              <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Materiel</ion-label>
+            <ion-select value="Materiel" okText="Validé" (ionChange)="handleChange($event)">
+              <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Exercices</ion-label>
+            <ion-select value="Exercices" okText="Validé" (ionChange)="handleChange($event)" multiple>
+              <ion-select-option [value]="exercices" *ngFor="let exercices of exercicesList">
+                {{exercices.name}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Temps de récupération</ion-label>
+            <ion-select okText="Validé" (ionChange)="handleChange($event)">
+              <ion-select-option>
+                1
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Séries</ion-label>
+            <ion-select okText="Validé" (ionChange)="handleChange($event)">
+              <ion-select-option>
+                1
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Repetitions</ion-label>
+            <ion-select okText="Validé" (ionChange)="handleChange($event)">
+              <ion-select-option>
+                1
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </form>
 
 
 

@@ -1,7 +1,11 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, Validator, FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
 import { IExercise } from 'src/app/shared/models/program.interface';
+import { Location } from '@angular/common';
+
+
 
 @Component({
   selector: 'app-seances-form',
@@ -14,8 +18,9 @@ export class SeancesFormComponent implements OnInit {
   public inProgressExercices: IExercise[] = [];
 
 
-
+  
   customProg = undefined;
+  private history: string[] = [];
 
 
  groupeMusculaire = [
@@ -40,52 +45,30 @@ export class SeancesFormComponent implements OnInit {
     { id: 1, value: 'Avec'},
     { id: 2, value: 'Sans'},
   ]
-
-
- 
-
-  handleChange(ev) {
-    this.customProg = ev.target.value;
-    console.log(this.customProg);
-    
-  }
-  // customForm = this.fb.group({
-  //   gm: new FormControl(),
-  //   materiel: new FormControl('male'),
-  // });
-
-
-  constructor(private fb: FormBuilder) {}
+  
+constructor(private router: Router, private location: Location) {}
 
   ngOnInit() {
     this.getInProgressExercices();
-    this.increment();
-    this.decrement();
   }
 
   getInProgressExercices() {
     this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress, mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley, mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
   }
 
-
-  // function compteur
-  counterValue: number = 0;
-  counterChange = new EventEmitter();
-
-  increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    });
+  back(): void {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.back()
+    } else {
+      this.router.navigateByUrl('/')
+    }
   }
-  decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    });
-  // ---- ---- -- --- -- -- -
 
-
+  handleChange(ev) {
+    this.customProg = ev.target.value;
+    console.log(this.customProg);
   }
+ 
 
 }

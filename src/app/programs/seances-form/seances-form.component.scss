@@ -1,22 +1,13 @@
-ion-label{
-    display: flex;
-    justify-content: center;
-    //background-color: aqua;
-}
-h1{
-    text-align: center;
-}
-ion-select{
-    //background-color: rgb(126, 20, 57);
-    margin: 0px 15px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px black;
-}
-ion-range{
-    margin: 10px;
-    padding: 0px 20px;
-    border-radius: 20px;
-    box-shadow: 0px 1px 2px black;
-
+ion-list {
+  margin: 5px 10px;
 }
 
+h1 {
+  margin: 1vh 0px 30px 0px;
+}
+
+button {
+  background-color: white;
+  width: 45px;
+  margin: 15px 0px 0px 10px;
+}

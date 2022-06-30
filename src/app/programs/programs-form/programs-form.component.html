@@ -5,8 +5,9 @@
 
       <div class="container">
         <button class="btn_back" (click)="back()">
-          <ion-icon name="arrow-back-outline"></ion-icon>
+          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
         </button>
+        
         <!-- <div class="form-group">
               <label>Nom du programme</label>
               <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName" required minlength="2">
@@ -14,10 +15,15 @@
 
         <div class="container_info">
           <img src="/assets/img/OVA-9.png" alt="logo">
-          <ion-item>
-            <ion-label color="dark" position="floating">Nom du programme</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
+          <form [formGroup]="nameProg" >
+            <ion-item>
+              <ion-label color="dark" position="floating">Nom du programme</ion-label>
+              <ion-input type="text" placeholder="Nom du programme"
+                [formControl]="nameProg.controls['programName']"></ion-input>
+            </ion-item>
+          </form>
+
+
           <!-- <input placeholder="Nom du programme" type="text" [disabled]="nameProgInputChoice"> -->
           <!-- <input type="checkbox" (click)="checkBoxClick()"><br> 
             <button (click)="checkBoxClick()">
@@ -44,7 +50,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" [routerLink]="['/programs/createSeance']">
+      <a class="btn-add-program" (click)="onSubmit(nameProg.value)" [routerLink]="['/programs/createSeance']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-6.png" alt="">
       </a>
     </div>
