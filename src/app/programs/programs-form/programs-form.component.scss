@@ -1,10 +1,7 @@
 
 .container_info{
   display: flex;
-    justify-content: center;
-    align-items: baseline;
-    /* height: 209px; */
-    padding-top: 33vh
+  flex-direction: column;
 }
 
 h1{
@@ -12,10 +9,14 @@ h1{
   padding-right: 15px;
 }
 
-button{
+.btn_back{
   background-color: white;
+  margin: 23px 0px 0px 12px;
 }
 
+ion-item{
+  background-color: brown;
+}
 
 
 

@@ -55,9 +55,9 @@ export class ProgramsFormComponent implements OnInit {
     nameP = this.namePrograme;
   }
 
-  checkBoxClick() {
-    !this.nameProgInputChoice ? this.nameProgInputChoice = true : this.nameProgInputChoice = false;
-  }
+  // checkBoxClick() {
+  //   !this.nameProgInputChoice ? this.nameProgInputChoice = true : this.nameProgInputChoice = false;
+  // }
 
 
 }
