@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from './shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+import { ProgramService } from './services/Program.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -21,9 +23,11 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     SwiperModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, ProgramService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

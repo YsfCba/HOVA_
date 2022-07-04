@@ -4,6 +4,7 @@ import { SwiperOptions } from 'swiper';
 import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { ProgramService } from '../../services/Program.service';
 
 
 
@@ -22,15 +23,20 @@ export class ProgramsHomeComponent implements OnInit {
   private history: string[] = [];
 
 
-  constructor(private router: Router, private location: Location) {
+  constructor(private router: Router, private location: Location, private service: ProgramService) {
     
   }
 
   id: any = "mission";
+  readData: any;
   
 
   ngOnInit() {
     this.getInProgressPrograms();
+    this.service.getAllData().subscribe((res)=>{
+      console.log(res,"res==>");
+      this.readData = res.data;
+    });
   }
 
   back(): void {

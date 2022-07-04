@@ -18,8 +18,17 @@ export class SeancesFormComponent implements OnInit {
   public inProgressExercices: IExercise[] = [];
 
 
-  
-  customProg = undefined;
+  formSeance: FormGroup;
+  // muscleGroup: string;
+  // Materiel: string;
+  // Exercices: string;
+  // recoveryTime : string;
+  // series: string;
+  // repetitions: string;
+
+  customProg = undefined;  
+  ParametreSeance: string;  
+
   private history: string[] = [];
 
 
@@ -46,7 +55,17 @@ export class SeancesFormComponent implements OnInit {
     { id: 2, value: 'Sans'},
   ]
   
-constructor(private router: Router, private location: Location) {}
+constructor(private fb: FormBuilder, private router: Router, private location: Location) {
+  this.formSeance = fb.group({
+    'nameSeance': [''],
+    'muscleGroup': [''],
+    'materiel': [''],
+    'exercices': [''],
+    'recoveryTime' : [''],
+    'series': [''],
+    'repetitions': ['']
+  });
+}
 
   ngOnInit() {
     this.getInProgressExercices();
@@ -58,11 +77,13 @@ constructor(private router: Router, private location: Location) {}
 
   back(): void {
     this.history.pop()
-    if (this.history.length > 0) {
-      this.location.back()
-    } else {
-      this.router.navigateByUrl('/')
-    }
+    this.router.navigateByUrl('/programs/createProgramme')
+   }
+
+  onSubmit(value: string) {
+    this.ParametreSeance = this.formSeance.value;
+    console.log(this.ParametreSeance);
+
   }
 
   handleChange(ev) {

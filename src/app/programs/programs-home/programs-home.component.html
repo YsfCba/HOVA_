@@ -9,6 +9,8 @@
     </div>
 
 
+    <!-- Function collapse -->
+
     <div class="btn_programs">
       <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark" id="basic"
         (click)="tabChange('basic')">
@@ -47,9 +49,9 @@
 
         <div id="target1" class="collapse" *ngIf="id ==='custom'">
 
-          <ion-card *ngFor="let program of programsList">
+          <ion-card *ngFor="let program of readData">
             <ion-item>
-              <ion-label></ion-label>
+              <ion-label>{{program.nameProgram}}</ion-label>
               <ion-button color="danger" slot="end" [routerLink]="['/programs/listSeances']">
                 <ion-icon name="chevron-forward-sharp"></ion-icon>
               </ion-button>
