@@ -15,7 +15,7 @@
 
         <div class="container_info">
           <img src="/assets/img/OVA-9.png" alt="logo">
-          <form [formGroup]="nameProg"  >
+          <form [formGroup]="nameProg" (click)="activeAnim()" >
             <ion-item>
               <ion-label color="dark" position="floating">Nom du programme</ion-label>
               <ion-input type="text" placeholder="Nom du programme"

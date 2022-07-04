@@ -81,6 +81,11 @@ export class ProgramsFormComponent implements OnInit {
   // }
 
 
+  activeAnim(){
+    console.log("oui");
+    
+  }
+
 }
 
 
