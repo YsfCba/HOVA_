@@ -40,11 +40,19 @@ export class ProgramsFormComponent implements OnInit {
 
   nameProgramSubmit()
   {
+    if(this.nameProg.valid)
+    {
     console.log(this.nameProg.value);
     this.service.createData(this.nameProg.value).subscribe((res)=>{
       console.log(res, 'res==>');
       this.nameProg.reset();
-    })
+      });
+    }
+    else
+    {
+      console.log("NON");
+      
+    }
   }
   
   

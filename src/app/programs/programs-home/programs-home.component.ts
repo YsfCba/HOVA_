@@ -24,28 +24,35 @@ export class ProgramsHomeComponent implements OnInit {
 
 
   constructor(private router: Router, private location: Location, private service: ProgramService) {
-    
+
   }
 
   id: any = "mission";
   readData: any;
-  
+
 
   ngOnInit() {
     this.getInProgressPrograms();
-    this.service.getAllData().subscribe((res)=>{
-      console.log(res,"res==>");
-      this.readData = res.data;
-    });
+    this.getAllData();
   }
 
-  back(): void {
-    this.history.pop()
-    if (this.history.length > 0) {
-      this.location.back()
-    } else {
-      this.router.navigateByUrl('/')
-    }
+
+  deleteID(id: any) {
+    console.log(id, 'deleteid');
+    this.service.deleteData(id).subscribe((res) => {
+      console.log(res, 'deleteres==>');
+      this.getAllData();
+
+    })
+
+  }
+
+  getAllData() {
+    this.service.getAllData().subscribe((res) => {
+      console.log(res, "res==>");
+      this.readData = res.data;
+
+    });
   }
 
 
@@ -62,6 +69,17 @@ export class ProgramsHomeComponent implements OnInit {
   tabChange(ids: any) {
     this.id = ids;
   }
+
+
+  back(): void {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.back()
+    } else {
+      this.router.navigateByUrl('/')
+    }
+  }
+
 
 }
 

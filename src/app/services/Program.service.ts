@@ -20,6 +20,8 @@ getAllData():Observable<any>
   return this.http.get(`${this.apiUrl}`);
 }
 
+//create data
+
 createData(data: any):Observable<any>
 {
   console.log(data, 'createapi=>');
@@ -27,4 +29,11 @@ createData(data: any):Observable<any>
   return this.http.post(`${this.apiUrl}`, data);
 }
 
+// delete single data
+
+deleteData(id: any):Observable<any>
+{
+  let ids = id;
+  return this.http.delete(`${this.apiUrl}/${ids}`);
+}
 }
