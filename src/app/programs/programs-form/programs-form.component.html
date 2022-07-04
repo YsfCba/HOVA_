@@ -15,11 +15,11 @@
 
         <div class="container_info">
           <img src="/assets/img/OVA-9.png" alt="logo">
-          <form [formGroup]="nameProg" >
+          <form [formGroup]="nameProg" (ngSubmit)="nameProgramSubmit()" >
             <ion-item>
               <ion-label color="dark" position="floating">Nom du programme</ion-label>
               <ion-input type="text" placeholder="Nom du programme"
-                [formControl]="nameProg.controls['programName']"></ion-input>
+                formControlName = "nameProgram"></ion-input>
             </ion-item>
           </form>
 
@@ -50,7 +50,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" (click)="onSubmit(nameProg.value)" [routerLink]="['/programs/createSeance']">
+      <a class="btn-add-program" (click)="nameProgramSubmit()" [routerLink]="['/programs/createSeance']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-6.png" alt="">
       </a>
     </div>

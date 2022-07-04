@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common'
 import { NavigationEnd } from '@angular/router'
+import { ProgramService } from '../../services/Program.service';
+
 
 
 @Component({
@@ -12,16 +14,13 @@ import { NavigationEnd } from '@angular/router'
 })
 export class ProgramsFormComponent implements OnInit {
 
-  nameProg: FormGroup;
   namePrograme: string;
   // nameProgInputChoice = true;
   private history: string[] = [];
 
 
-  constructor(fb: FormBuilder, private router: Router, private location: Location) {
-    this.nameProg = fb.group({
-      'programName': [''],
-    });
+  constructor(private router: Router, private location: Location, private service: ProgramService) {
+    
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -30,7 +29,23 @@ export class ProgramsFormComponent implements OnInit {
     })
 
   }
-  ngOnInit() { }
+  //Formulaire nameProgram
+
+  nameProg = new FormGroup({
+    'nameProgram': new FormControl('')
+  });
+
+  ngOnInit() {}
+
+
+  nameProgramSubmit()
+  {
+    console.log(this.nameProg.value);
+    this.service.createData(this.nameProg.value).subscribe((res)=>{
+      console.log(res, 'res==>');
+      this.nameProg.reset();
+    })
+  }
   
   
   // Button back
@@ -43,15 +58,15 @@ export class ProgramsFormComponent implements OnInit {
     }
   }
 
-  onSubmit(value: string) {
-    this.namePrograme = this.nameProg.value;
-    console.log(this.namePrograme);
+  // onSubmit(value: string) {
+  //   this.namePrograme = this.nameProg.value;
+  //   console.log(this.namePrograme);
 
-  }
+  // }
   
-  getnameProg(nameP: string) {
-    nameP = this.namePrograme;
-  }
+  // getnameProg(nameP: string) {
+  //   nameP = this.namePrograme;
+  // }
 
   // checkBoxClick() {
   //   !this.nameProgInputChoice ? this.nameProgInputChoice = true : this.nameProgInputChoice = false;

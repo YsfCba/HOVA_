@@ -20,4 +20,11 @@ getAllData():Observable<any>
   return this.http.get(`${this.apiUrl}`);
 }
 
+createData(data: any):Observable<any>
+{
+  console.log(data, 'createapi=>');
+  
+  return this.http.post(`${this.apiUrl}`, data);
+}
+
 }
