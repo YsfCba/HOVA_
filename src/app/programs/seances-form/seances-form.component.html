@@ -13,10 +13,11 @@
         <ion-list>
           <ion-item>
             <ion-label color="dark" position="floating">Nom de la séance</ion-label>
-            <ion-input type="text" placeholder="Nom du programme"
+            <ion-input type="text" 
               [formControl]="formSeance.controls['nameSeance']"></ion-input>
           </ion-item>
         </ion-list>
+
         <ion-list>
           <ion-item>
             <ion-label>Groupe Musculaire</ion-label>
@@ -26,6 +27,7 @@
             </ion-select>
           </ion-item>
         </ion-list>
+        
         <ion-list>
           <ion-item>
             <ion-label>Materiel</ion-label>
@@ -36,6 +38,7 @@
             </ion-select>
           </ion-item>
         </ion-list>
+
         <ion-list>
           <ion-item>
             <ion-label>Exercices</ion-label>
@@ -47,6 +50,7 @@
             </ion-select>
           </ion-item>
         </ion-list>
+
         <ion-list>
           <ion-item>
             <ion-label>Temps de récupération</ion-label>
@@ -58,6 +62,7 @@
             </ion-select>
           </ion-item>
         </ion-list>
+
         <ion-list>
           <ion-item>
             <ion-label>Séries</ion-label>
@@ -69,10 +74,23 @@
             </ion-select>
           </ion-item>
         </ion-list>
+
         <ion-list>
           <ion-item>
             <ion-label>Repetitions</ion-label>
             <ion-select [formControl]="formSeance.controls['repetitions']" okText="Validé"
+              (ionChange)="handleChange($event)">
+              <ion-select-option>
+                1
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Times</ion-label>
+            <ion-select [formControl]="formSeance.controls['Times']" okText="Validé"
               (ionChange)="handleChange($event)">
               <ion-select-option>
                 1

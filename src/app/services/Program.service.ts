@@ -15,15 +15,13 @@ apiUrl = 'http://localhost:3000/CustomPrograms';
 
 //get all data 
 
-getAllData():Observable<any>
-{
+getAllData():Observable<any> {
   return this.http.get(`${this.apiUrl}`);
 }
 
 //create data
 
-createData(data: any):Observable<any>
-{
+createData(data: any):Observable<any> {
   console.log(data, 'createapi=>');
   
   return this.http.post(`${this.apiUrl}`, data);
@@ -31,9 +29,19 @@ createData(data: any):Observable<any>
 
 // delete single data
 
-deleteData(id: any):Observable<any>
-{
-  let ids = id;
-  return this.http.delete(`${this.apiUrl}/${ids}`);
+deleteData(id: any):Observable<any> {
+  return this.http.delete(`${this.apiUrl}/${id}`);
 }
+
+updateData(data: any, id: any): Observable<any> {
+  let ids = id;
+  return this.http.put(`${this.apiUrl}/${ids}`, data);
+}
+
+
+
+
+
+
+
 }

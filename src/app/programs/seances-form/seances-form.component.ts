@@ -63,7 +63,8 @@ constructor(private fb: FormBuilder, private router: Router, private location: L
     'exercices': [''],
     'recoveryTime' : [''],
     'series': [''],
-    'repetitions': ['']
+    'repetitions': [''],
+    'Times':['']
   });
 }
 

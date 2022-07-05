@@ -38,7 +38,7 @@ export class ProgramsHomeComponent implements OnInit {
 
 
   deleteID(id: any) {
-    console.log(id, 'deleteid');
+    console.log(id, 'deleteid==>');
     this.service.deleteData(id).subscribe((res) => {
       console.log(res, 'deleteres==>');
       this.getAllData();
