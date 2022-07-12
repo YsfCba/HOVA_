@@ -8,51 +8,26 @@
           <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
         </button>
 
-        <!-- <div class="form-group">
-              <label>Nom du programme</label>
-              <input type="text" class="form-control" placeholder="ex : Prise de masse" formControlProgram="programName" required minlength="2">
-            </div> -->
-
         <div class="container_info">
           <img src="/assets/img/OVA-9.png" alt="logo">
-          <form [formGroup]="nameProg">
+
+
+         
             <ion-item>
               <ion-label color="dark" position="floating">Nom du programme</ion-label>
-              <ion-input type="text" formControlName="nameProgram"></ion-input>
+              <ion-input type="text" [(ngModel)]="nameProg"></ion-input>
             </ion-item>
-          </form>
-
-
-          <!-- <input placeholder="Nom du programme" type="text" [disabled]="nameProgInputChoice"> -->
-          <!-- <input type="checkbox" (click)="checkBoxClick()"><br> 
-            <button (click)="checkBoxClick()">
-            <ion-icon name="pencil-outline"></ion-icon>
-          </button>-->
-
-
-
-
-          <!-- <form [formGroup]="nameProg" (ngSubmit)="onSubmit(nameProg.value)">
-            <input  type="text" ([ngModel])="namePrograme" placeholder="Nom du programme"
-              [formControl]="nameProg.controls['programName']">
-                </form> -->
-
-
+         
         </div>
       </div>
-
-      <div>
-
-      </div>
-
-
-
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" (click)="nameProgramSubmit()" [routerLink]="['/programs/createSeance']">
+      <p class="btn-add-program"  (click)="next()" >
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-6.png" alt="">
-      </a>
+      </p>
     </div>
+
+    <!-- (click)="nameProgramSubmit()" [routerLink]="['/programs/createSeance', nameProg]" -->
 
   </div>
 </ion-content>

@@ -4,7 +4,7 @@ import { SwiperOptions } from 'swiper';
 import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, } from 'src/app/shared/mocks/program.mock';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { ProgramService } from '../../services/Program.service';
+import { API_PARAMS, ProgramService } from '../../services/Program.service';
 
 
 
@@ -38,8 +38,8 @@ export class ProgramsHomeComponent implements OnInit {
 
 
   deleteID(id: any) {
-    console.log(id, 'deleteid==>');
-    this.service.deleteData(id).subscribe((res) => {
+    console.log(id, 'deleteid');
+    this.service.deleteData(API_PARAMS.PROGRAMS,id).subscribe((res) => {
       console.log(res, 'deleteres==>');
       this.getAllData();
 
@@ -48,7 +48,7 @@ export class ProgramsHomeComponent implements OnInit {
   }
 
   getAllData() {
-    this.service.getAllData().subscribe((res) => {
+    this.service.getAllData(API_PARAMS.PROGRAMS).subscribe((res) => {
       console.log(res, "res==>");
       this.readData = res.data;
 
@@ -69,8 +69,7 @@ export class ProgramsHomeComponent implements OnInit {
   tabChange(ids: any) {
     this.id = ids;
   }
-
-
+  
   back(): void {
     this.history.pop()
     if (this.history.length > 0) {

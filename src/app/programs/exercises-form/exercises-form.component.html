@@ -1,4 +1,4 @@
-<ion-content>
+<!-- <ion-content>
   <div class="two-sides-top">
     <div class="top-side">
 
@@ -8,29 +8,23 @@
         </button>
       </div>
 
-
-      <div>
-        <h1>The <span>{{namProgram}}</span> program is created</h1>
-        <p>Now add the session</p>
-      </div>
-
-      <form [formGroup]="formSeance">
+      <form [formGroup]="formExecise">
         <ion-list>
           <ion-item>
-            <ion-label color="dark" position="floating">name of the session</ion-label>
+            <ion-label color="dark" position="floating">Nom de la séance</ion-label>
             <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
           </ion-item>
         </ion-list>
 
         <ion-list>
           <ion-item>
-            <ion-label>Muscle Group </ion-label>
+            <ion-label>Groupe Musculaire</ion-label>
             <ion-select formControlName="muscleGroup"  [multiple]="true">
               <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-list>
-        
+
         <ion-list>
           <ion-item>
             <ion-label>Materiel</ion-label>
@@ -40,8 +34,6 @@
             </ion-select>
           </ion-item>
         </ion-list>
-<!-- 
-        
 
         <ion-list>
           <ion-item>
@@ -103,18 +95,18 @@
             </ion-select>
           </ion-item>
         </ion-list> -->
-      </form>
+      <!-- </form>
 
 
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" (click)="CustomProgramSubmit()" >
+      <a class="btn-add-program" >
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>
 
-<!-- (click)="CustomProgramSubmit()" -->
+(click)="CustomProgramSubmit()" 
 
   </div>
-</ion-content>
+</ion-content> --> -->

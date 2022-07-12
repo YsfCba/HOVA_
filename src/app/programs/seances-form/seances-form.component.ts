@@ -1,9 +1,10 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, Validator, FormControl, FormGroup, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { mockExercises } from 'src/app/shared/mocks/exercises.mock';
 import { IExercise } from 'src/app/shared/models/program.interface';
 import { Location } from '@angular/common';
+import { API_PARAMS, ProgramService } from 'src/app/services/Program.service';
 
 
 
@@ -17,19 +18,11 @@ export class SeancesFormComponent implements OnInit {
   public exercicesList: IExercise[] = [];
   public inProgressExercices: IExercise[] = [];
 
-
-  formSeance: FormGroup;
-  // muscleGroup: string;
-  // Materiel: string;
-  // Exercices: string;
-  // recoveryTime : string;
-  // series: string;
-  // repetitions: string;
-
   customProg = undefined;  
   ParametreSeance: string;  
 
   private history: string[] = [];
+  namProgram : string;
 
 
  groupeMusculaire = [
@@ -46,7 +39,7 @@ export class SeancesFormComponent implements OnInit {
     { id:11, value: 'Triceps' }, 
     { id:12, value: 'lombaire' },
     { id:13, value: 'fessiers' }, 
-    {id:14, value: 'Ischio-jambiers' }, 
+    { id:14, value: 'Ischio-jambiers' }, 
     { id:15, value: 'mollet' }
   ];
 
@@ -55,30 +48,46 @@ export class SeancesFormComponent implements OnInit {
     { id: 2, value: 'Sans'},
   ]
   
-constructor(private fb: FormBuilder, private router: Router, private location: Location) {
-  this.formSeance = fb.group({
-    'nameSeance': [''],
-    'muscleGroup': [''],
-    'materiel': [''],
-    'exercices': [''],
-    'recoveryTime' : [''],
-    'series': [''],
-    'repetitions': [''],
-    'Times':['']
-  });
+constructor(private router: Router, private location: Location, private service: ProgramService, private route: ActivatedRoute) {
 }
+formSeance = new FormGroup({
+    'nameSeance': new FormControl(''),
+    'muscleGroup': new FormControl(''),
+    'material': new FormControl('')
+  });
 
   ngOnInit() {
-    this.getInProgressExercices();
+    this.namProgram = this.router.getCurrentNavigation().extras.state.name;
+    console.log(this.namProgram);
+    
   }
+
+  CustomProgramSubmit()
+  {
+    if(this.formSeance.valid)
+    {
+    console.log(this.formSeance.value);
+    this.service.createData(this.formSeance.value, API_PARAMS.SEANCE).subscribe((res)=>{
+      console.log(res, 'res==>');
+      //this.formSeance.reset();
+      });
+    }
+    else
+    {
+      console.log("NON");
+      
+    }
+  }
+
+
 
   getInProgressExercices() {
     this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress, mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley, mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
   }
 
   back(): void {
-    this.history.pop()
-    this.router.navigateByUrl('/programs/createProgramme')
+    this.history.pop();
+    this.router.navigateByUrl('/programs/createProgramme');
    }
 
   onSubmit(value: string) {
@@ -87,10 +96,10 @@ constructor(private fb: FormBuilder, private router: Router, private location: L
 
   }
 
-  handleChange(ev) {
-    this.customProg = ev.target.value;
-    console.log(this.customProg);
-  }
+  // handleChange(ev) {
+  //   this.customProg = ev.target.value;
+  //   console.log(this.customProg);
+  // }
  
 
 }

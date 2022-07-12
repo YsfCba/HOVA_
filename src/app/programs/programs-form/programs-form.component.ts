@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common'
 import { NavigationEnd } from '@angular/router'
-import { ProgramService } from '../../services/Program.service';
+import { API_PARAMS, ProgramService } from '../../services/Program.service';
 
 
 
@@ -14,7 +14,8 @@ import { ProgramService } from '../../services/Program.service';
 })
 export class ProgramsFormComponent implements OnInit {
 
-  namePrograme: string;
+  public nameProg: string = "Lundi";
+  
   // nameProgInputChoice = true;
   private history: string[] = [];
 
@@ -29,32 +30,29 @@ export class ProgramsFormComponent implements OnInit {
     })
 
   }
-  //Formulaire nameProgram
 
-  nameProg = new FormGroup({
-    'nameProgram': new FormControl('')
-  });
 
   ngOnInit() {}
 
 
-  nameProgramSubmit()
-  {
-    if(this.nameProg.valid)
+
+  next(){
+    this.router.navigate(['/programs/createSeance'], {state: {name: this.nameProg}});
+
+    if(this.nameProg)
     {
-    console.log(this.nameProg.value);
-    this.service.createData(this.nameProg.value).subscribe((res)=>{
+    console.log(this.nameProg);
+    this.service.createData(this.nameProg, API_PARAMS.PROGRAMS).subscribe((res)=>{
       console.log(res, 'res==>');
-      this.nameProg.reset();
       });
     }
     else
     {
       console.log("NON");
-      
     }
   }
-  
+
+
   
   // Button back
   back(): void {

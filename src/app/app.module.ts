@@ -4,12 +4,11 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from './shared/shared.module';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProgramService } from './services/Program.service';
 
 @NgModule({
@@ -19,12 +18,11 @@ import { ProgramService } from './services/Program.service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    CommonModule,
     FormsModule,
     SwiperModule,
     SharedModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, ProgramService],
