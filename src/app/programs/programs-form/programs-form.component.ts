@@ -28,7 +28,6 @@ export class ProgramsFormComponent implements OnInit {
         this.history.push(event.urlAfterRedirects)
       }
     })
-
   }
 
 

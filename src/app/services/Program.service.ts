@@ -3,9 +3,9 @@ import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 
 export enum API_PARAMS{
-  PROGRAMS = '/CustomPrograms',
-  SEANCE = '/CustomSeances',
-  EXECISE = '/CustomExercises'
+  PROGRAMS = 'CustomPrograms',
+  SEANCE = 'CustomSeances',
+  EXECISE = 'CustomExercises'
 
 }
 
@@ -21,7 +21,7 @@ constructor(private http: HttpClient) {
  
 // connect front to back
 
-apiUrl = 'http://localhost:3000';
+apiUrl = 'http://localhost:3000/';
 
 //get all data 
 
@@ -49,7 +49,7 @@ deleteData(id: any, apiParams: string):Observable<any> {
 
 updateData(data: any,apiParams: string, id: any): Observable<any> {
   let ids = id;
-  return this.http.put(`${this.apiUrl}${apiParams}/${ids}`, data);
+  return this.http.put(`${this.apiUrl}${apiParams}${ids}`, data);
 }
 
 
