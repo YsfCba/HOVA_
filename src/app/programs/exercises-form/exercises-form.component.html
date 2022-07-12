@@ -1,4 +1,4 @@
-<!-- <ion-content>
+<ion-content>
   <div class="two-sides-top">
     <div class="top-side">
 
@@ -9,31 +9,7 @@
       </div>
 
       <form [formGroup]="formExecise">
-        <ion-list>
-          <ion-item>
-            <ion-label color="dark" position="floating">Nom de la séance</ion-label>
-            <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
-          </ion-item>
-        </ion-list>
-
-        <ion-list>
-          <ion-item>
-            <ion-label>Groupe Musculaire</ion-label>
-            <ion-select formControlName="muscleGroup"  [multiple]="true">
-              <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-
-        <ion-list>
-          <ion-item>
-            <ion-label>Materiel</ion-label>
-            <ion-select formControlName="material"  okText="Validé">
-              <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+       
 
         <ion-list>
           <ion-item>
@@ -79,7 +55,7 @@
               </ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list> -->
+        </ion-list> 
 
         
         <!-- (ionChange)="handleChange($event)" -->
@@ -109,4 +85,4 @@
 (click)="CustomProgramSubmit()" 
 
   </div>
-</ion-content> --> -->
+</ion-content> -->

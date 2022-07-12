@@ -38,17 +38,17 @@ export class ProgramsFormComponent implements OnInit {
   next(){
     this.router.navigate(['/programs/createSeance'], {state: {name: this.nameProg}});
 
-    if(this.nameProg)
-    {
-    console.log(this.nameProg);
-    this.service.createData(this.nameProg, API_PARAMS.PROGRAMS).subscribe((res)=>{
-      console.log(res, 'res==>');
-      });
-    }
-    else
-    {
-      console.log("NON");
-    }
+    // if(this.nameProg)
+    // {
+    // console.log(this.nameProg);
+    // this.service.createData(this.nameProg, API_PARAMS.PROGRAMS).subscribe((res)=>{
+    //   console.log(res, 'res==>');
+    //   });
+    // }
+    // else
+    // {
+    //   console.log("NON");
+    // }
   }
 
 

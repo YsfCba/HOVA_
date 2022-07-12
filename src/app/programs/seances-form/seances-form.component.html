@@ -9,8 +9,8 @@
       </div>
 
 
-      <div>
-        <h1>The <span>{{namProgram}}</span> program is created</h1>
+      <div class="top_info">
+        <h1 >The <p class="nameProgram">{{namProgram}}</p> program is created</h1>
         <p>Now add the session</p>
       </div>
 
@@ -40,6 +40,8 @@
             </ion-select>
           </ion-item>
         </ion-list>
+
+
 <!-- 
         
 
@@ -109,7 +111,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" (click)="CustomProgramSubmit()" >
+      <a class="btn-add-program"  [routerLink]="['/programs/createExercise']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>
