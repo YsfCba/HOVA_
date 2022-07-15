@@ -9,7 +9,7 @@
       </div>
 
       <form [formGroup]="formExecise">
-       
+
 
         <ion-list>
           <ion-item>
@@ -47,41 +47,27 @@
         <ion-list>
           <ion-item>
             <ion-label>Repetitions</ion-label>
-            <ion-select formControlName="repetitions"  value="repetitions" okText="Validé"
-              >
-              
+            <ion-select formControlName="repetitions" value="repetitions" okText="Validé">
+
               <ion-select-option>
                 1
               </ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list> 
+        </ion-list>
 
-        
-        <!-- (ionChange)="handleChange($event)" -->
-        <!-- ---------------------------------------------------  Cardio  --------------------------------------------------- -->
 
-        <!-- <ion-list>
-          <ion-item>
-            <ion-label>Times</ion-label>
-            <ion-select [formControl]="formSeance.controls['Times']" okText="Validé" (ionChange)="handleChange($event)">
-              <ion-select-option>
-                1
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list> -->
-      <!-- </form>
+      </form>
 
 
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" >
+      <a class="btn-add-program">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>
-
+    <!-- 
 (click)="CustomProgramSubmit()" 
 
   </div>
