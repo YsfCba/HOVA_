@@ -14,7 +14,7 @@ import { API_PARAMS, ProgramService } from '../../services/Program.service';
 })
 export class ProgramsFormComponent implements OnInit {
 
-  public nameProg: string = "Lundi";
+  public nameProg: string = "";
   
   // nameProgInputChoice = true;
   private history: string[] = [];

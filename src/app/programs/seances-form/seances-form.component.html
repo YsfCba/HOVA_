@@ -10,62 +10,69 @@
 
 
       <div class="top_info">
-        <h1 >The <p class="nameProgram">{{namProgram}}</p> program is created</h1>
+        <h1>The <p class="nameProgram">{{namProgram}}</p> program is created</h1>
         <p>Now add the session</p>
       </div>
 
       <form [formGroup]="formSeance">
-        <ion-list>
-          <ion-item>
-            <ion-label color="dark" position="floating">name of the session</ion-label>
-            <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
-          </ion-item>
-        </ion-list>
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <ion-label color="dark" position="floating">name of the session</ion-label>
+              <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
+            </ion-item>
+          </ion-list>
 
-        <ion-list>
-          <ion-item>
-            <ion-label>Muscle Group </ion-label>
-            <ion-select formControlName="muscleGroup"  [multiple]="true">
-              <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>Muscle Group </ion-label>
+              <ion-select formControlName="muscleGroup" [multiple]="true">
+                <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          
+          <ion-list>
+            <ion-item>
+              <ion-label>Materiel</ion-label>
+              <ion-select formControlName="material" okText="Validé">
+                <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+
+        <p>Now add the exercice</p>
+        <button>
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+
         
-        <ion-list>
-          <ion-item>
-            <ion-label>Materiel</ion-label>
-            <ion-select formControlName="material"  okText="Validé">
-              <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
 
 
-<!-- 
-        
 
-        <ion-list>
-          <ion-item>
-            <ion-label>Exercices</ion-label>
-            <ion-select formControlName="nameExercise" value="nameExercise" [multiple]="true">
-              <ion-select-option [value]="exercices" *ngFor="let exercices of exercicesList">
-                {{exercices.name}}
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
 
-        <ion-list>
-          <ion-item>
-            <ion-label>Temps de récupération</ion-label>
-            <ion-select formControlName="timeOff" value="timeOff" okText="Validé" value="timeOff">
-              <ion-select-option>
-                1
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+
+
+
+
+
+        <ion-card>
+          <ion-list>
+            <ion-item>
+              <ion-label>Exercices</ion-label>
+              <ion-select  [multiple]="true" >
+                <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+                  {{exercice.name}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+
+       
 
         <ion-list>
           <ion-item>
@@ -89,34 +96,29 @@
               </ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list> -->
+        </ion-list> 
 
-        
-        <!-- (ionChange)="handleChange($event)" -->
-        <!-- ---------------------------------------------------  Cardio  --------------------------------------------------- -->
-
-        <!-- <ion-list>
+        <ion-list>
           <ion-item>
-            <ion-label>Times</ion-label>
-            <ion-select [formControl]="formSeance.controls['Times']" okText="Validé" (ionChange)="handleChange($event)">
+            <ion-label>Temps de récupération</ion-label>
+            <ion-select formControlName="timeOff" value="timeOff" okText="Validé" value="timeOff">
               <ion-select-option>
                 1
               </ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list> -->
+        </ion-list>
+
       </form>
 
 
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program"  [routerLink]="['/programs/createExercise']">
+      <a class="btn-add-program"[routerLink]="['/programs/recapProgram']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>
-
-<!-- (click)="CustomProgramSubmit()" -->
-
+ <!-- (click)="CustomProgramSubmit()"  -->
   </div>
 </ion-content>

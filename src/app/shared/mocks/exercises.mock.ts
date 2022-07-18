@@ -56,7 +56,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   tractionEasyChinDip: {
     name: 'Tractions assistées',
-    category: exerciceCategories.machine,
+    category: ExerciseCategory.machine,
     muscleGroup: ['back-up', 'shoulders', 'biceps'],
     repetitions: 8,
     series: 4,

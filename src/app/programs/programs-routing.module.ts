@@ -1,10 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExercisesFormComponent } from './exercises-form/exercises-form.component';
 import { ListExercicesComponent } from './list-exercices/list-exercices.component';
 import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import {ProgramsHomeComponent} from './programs-home/programs-home.component';
+import { RecapFormComponent } from './recap-form/recap-form.component';
 import { SeancesFormComponent } from './seances-form/seances-form.component';
 
 const routes: Routes = [
@@ -17,8 +17,8 @@ const routes: Routes = [
     component: SeancesFormComponent
   },
   {
-    path: 'createExercise',
-    component: ExercisesFormComponent
+    path: 'recapProgram',
+    component: RecapFormComponent
   },
   {
     path: '',
