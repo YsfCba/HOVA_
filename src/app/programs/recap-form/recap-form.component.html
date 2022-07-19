@@ -1,26 +1,49 @@
-<ion-accordion-group expand="inset">
-  <ion-accordion value="first">
-    <ion-item slot="header" color="light">
-      <ion-label>First Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">
-      First Content
+<ion-content>
+  <div class="two-sides-top">
+    <div class="top-side">
+
+
+      <div class="container">
+        <button class="btn_back" (click)="back()">
+          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
+        </button>
+
+        <ion-accordion-group expand="inset">
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>First Accordion</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              First Content
+            </div>
+          </ion-accordion>
+          <ion-accordion value="second">
+            <ion-item slot="header" color="light">
+              <ion-label>Second Accordion</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              Second Content
+            </div>
+          </ion-accordion>
+          <ion-accordion value="third">
+            <ion-item slot="header" color="light">
+              <ion-label>Third Accordion</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              Third Content
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+
+      </div>
     </div>
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item slot="header" color="light">
-      <ion-label>Second Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">
-      Second Content
+    <div class="bottom-side">
+      <p class="btn-add-program" (click)="next()">
+        <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-6.png" alt="">
+      </p>
     </div>
-  </ion-accordion>
-  <ion-accordion value="third">
-    <ion-item slot="header" color="light">
-      <ion-label>Third Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">
-      Third Content
-    </div>
-  </ion-accordion>
-</ion-accordion-group>
+
+    <!-- (click)="nameProgramSubmit()" [routerLink]="['/programs/createSeance', nameProg]" -->
+
+  </div>
+</ion-content>

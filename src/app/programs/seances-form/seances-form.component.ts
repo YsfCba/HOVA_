@@ -29,6 +29,9 @@ export class SeancesFormComponent implements OnInit {
   customProg = undefined;
   ParametreSeance: string;
 
+  show_exercise_form: boolean = false;
+  compteur: number = 0;
+
   private history: string[] = [];
   namProgram: string;
 
@@ -56,16 +59,9 @@ export class SeancesFormComponent implements OnInit {
     { id: 2, value: 'Sans' },
   ]
 
-  
-
-  constructor(private router: Router, private location: Location, private service: ProgramService, private route: ActivatedRoute) {
-
-    // this.filteredArray = this.groupeMusculaire.filter(item =>
-    //   item.value == 'Adducteurs');
-    // console.log(this.filteredArray);
 
 
-  }
+  constructor(private router: Router, private location: Location, private service: ProgramService, private route: ActivatedRoute) { }
 
 
   formSeance = new FormGroup({
@@ -74,12 +70,7 @@ export class SeancesFormComponent implements OnInit {
     'material': new FormControl(''),
     'series': new FormControl(''),
     'repetitions': new FormControl(''),
-    'timeOff': new FormControl(''),
-
-    
-
-    
-    
+    'timeOff': new FormControl('')
   });
 
   ngOnInit() {
@@ -87,6 +78,8 @@ export class SeancesFormComponent implements OnInit {
     console.log(this.namProgram);
     this.getInProgressExercices()
   }
+
+
 
   CustomProgramSubmit() {
     if (this.formSeance.valid) {
@@ -101,25 +94,26 @@ export class SeancesFormComponent implements OnInit {
     }
   }
 
-filteredFormSeance(){
-  const muscleGroupd = this.formSeance.get('muscleGroup').value;
-  const material = this.formSeance.get('material').value;
+  // filteredFormSeance() {
+  //   const muscleGroupd = this.formSeance.get('muscleGroup').value;
+  //   const material = this.formSeance.get('material').value;
 
-  console.log(muscleGroupd);
-  
-
-  // this.filteredArray = this.seancesList.filter(
-  //   seancesList[].muscleGroup == muscleGroupd && seancesList[].material == material );
-  // console.log(this.filteredArray);
-
-}
+  //   console.log(muscleGroupd);
 
 
+  //   // this.filteredArray = this.seancesList.filter(
+  //   //   seancesList[].muscleGroup == muscleGroupd && seancesList[].material == material );
+  //   // console.log(this.filteredArray);
+
+  // }
+
+  add() {
+    ++this.compteur;
+  }
 
 
   getInProgressSeance() {
-    this.seancesList.push(mockSeancesProgram1.pecAndShoulders, mockSeancesProgram1.backAndBiceps, mockSeancesProgram1.legs, mockSeancesProgram1.pecAndArms, mockSeancesProgram1.backAndShoulders, mockSeancesProgram1.legsMachine,  mockSeancesProgram1.abs);
-    
+    this.seancesList.push(mockSeancesProgram1.pecAndShoulders, mockSeancesProgram1.backAndBiceps, mockSeancesProgram1.legs, mockSeancesProgram1.pecAndArms, mockSeancesProgram1.backAndShoulders, mockSeancesProgram1.legsMachine, mockSeancesProgram1.abs);
   }
 
   getInProgressExercices() {
