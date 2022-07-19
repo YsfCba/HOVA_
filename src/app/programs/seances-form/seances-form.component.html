@@ -1,7 +1,7 @@
 <ion-content>
-  <div class="two-sides-top">
-    <div class="top-side">
-  
+  <div>
+    <div>
+  <!-- class="two-sides-top" /// class="top-side"-->
 
       <div>
         <button class="btn_back" (click)="back()">
@@ -64,30 +64,19 @@
           <ion-list>
             <ion-item>
               <ion-label>Séries</ion-label>
-              <ion-select formControlName="series" value="series" okText="Validé">
-                <ion-select-option>
-                  1
-                </ion-select-option>
-              </ion-select>
+              <ion-input type="number"></ion-input>
             </ion-item>
           </ion-list>
           <ion-list>
             <ion-item>
               <ion-label>Repetitions</ion-label>
-              <ion-select formControlName="repetitions" value="repetitions" okText="Validé">
-                <ion-select-option>
-                  1
-                </ion-select-option>
-              </ion-select>
+              <ion-input type="number"></ion-input>
+              
             </ion-item>
           </ion-list>
           <ion-item>
             <ion-label>Temps de récupération</ion-label>
-            <ion-select formControlName="timeOff" value="timeOff" okText="Validé" value="timeOff">
-              <ion-select-option>
-                1
-              </ion-select-option>
-            </ion-select>
+            <ion-input type="number"></ion-input>
           </ion-item>
         </ion-card>
 
@@ -116,51 +105,36 @@
             <ion-list>
               <ion-item>
                 <ion-label>Séries</ion-label>
-                <ion-select formControlName="series" value="series" okText="Validé">
-                  <ion-select-option>
-                    1
-                  </ion-select-option>
-                </ion-select>
+                <ion-input type="number"></ion-input>
               </ion-item>
             </ion-list>
 
             <ion-list>
               <ion-item>
                 <ion-label>Repetitions</ion-label>
-                <ion-select formControlName="repetitions" value="repetitions" okText="Validé">
-
-                  <ion-select-option>
-                    1
-                  </ion-select-option>
-                </ion-select>
+                <ion-input type="number"></ion-input>
               </ion-item>
             </ion-list>
 
             <ion-item>
               <ion-label>Temps de récupération</ion-label>
-              <ion-select formControlName="timeOff" value="timeOff" okText="Validé" value="timeOff">
-                <ion-select-option>
-                  1
-                </ion-select-option>
-              </ion-select>
+              <ion-input type="number"></ion-input>
             </ion-item>
           </ion-card>
         </form>
 
-        <ion-fab horizontal="bottom" vertical="start">
-          <ion-fab-button color="dark">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
+        <ion-fab>
+          <ion-fab-button color="light">
+            <ion-icon name="build"></ion-icon>
           </ion-fab-button>
+        
           <ion-fab-list side="end">
-            <ion-fab-button color="light" (click)="add()">
-              <ion-icon name="add-circle"></ion-icon>
+            <ion-fab-button color="dark" (click)="add()">
+              <ion-icon name="add-outline"></ion-icon>
             </ion-fab-button>
-            <ion-fab-button color="light">
-              <ion-icon name="brush"></ion-icon>
-            </ion-fab-button>
-            <ion-fab-button color="light">
-              <ion-icon name="bookmark"></ion-icon>
-            </ion-fab-button>
+          </ion-fab-list>
+         
+          <ion-fab-list side="start">
             <ion-fab-button color="light">
               <ion-icon name="trash"></ion-icon>
             </ion-fab-button>
@@ -173,7 +147,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" [routerLink]="['/programs/recapProgram']">
+      <a class="btn-add-program" (click)="CustomProgramSubmit()" [routerLink]="['/programs/recapProgram']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>

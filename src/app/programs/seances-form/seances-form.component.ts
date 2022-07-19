@@ -68,10 +68,15 @@ export class SeancesFormComponent implements OnInit {
     'nameSeance': new FormControl(''),
     'muscleGroup': new FormControl(''),
     'material': new FormControl(''),
+    'nameExercise': new FormControl(''),
+    'timeOff': new FormControl(''),
     'series': new FormControl(''),
     'repetitions': new FormControl(''),
-    'timeOff': new FormControl('')
+    
   });
+
+ 
+   
 
   ngOnInit() {
     this.namProgram = this.router.getCurrentNavigation().extras.state.namProgram;
@@ -88,6 +93,10 @@ export class SeancesFormComponent implements OnInit {
         console.log(res, 'res==>');
         this.formSeance.reset();
       });
+      this.service.createData(this.formSeance.value, API_PARAMS.EXECISE).subscribe((res) =>{
+        console.log(res, 'res==>');
+        this.formSeance.reset();
+      })
     }
     else {
       console.log("NON");

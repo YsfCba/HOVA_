@@ -14,7 +14,7 @@ import { API_PARAMS, ProgramService } from '../../services/Program.service';
 })
 export class ProgramsFormComponent implements OnInit {
 
-  public nameProg: string = "";
+  // public nameProg: string = "";
   
   // nameProgInputChoice = true;
   private history: string[] = [];
@@ -31,24 +31,29 @@ export class ProgramsFormComponent implements OnInit {
   }
 
 
+  formProgram = new FormGroup({
+    'nameProgram': new FormControl('')
+  });
+
+
   ngOnInit() {}
 
 
 
   next(){
-    this.router.navigate(['/programs/createSeance'], {state: {name: this.nameProg}});
+    this.router.navigate(['/programs/createSeance'], {state: {name: this.formProgram.value}});
 
-    // if(this.nameProg)
-    // {
-    // console.log(this.nameProg);
-    // this.service.createData(this.nameProg, API_PARAMS.PROGRAMS).subscribe((res)=>{
-    //   console.log(res, 'res==>');
-    //   });
-    // }
-    // else
-    // {
-    //   console.log("NON");
-    // }
+    if(this.formProgram.value)
+    {
+    console.log(this.formProgram.value);
+    this.service.createData(this.formProgram.value, API_PARAMS.PROGRAMS).subscribe((res)=>{
+      console.log(res, 'res==>');
+      });
+    }
+    else
+    {
+      console.log("NON");
+    }
   }
 
 
