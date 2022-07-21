@@ -33,25 +33,25 @@ export class SeancesFormComponent implements OnInit {
   compteur: number = 0;
 
   private history: string[] = [];
-  namProgram: string;
+  nameProgram: string;
 
 
   groupeMusculaire = [
-    { id: 1, value: 'Pectoraux' },
-    { id: 2, value: 'Deltoide' },
+    { id: 1, value: 'Adducteurs' },
+    { id: 2, value: 'Avant-Bras' },
     { id: 3, value: 'Biceps' },
-    { id: 4, value: 'Avant-Bras' },
-    { id: 5, value: 'Grand-dorsaux' },
-    { id: 6, value: 'oblique' },
-    { id: 7, value: 'Quadriceps' },
-    { id: 8, value: 'Adducteurs' },
-    { id: 9, value: 'trapeze' },
-    { id: 10, value: 'dorsaux' },
-    { id: 11, value: 'Triceps' },
-    { id: 12, value: 'lombaire' },
-    { id: 13, value: 'fessiers' },
-    { id: 14, value: 'Ischio-jambiers' },
-    { id: 15, value: 'mollet' }
+    { id: 4, value: 'Deltoide' },
+    { id: 5, value: 'Dorsaux' },
+    { id: 6, value: 'Fessiers' },
+    { id: 7, value: 'Grand-dorsaux' },
+    { id: 8, value: 'Ischio-jambiers' },
+    { id: 9, value: 'Lombaire' },
+    { id: 10, value: 'Mollet' },
+    { id: 11, value: 'Oblique' },
+    { id: 12, value: 'Pectoraux' },
+    { id: 13, value: 'Quadriceps' },
+    { id: 14, value: 'Trapeze' },
+    { id: 15, value: 'Triceps' }
   ];
 
   Materiels = [
@@ -72,15 +72,12 @@ export class SeancesFormComponent implements OnInit {
     'timeOff': new FormControl(''),
     'series': new FormControl(''),
     'repetitions': new FormControl(''),
-    
   });
 
- 
-   
 
   ngOnInit() {
-    this.namProgram = this.router.getCurrentNavigation().extras.state.namProgram;
-    console.log(this.namProgram);
+    this.nameProgram = this.router.getCurrentNavigation().extras.state.nameProgram;
+    console.log(this.nameProgram);
     this.getInProgressExercices()
   }
 
@@ -93,7 +90,7 @@ export class SeancesFormComponent implements OnInit {
         console.log(res, 'res==>');
         this.formSeance.reset();
       });
-      this.service.createData(this.formSeance.value, API_PARAMS.EXECISE).subscribe((res) =>{
+      this.service.createData(this.formSeance.value, API_PARAMS.EXECISE).subscribe((res) => {
         console.log(res, 'res==>');
         this.formSeance.reset();
       })

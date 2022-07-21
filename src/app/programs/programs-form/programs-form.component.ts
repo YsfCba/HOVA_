@@ -43,24 +43,24 @@ export class ProgramsFormComponent implements OnInit {
   next(){
     this.router.navigate(['/programs/createSeance'], {state: {name: this.formProgram.value}});
 
-    if(this.formProgram.value)
-    {
-    console.log(this.formProgram.value);
-    this.service.createData(this.formProgram.value, API_PARAMS.PROGRAMS).subscribe((res)=>{
-      console.log(res, 'res==>');
-      });
-    }
-    else
-    {
-      console.log("NON");
-    }
+    // if(this.formProgram.value)
+    // {
+    // console.log(this.formProgram.value);
+    // this.service.createData(this.formProgram.value, API_PARAMS.PROGRAMS).subscribe((res)=>{
+    //   console.log(res, 'res==>');
+    //   });
+    // }
+    // else
+    // {
+    //   console.log("NON");
+    // }
   }
 
 
   
   // Button back
   back(): void {
-    this.history.pop()
+    this.history.pop();
     if (this.history.length > 0) {
       this.location.back()
     } else {

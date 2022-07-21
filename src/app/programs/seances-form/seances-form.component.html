@@ -1,6 +1,6 @@
 <ion-content>
-  <div>
-    <div>
+  <div >
+    <div >
   <!-- class="two-sides-top" /// class="top-side"-->
 
       <div>
@@ -12,7 +12,7 @@
 
 
       <div class="title_top_seanceForm">
-        <h1>Le programme <span class="nameProgram">{{namProgram}}</span> a été créé</h1>
+        <h1>Le programme <p>{{namProgram}}</p> a été créé</h1>
         <p class="top_info">Ajouter un séance</p>
       </div>
 
@@ -54,8 +54,8 @@
           <ion-list>
             <ion-item>
               <ion-label>Exercices</ion-label>
-              <ion-select [multiple]="true">
-                <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+              <ion-select formControlName="nameExercise" [multiple]="true">
+                <ion-select-option  [value]="exercice" *ngFor="let exercice of exercicesList">
                   {{exercice.name}}
                 </ion-select-option>
               </ion-select>
@@ -64,19 +64,19 @@
           <ion-list>
             <ion-item>
               <ion-label>Séries</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input formControlName="series" type="number"></ion-input>
             </ion-item>
           </ion-list>
           <ion-list>
             <ion-item>
               <ion-label>Repetitions</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input formControlName="repetitions" type="number"></ion-input>
               
             </ion-item>
           </ion-list>
           <ion-item>
             <ion-label>Temps de récupération</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input formControlName="timeOff" type="number"></ion-input>
           </ion-item>
         </ion-card>
 
@@ -147,7 +147,7 @@
 
     </div>
     <div class="bottom-side">
-      <a class="btn-add-program" (click)="CustomProgramSubmit()" [routerLink]="['/programs/recapProgram']">
+      <a class="btn-add-program" [routerLink]="['/programs/recapProgram']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
     </div>

@@ -8,12 +8,12 @@ h1 {
   padding-right: 15px;
 }
 
-// .btn_back{
-//   background-color: white;
-//   margin: 23px 0px 0px 12px;
-// }
+.btn_back{
+  background-color: transparent;
+  margin: 23px 0px 0px 12px;
+}
 button {
-  background-color: white;
+  //background-color: white;
   width: 45px;
   margin: 15px 0px 0px 0px;
 
@@ -48,7 +48,7 @@ button {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 6px solid #ffffff;
+  border: 6px solid ;
   position: absolute;
   z-index: -1;
   top: 50%;
