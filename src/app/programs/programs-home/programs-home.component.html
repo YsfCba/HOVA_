@@ -52,7 +52,7 @@
         <ion-card *ngFor="let program of readData">
           <ion-item>
             <ion-label>{{program.nameProgram}}</ion-label>
-            <ion-button color="danger" slot="end" [routerLink]="['/programs/listSeances']">
+            <ion-button color="danger" slot="end" (click)="onClickDetail(readData)">
               <ion-icon name="chevron-forward-sharp"></ion-icon>
             </ion-button>
           </ion-item>
@@ -65,7 +65,7 @@
             <button (click)="deleteID(program.id)">
               <ion-icon name="trash-outline"></ion-icon>
             </button> | 
-            <button  [routerLink]="">
+            <button expand="block" (click)="openModal()">
               <ion-icon name="pencil-outline"></ion-icon>
             </button>
           </ion-item>

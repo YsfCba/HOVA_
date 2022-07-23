@@ -25,6 +25,7 @@ public seance: ISeance;
 
 
   ngOnInit() {
+    // recoit les informations 
     this.seance = this.router.getCurrentNavigation().extras.state.seance;
   }
 

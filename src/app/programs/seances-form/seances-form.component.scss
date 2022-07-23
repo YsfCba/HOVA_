@@ -1,11 +1,24 @@
-// ion-list {
-//   margin: 0px 10px;
+// @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+// body{
+//   font-family: 'Lilita One', cursive;
 // }
+
+
+
+.swiper-slide {
+  display: block;
+}
 
 button {
   background-color: white;
   width: 45px;
   margin: 15px 0px 0px 10px;
+}
+
+ion-header{
+  background-color: white;
 }
 
 ion-label {
@@ -28,8 +41,7 @@ ion-label {
   text-align: center;
 }
 
-ion-fab{
-  margin-left: 40%;
-}
+// ion-fab{
+// }
 
 

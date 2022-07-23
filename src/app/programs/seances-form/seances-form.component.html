@@ -1,88 +1,93 @@
-<ion-content>
+ <!-- <ion-content>
   <div >
-    <div >
-  <!-- class="two-sides-top" /// class="top-side"-->
-
-      <div>
-        <button class="btn_back" (click)="back()">
-          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
-        </button>
-      </div>
-
-
-
-      <div class="title_top_seanceForm">
-        <h1>Le programme <p>{{namProgram}}</p> a été créé</h1>
-        <p class="top_info">Ajouter un séance</p>
-      </div>
-
-      <form [formGroup]="formSeance">
-
-        <ion-list>
-          <ion-item>
-            <ion-label color="dark" position="floating">name of the session</ion-label>
-            <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
-          </ion-item>
-        </ion-list>
-
-        <ion-list>
-          <ion-item>
-            <ion-label>Muscle Group </ion-label>
-            <ion-select formControlName="muscleGroup" [multiple]="true">
-              <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-
-        <ion-list>
-          <ion-item>
-            <ion-label>Materiel</ion-label>
-            <ion-select formControlName="material" okText="Validé">
-              <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
-              </ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+    <div > 
+ class="two-sides-top" /// class="top-side"-->
+ <ion-app>
+   <ion-header>
+     <div>
+       <button class="btn_back" (click)="back()">
+         <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
+       </button>
+     </div>
 
 
-        <div class="top_info">
-          <p>Now add the exercice</p>
-        </div>
 
+     <div class="title_top_seanceForm">
+       <!-- <h1>Le programme <p>{{namProgram}}</p> a été créé</h1> -->
+       <h1>Prise de masse</h1>
+       <p class="top_info">Ajouter un séance</p>
+     </div>
 
-        <ion-card>
+   </ion-header>
+   <!--
+        <form [formGroup]="formSeance">
+  
           <ion-list>
             <ion-item>
-              <ion-label>Exercices</ion-label>
-              <ion-select formControlName="nameExercise" [multiple]="true">
-                <ion-select-option  [value]="exercice" *ngFor="let exercice of exercicesList">
-                  {{exercice.name}}
+              <ion-label color="dark" position="floating">name of the session</ion-label>
+              <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
+            </ion-item>
+          </ion-list>
+  
+          <ion-list>
+            <ion-item>
+              <ion-label>Groupe musculaire </ion-label>
+              <ion-select formControlName="muscleGroup" [multiple]="true">
+                <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+  
+          <ion-list>
+            <ion-item>
+              <ion-label>Materiel</ion-label>
+              <ion-select formControlName="material" okText="Validé">
+                <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
                 </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
-          <ion-list>
+  
+  
+          <div class="top_info">
+            <p>Ajouter un exercice à votre séance</p>
+          </div>
+  
+  
+          <ion-card>
+            <ion-list>
+              <ion-item>
+                <ion-label>Exercices</ion-label>
+                <ion-select formControlName="nameExercise" [multiple]="true">
+                  <ion-select-option  [value]="exercice" *ngFor="let exercice of exercicesList">
+                    {{exercice.name}}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Séries</ion-label>
+                <ion-input formControlName="series" type="number"></ion-input>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Repetitions</ion-label>
+                <ion-input formControlName="repetitions" type="number"></ion-input>
+  
+              </ion-item>
+            </ion-list>
             <ion-item>
-              <ion-label>Séries</ion-label>
-              <ion-input formControlName="series" type="number"></ion-input>
+              <ion-label>Temps de récupération</ion-label>
+              <ion-input formControlName="timeOff" type="number"></ion-input>
             </ion-item>
-          </ion-list>
-          <ion-list>
-            <ion-item>
-              <ion-label>Repetitions</ion-label>
-              <ion-input formControlName="repetitions" type="number"></ion-input>
-              
-            </ion-item>
-          </ion-list>
-          <ion-item>
-            <ion-label>Temps de récupération</ion-label>
-            <ion-input formControlName="timeOff" type="number"></ion-input>
-          </ion-item>
-        </ion-card>
-
-
-
-      </form>
+          </ion-card>
+  
+  
+  
+        </form>
+  
 
 
 
@@ -150,7 +155,161 @@
       <a class="btn-add-program" [routerLink]="['/programs/recapProgram']">
         <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
       </a>
-    </div>
-    <!-- (click)="CustomProgramSubmit()"  -->
+    </div> -->
+   <!-- (click)="CustomProgramSubmit()"  
   </div>
-</ion-content>
+</ion-content>-->
+
+   <ion-content  class="ion-padding" scroll-y="true" >
+     <ion-slides >
+       <ion-slide >
+
+        <div>
+         <form [formGroup]="formSeance">
+
+           <ion-list>
+             <ion-item>
+               <ion-label color="dark" position="floating">name of the session</ion-label>
+               <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
+             </ion-item>
+           </ion-list>
+
+           <ion-list>
+             <ion-item>
+               <ion-label>Groupe musculaire </ion-label>
+               <ion-select formControlName="muscleGroup" [multiple]="true">
+                 <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
+               </ion-select>
+             </ion-item>
+           </ion-list>
+
+           <ion-list>
+             <ion-item>
+               <ion-label>Materiel</ion-label>
+               <ion-select formControlName="material" okText="Validé">
+                 <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
+                 </ion-select-option>
+               </ion-select>
+             </ion-item>
+           </ion-list>
+
+
+           <div >
+             <p class="top_info">Ajouter un exercice à votre séance</p>
+           </div>
+
+
+           <ion-card>
+             <ion-list>
+               <ion-item>
+                 <ion-label>Exercices</ion-label>
+                 <ion-select formControlName="nameExercise" [multiple]="true">
+                   <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+                     {{exercice.name}}
+                   </ion-select-option>
+                 </ion-select>
+               </ion-item>
+             </ion-list>
+             <ion-list>
+               <ion-item>
+                 <ion-label>Séries</ion-label>
+                 <ion-input formControlName="series" type="number"></ion-input>
+               </ion-item>
+             </ion-list>
+             <ion-list>
+               <ion-item>
+                 <ion-label>Repetitions</ion-label>
+                 <ion-input formControlName="repetitions" type="number"></ion-input>
+
+               </ion-item>
+             </ion-list>
+             <ion-item>
+               <ion-label>Temps de récupération</ion-label>
+               <ion-input formControlName="timeOff" type="number"></ion-input>
+             </ion-item>
+           </ion-card>
+
+
+
+         </form>
+        
+         <!-- <form *ngFor="let item of [].constructor(compteur); let i = index">
+
+          <ion-card class="card_exercise">
+            <ion-list>
+              <ion-item>
+                <ion-label>Exercices</ion-label>
+                <ion-select [multiple]="true">
+                  <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+                    {{exercice.name}}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>Séries</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-list>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>Repetitions</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-list>
+
+            <ion-item>
+              <ion-label>Temps de récupération</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-card>
+        </form> -->
+
+        <ion-fab>
+          <ion-fab-button color="light">
+            <ion-icon name="build"></ion-icon>
+          </ion-fab-button>
+        
+          <ion-fab-list side="end">
+            <ion-fab-button color="dark" (click)="add()">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+         
+          <ion-fab-list side="start">
+            <ion-fab-button color="light">
+              <ion-icon name="trash"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+
+      </div>
+
+       </ion-slide>
+
+       <ion-slide>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem laudantium quisquam eaque sit, earum nisi dolorum deserunt debitis perferendis vel, minus totam laborum mollitia. Necessitatibus soluta perferendis itaque id?</p>
+       </ion-slide>
+
+
+
+       <ion-slide>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis praesentium fugiat, magni reiciendis accusamus molestiae, minus facilis vitae aliquid obcaecati saepe! Unde quae error alias earum voluptatum doloribus, est voluptas!</p>
+       </ion-slide>
+     </ion-slides>
+   </ion-content>
+
+
+
+
+   <!-- <div class="bottom-side">
+    <a class="btn-add-program" [routerLink]="['/programs/recapProgram']">
+      <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-9.png" alt="">
+    </a>
+  </div> -->
+
+
+ </ion-app>

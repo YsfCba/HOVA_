@@ -1,0 +1,40 @@
+<header>
+  <div class="title_seance_name">
+    <button class="btn_back" (click)="back()">
+      <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
+      <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+    </button>
+       
+    <h1>{{program.name}}</h1>
+  </div>
+</header>
+
+<ion-content>
+  <div class="two-sides-top">
+    <div class="top-side" >
+
+
+
+      <ion-card *ngFor="let seance of readData">
+
+        <ion-item>
+          <ion-label>{{seance.nameSeance}}</ion-label>
+          <ion-button color="dark" slot="end" >
+            <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-card-content>
+          <ion-icon name="barbell"> </ion-icon> | exercice
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+    <div class="bottom-side">
+      <a class="btn-add-program" [routerLink]="['/settings/settingsHome']">
+        <img class="img-btn-add-program" src="/assets/img_btn/Ajouter-3.png" alt="">
+      </a>
+    </div>
+
+  </div>
+</ion-content>

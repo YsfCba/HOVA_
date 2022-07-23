@@ -5,6 +5,8 @@ import { mockProgramAbdominalMuscles, mockProgramFullBody, mockProgramMasseExpre
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { API_PARAMS, ProgramService } from '../../services/Program.service';
+import { ModalController } from '@ionic/angular';
+import { UpdateProgramComponent } from '../update-Program/update-Program.component';
 
 
 
@@ -22,9 +24,24 @@ export class ProgramsHomeComponent implements OnInit {
   };
   private history: string[] = [];
 
+  message: string;
 
-  constructor(private router: Router, private location: Location, private service: ProgramService) {
 
+  constructor(private router: Router, private location: Location, private service: ProgramService, private modalCtrl: ModalController) {
+
+  }
+
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: UpdateProgramComponent,
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      this.message = `Hello, ${data}!`;
+    }
   }
 
   id: any = "mission";
@@ -65,6 +82,10 @@ export class ProgramsHomeComponent implements OnInit {
     console.log(program);
     this.router.navigate(['/programs/listSeances'], { state: { program } })
   }
+  onClickDetail(readData: any) {
+    this.router.navigate(['/programs/listSeancesCustom'], { state: { readData } })
+  }
+
 
   tabChange(ids: any) {
     this.id = ids;

@@ -28,7 +28,14 @@
 /* SWIPER CSS */
 @import "~swiper/swiper-bundle.min.css";
 
+// font family
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 /* LAYOUT TWO SIDES STYLE */
+body{
+  font-family: 'Lilita One', cursive;
+}
+
 header{
   background-color: white;
 }

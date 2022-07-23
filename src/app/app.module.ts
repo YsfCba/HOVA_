@@ -10,9 +10,10 @@ import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProgramService } from './services/Program.service';
+import { UpdateProgramComponent } from './programs/update-Program/update-Program.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, UpdateProgramComponent ],
   entryComponents: [],
   imports: [
     BrowserModule,
