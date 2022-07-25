@@ -29,11 +29,12 @@ export class SeancesFormComponent implements OnInit {
   customProg = undefined;
   ParametreSeance: string;
 
-  show_exercise_form: boolean = false;
-  compteur: number = 0;
+  compteur_Exercice: number = 0;
+  compteur_Seance: number = 0;
 
   private history: string[] = [];
-  nameProgram: string;
+  // nameProgram: string;
+  nameProgramme: FormGroup;
 
 
   groupeMusculaire = [
@@ -59,6 +60,10 @@ export class SeancesFormComponent implements OnInit {
     { id: 2, value: 'Sans' },
   ]
 
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400
+  };
 
 
   constructor(private router: Router, private location: Location, private service: ProgramService, private route: ActivatedRoute) { }
@@ -76,9 +81,9 @@ export class SeancesFormComponent implements OnInit {
 
 
   ngOnInit() {
-    this.nameProgram = this.router.getCurrentNavigation().extras.state.nameProgram;
-    console.log(this.nameProgram);
-    this.getInProgressExercices()
+    // this.nameProgramme = this.router.getCurrentNavigation().extras.state.nameProgramme;
+    // console.log(this.nameProgramme);
+    this.getInProgressExercices();
   }
 
 
@@ -114,7 +119,14 @@ export class SeancesFormComponent implements OnInit {
   // }
 
   add() {
-    ++this.compteur;
+    ++this.compteur_Exercice;
+    console.log("ajout_Exercice");
+  }
+
+  addSeance(){
+    ++this.compteur_Seance;
+    console.log("ajout_Seance");
+
   }
 
 
@@ -126,15 +138,15 @@ export class SeancesFormComponent implements OnInit {
     this.exercicesList.push(mockExercises.benchPress, mockExercises.pectoralPress, mockExercises.shoulderPress, mockExercises.tricepsPulley, mockExercises.lowRow, mockExercises.pullDown, mockExercises.bicepsPulley, mockExercises.legPress, mockExercises.legExtension, mockExercises.legCurl, mockExercises.abdosCrunch);
   }
   back(): void {
-    this.history.pop();
+    // this.history.pop();
     this.router.navigateByUrl('/programs/createProgramme');
   }
 
-  onSubmit(value: string) {
-    this.ParametreSeance = this.formSeance.value;
-    console.log(this.ParametreSeance);
+  // onSubmit(value: string) {
+  //   this.ParametreSeance = this.formSeance.value;
+  //   console.log(this.ParametreSeance);
 
-  }
+  // }
 
   // handleChange(ev) {
   //   this.customProg = ev.target.value;

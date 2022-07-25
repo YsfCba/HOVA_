@@ -38,22 +38,31 @@ export class ProgramsFormComponent implements OnInit {
 
   ngOnInit() {}
 
-
-
   next(){
     this.router.navigate(['/programs/createSeance'], {state: {name: this.formProgram.value}});
- 
+   
+    // if (this.formProgram.valid) {
+    //   console.log(this.formProgram.value);
+    //   this.service.createData(this.formProgram.value, API_PARAMS.PROGRAMS).subscribe((res) => {
+    //     console.log(res, 'res==>');
+    //     this.formProgram.reset();
+    //   });
+    // }
+    // else {
+    //   console.log("NON");
+    // }
+    
   }
 
 
   // Button back
   back(): void {
-    this.history.pop();
-    if (this.history.length > 0) {
-      this.location.back()
-    } else {
+    // this.history.pop();
+    // if (this.history.length > 0) {
+    //   this.location.back()
+    // } else {
       this.router.navigateByUrl('/programs')
-    }
+    
   }
 
   // onSubmit(value: string) {
