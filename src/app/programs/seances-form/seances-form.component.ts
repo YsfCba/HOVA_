@@ -70,6 +70,7 @@ export class SeancesFormComponent implements OnInit {
 
 
   formSeance = new FormGroup({
+    'id_Program': new FormControl(''),
     'nameSeance': new FormControl(''),
     'muscleGroup': new FormControl(''),
     'material': new FormControl(''),
@@ -86,9 +87,12 @@ export class SeancesFormComponent implements OnInit {
     this.getInProgressExercices();
   }
 
+  
+
 
 
   CustomProgramSubmit() {
+    debugger
     if (this.formSeance.valid) {
       console.log(this.formSeance.value);
       this.service.createData(this.formSeance.value, API_PARAMS.SEANCE).subscribe((res) => {

@@ -23,7 +23,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'Cette machine vous permettra de réaliser des exercices de musculation pour cibler principalement les pectoraux, les triceps, mais également les deltoïdes.',
-    img: '/assets/img_slide/Pectoral_Press.jpeg'
+    img: '/assets/img_slide/developpe-incline-machine-convergente-exercice-musculation.gif'
 
 
   },
@@ -36,7 +36,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'Le développé épaules est un mouvement de musculation de base qui fait travailler les épaules, plus précisément les faisceaux antérieur et moyen du deltoïde, et indirectement les triceps, les trapèzes, le haut de la poitrine et le dentelé antérieur. L\'exercice se fait à la machine ',
-    img: '/assets/img_slide/shoulders_press.jpeg'
+    img: '/assets/img_slide/presse-epaule-exercice-musculation.gif'
 
 
   },
@@ -63,7 +63,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 90,
     time: null,
     detail: 'Les tractions assistées se font sur une chaise romaine avec un système d’assistance ou contre poids. Saisissez les poignées et positionnez les pieds ou les genoux sur le contrepoids (selon le type d’appareil). La prise s’appelle communément prise large pronation. Penchez vous légèrement en arrière et tractez votre poids en montant la poitrine vers le haut, sans décoller les pieds (ou les genoux) du contrepoids de la machine',
-    img: '/assets/img_slide/tractions_assistées.gif'
+    img: '/assets/img_slide/traction-assistee-machine.gif'
 
 
   },
@@ -76,7 +76,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'This easy exercise is excellent for bringing out the details in the middle and center of the back muscles. For this exercise, you will need access to a low pulley row machine with a V-bar handle. The V-bar handle enables you to have a neutral grip where the palms of your hands face each other. ',
-    img: '/assets/img_slide/Low Row Pulley.png'
+    img: '/assets/img_slide/tirage-horizontal-poulie.gif'
 
 
   },
@@ -89,7 +89,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'Les lat pulldown ont une amplitude de mouvement similaire aux tractions, cependant, vous pouvez utiliser une forme plus stricte en raison de votre posture assise et ajuster le poids en fonction de votre niveau de force.',
-    img: '/assets/img_slide/Pull Down Machine.png'
+    img: '/assets/img_slide/tirage-vertical-prise-serree.gif'
 
 
   },
@@ -102,7 +102,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: '',
-    img: '/assets/img_slide/biceps Pulley.png'
+    img: '/assets/img_slide/curl-biceps-poulie-basse.gif'
     
 
   },
@@ -116,7 +116,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 90,
     time: null,
     detail: 'La presse à cuisses est une exercice pour se muscler les jambes et permettant de développer très efficacement la partie avant des cuisses, c’est-à-dire les quadriceps. Exercice simple à réaliser grâce à l’exécution à la presse inclinée, ce mouvements de base pour muscler les quadriceps est aussi accessible à tous.',
-    img: '/assets/img_slide/Leg Press.png'
+    img: '/assets/img_slide/presse-a-cuisse-exercice-musculation.gif'
 
 
   },
@@ -129,7 +129,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: '',
-    img: '/assets/img_slide/Leg Extension Machine.png'
+    img: '/assets/img_slide/leg-extension-exercice-musculation.gif'
 
   },
   legCurl: {
@@ -141,7 +141,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'La machine Leg Curl assise va cibler activement les ischios-jambiers qui sont situés à l’arrière de vos cuisses',
-    img: '/assets/img_slide/Leg Curl Machine.png'
+    img: '/assets/img_slide/leg-curl-allonge.gif'
 
 
   },
@@ -154,7 +154,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 45,
     time: null,
     detail: 'Le crunch est un mouvement idéal pour muscler les abdos car il propose un travail ciblé sans aucun risque de vous faire mal au dos. Ainsi, les exercices « d’abdo crunch » sont conseillés à toutes celles et ceux qui souhaitent muscler leur ventre, du débutant au sportif confirmé. Niveau musculaire, l’exercice de crunch sollicite principalement le grand droit de l’abdomen, muscle situé dans la paroi antérieure de l’abdomen',
-    img: '/assets/img_slide/Abdos_Crunch.jpeg'
+    img: '/assets/img_slide/crunch-poulie-haute-exercice-musculation.gif'
 
 
   },
@@ -177,7 +177,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'Le Lunge, ou fente en français, est un grand classique des séances de sport axées sur les jambes et les fessiers. Cet exercice simple en apparence est très efficace et parfaitement adapté aux débutants ! Nous allons te montrer comment effectuer une fente parfaite',
-    img: '/assets/img_slide/fente.jpg'
+    img: '/assets/img_slide/fentes-avant-kettlebell.gif'
 
 
   },
@@ -214,7 +214,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: null,
     time: null,
     detail: 'Le burpee est un enchaînement de mouvements hyper efficace qui challenge votre force athlétique et votre mental. S\'entraîner à cet exercice, c\'est non seulement le moyen de parfaire votre technique de squat, planche et pompe, mais aussi de développer ses capacités physiques, musculaires et cardio',
-    img: '/assets/img_slide/burpees.png'
+    img: '/assets/img_slide/burpee-muscle-sollicites.gif'
 
   },
   squat: {
@@ -226,7 +226,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: null,
     time: null,
     detail: 'La flexion sur jambes est un mouvement d\'accroupi qui constitue un exercice poly-articulaire de force et de musculation ciblant les muscles de la cuisse et les fessiers. Il sollicite aussi secondairement les mollets, les lombaires et les abdominaux',
-    img: '/assets/img_slide/squat.png'
+    img: '/assets/img_slide/homme-faisant-un-squat-avec-barre.gif'
 
   },
   JumpingJack: {
@@ -238,7 +238,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: null,
     time: null,
     detail: 'Un jumping jack, également connu sous le nom de saut en étoile et appelé saut à cheval latéral dans l\'armée américaine, est un exercice de saut physique effectué en sautant dans une position avec les jambes',
-    img: '/assets/img_slide/jumping jack.jpeg'
+    img: '/assets/img_slide/jumping-jack.gif'
 
   },
   PushUps: {
@@ -250,7 +250,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: null,
     time: null,
     detail: 'La pompe est un exercice physique de musculation qui sollicite principalement le grand pectoral, le deltoïde et les triceps. Cet exercice est populaire car il peut être pratiqué n\'importe où, ne nécessitant pas de matériel',
-    img: '/assets/img_slide/Push-ups.jpeg'
+    img: '/assets/img_slide/pompe-musculation.gif'
 
   },
   AbsScissors: {
@@ -262,7 +262,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: null,
     detail: 'L\'exercice abdominal des ciseaux est un mouvement de base qui se concentre sur le travail et le ciblage de vos abdominaux transversaux. C\'est un mouvement axé sur les abdominaux qui consiste à vous allonger sur le dos, à lever les deux jambes du sol, puis à se croiser l\'une sur l\'autre dans un mouvement semblable à celui de ciseaux sans les laisser tomber (oui, ça brûle). Puisque vos jambes bougent tout au long de l\'exercice, cela sert également de mouvement de renforcement du bas du corps',
-    img: '/assets/img_slide/Abs Scissors.jpeg'
+    img: '/assets/img_slide/ciseaux.gif'
 
   },
   AbsKickOut: {
@@ -286,7 +286,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     breakTime: 60,
     time: '60s',
     detail: 'Le gainage fait partie des exercices de musculation de base utilisant le poids corporel, c\'est toute la musculature du corps qui travaille. Des mollets aux épaules et au torse en passant par les cuisses, les fesses, le bas du dos et les abdos.',
-    img: '/assets/img_slide/plank.jpg'
+    img: '/assets/img_slide/planche-abdos.gif'
 
   },
 
