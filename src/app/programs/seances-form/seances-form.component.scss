@@ -11,11 +11,9 @@ button {
 .bnt_ajout_exercice{
   box-shadow: 3px 4px 10px black;
   border-radius: 20px;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
-.form_seance{
-  box-shadow: 0px 2px 2px black;
-}
+
 .text_ajout_exercice{
   margin: 25px 0px 0px 0px ;
 }
@@ -24,32 +22,19 @@ ion-slides {
   height: auto;
 }
 ion-text{
-  color: #E74C3C;
+  color: rgb(194, 0, 0);
 }
-
 ion-header {
   background-color: white;
 }
-
 ion-label {
   font-weight: bold;
   font-size: 25px;
-
 }
 
-p {
-  margin: 0px 0px;
-  font-size: 20px;
-}
 
 .top_info_seance {
-  // background-color: rgb(0, 0, 0);
-  // color: white;
-  // margin: 10px;
   text-align: center;
-
-  // border-radius: 7px;
-
 }
 
 // btn bottom
@@ -58,15 +43,6 @@ p {
   height: 80px;
   border-radius: 50px;
   cursor: pointer;
-}
-
-.btn-add-program {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 52px 0px 25px 136px;
-  color: antiquewhite;
 }
 
 .bottom-side 
@@ -78,7 +54,7 @@ p {
   background: #000000;
 }
 
-.title_top_seanceForm 
+.nameProgram 
 {
   margin: 10px;
   text-align: center;
@@ -88,15 +64,69 @@ p {
   display: flex;
   justify-content: space-around;
 }
+
 .btn_terminer{
   margin-top: 84px;
 }
 
-.btn_ajouter_seance{
+
+// ----------------- Animation sur btn ajouter une autre seance ---------
+
+
+.btn_ajouter_seance {
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
   margin-top: 56px;
 }
 
-// animation btn ajouter_une_seance
+.btn_ajouter_seance::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+
+
+.btn_ajouter_seance::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 3px solid white;
+  position: absolute;
+  z-index: -1;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 190px;
+    height: 160px;
+    opacity: 0;
+  }
+}
+
+
+//---------------------------------- animation btn ajouter_une_seance
 
 p {
   color: rgb(0, 0, 0);
@@ -153,3 +183,6 @@ p:nth-child(2) span::after {
       color: rgb(194, 0, 0);
   }
 }
+
+// ---------------------- Fin animation -------------------------------------
+
