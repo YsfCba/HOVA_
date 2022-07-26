@@ -24,16 +24,13 @@
 
 
      <ion-slides pager="true" [options]="slideOpts">
-
-
-
        <ion-slide>
          <p>
-           <span>Ajouter une séance à votre programme !</span> 
-          </p>
+           <span>Ajouter une séance à votre programme !</span>
+         </p>
 
+         <!-- Premier formulaire -->
          <form [formGroup]="formSeance">
-
 
            <ion-list>
              <ion-item>
@@ -60,17 +57,12 @@
            </ion-list>
 
 
-
-
-
-
-
            <div class="text_ajout_exercice">
              <p>
-               <span>Ajouter maintenant un exercice à votre programme !</span> 
-              </p>
+               <span>Ajouter maintenant un exercice à votre programme !</span>
+             </p>
            </div>
-
+           <!-- deuxieme formulaire -->
            <ion-list>
              <ion-item>
                <ion-label>Exercices</ion-label>
@@ -101,11 +93,7 @@
              <ion-input formControlName="timeOff" type="number" min="0"></ion-input>
            </ion-item>
 
-
          </form>
-
-
-
 
 
          <div class="add_more_exercise">
@@ -145,33 +133,13 @@
              </ion-card>
            </form>
 
-           <!-- <ion-fab>
-          <ion-fab-button color="light">
-            <ion-icon name="build"></ion-icon>
-          </ion-fab-button>
         
-          <ion-fab-list side="end">
-            <ion-fab-button color="dark" (click)="add()">
-              <ion-icon name="add-outline"></ion-icon>
-            </ion-fab-button>
-          </ion-fab-list>
-         
-          <ion-fab-list side="start">
-            <ion-fab-button color="light">
-              <ion-icon name="trash"></ion-icon>
-            </ion-fab-button>
-          </ion-fab-list>
-        </ion-fab> -->
            <div class="top_info_exercice">
 
              <ion-button class="bnt_ajout_exercice" color="light-shade" (click)="add()">
                <ion-text>Ajouter un exercice</ion-text>
              </ion-button>
 
-
-             <!-- <ion-button color="dark" >
-               <p>Ajouter un exercice</p>
-             </ion-button> -->
            </div>
 
          </div>
@@ -179,74 +147,111 @@
 
        </ion-slide>
        <ion-slide *ngFor="let item of [].constructor(compteur_Seance); let i = index">
-         <form [formGroup]="formSeance">
+        <form [formGroup]="formSeance">
 
-           <ion-list>
-             <ion-item>
-               <ion-label color="dark" position="floating">name of the session</ion-label>
-               <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
-             </ion-item>
-           </ion-list>
-
-           <ion-list>
-             <ion-item>
-               <ion-label>Groupe musculaire </ion-label>
-               <ion-select formControlName="muscleGroup" [multiple]="true">
-                 <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
-               </ion-select>
-             </ion-item>
-           </ion-list>
-
-           <ion-list>
-             <ion-item>
-               <ion-label>Materiel</ion-label>
-               <ion-select formControlName="material" okText="Validé">
-                 <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
-                 </ion-select-option>
-               </ion-select>
-             </ion-item>
-           </ion-list>
-
-           <div class="top_info_exercice">
-             <ion-button (click)="add()">
-               <p>Ajouter un exercice</p>
-             </ion-button>
-           </div>
+          <ion-list>
+            <ion-item>
+              <ion-label color="dark" position="floating">Nom de la seance</ion-label>
+              <ion-input type="text" formControlName="nameSeance" value="nameSeance"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>Groupe musculaire </ion-label>
+              <ion-select formControlName="muscleGroup" [multiple]="true">
+                <ion-select-option *ngFor="let gm of groupeMusculaire" [value]="gm">{{ gm.value }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>Materiel</ion-label>
+              <ion-select formControlName="material" okText="Validé">
+                <ion-select-option *ngFor="let materiel of Materiels" [value]="materiel">{{materiel.value}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
 
 
+          <div class="text_ajout_exercice">
+            <p>
+              <span>Ajouter maintenant un exercice à votre programme !</span>
+            </p>
+          </div>
+          <!-- deuxieme formulaire -->
+          <ion-list>
+            <ion-item>
+              <ion-label>Exercices</ion-label>
+              <ion-select formControlName="nameExercise">
+                <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+                  {{exercice.name}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
 
-           <ion-list>
-             <ion-item>
-               <ion-label>Exercices</ion-label>
-               <ion-select formControlName="nameExercise">
-                 <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
-                   {{exercice.name}}
-                 </ion-select-option>
-               </ion-select>
-             </ion-item>
-           </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>Séries</ion-label>
+              <ion-input formControlName="series" type="number" min="0"></ion-input>
+            </ion-item>
+          </ion-list>
 
-           <ion-list>
-             <ion-item>
-               <ion-label>Séries</ion-label>
-               <ion-input formControlName="series" type="number" min="0"></ion-input>
-             </ion-item>
-           </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>Repetitions</ion-label>
+              <ion-input formControlName="repetitions" type="number" min="0"></ion-input>
+            </ion-item>
+          </ion-list>
 
-           <ion-list>
-             <ion-item>
-               <ion-label>Repetitions</ion-label>
-               <ion-input formControlName="repetitions" type="number" min="0"></ion-input>
-             </ion-item>
-           </ion-list>
+          <ion-item>
+            <ion-label>Temps de récupération</ion-label>
+            <ion-input formControlName="timeOff" type="number" min="0"></ion-input>
+          </ion-item>
 
-           <ion-item>
-             <ion-label>Temps de récupération</ion-label>
-             <ion-input formControlName="timeOff" type="number" min="0"></ion-input>
-           </ion-item>
+        </form>
+        <form *ngFor="let item of [].constructor(compteur_Exercice); let i = index">
 
+          <ion-card class="card_exercise">
+            <ion-list>
+              <ion-item>
+                <ion-label>Exercices</ion-label>
+                <ion-select>
+                  <ion-select-option [value]="exercice" *ngFor="let exercice of exercicesList">
+                    {{exercice.name}}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
 
-         </form>
+            <ion-list>
+              <ion-item>
+                <ion-label>Séries</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-list>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>Repetitions</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-list>
+
+            <ion-item>
+              <ion-label>Temps de récupération</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-card>
+        </form>
+        <div class="top_info_exercice">
+
+          <ion-button class="bnt_ajout_exercice" color="light-shade" (click)="add()">
+            <ion-text>Ajouter un exercice</ion-text>
+          </ion-button>
+
+        </div>
        </ion-slide>
      </ion-slides>
    </ion-content>
@@ -258,10 +263,10 @@
 
    <div class="bottom-side">
      <div class="btn_bottom_side">
-       <a class="btn_terminer">
-         <img  class="img-btn-add-program" src="/assets/img_btn/HOVA-12.png" alt="">
+       <a class="btn_terminer" (click)="CustomProgramSubmit()">
+         <img class="img-btn-add-program" src="/assets/img_btn/HOVA-12.png" alt="">
        </a>
-       <a class="btn_ajouter_seance ">
+       <a class="btn_ajouter_seance" (click)="addSeance()">
          <img class="img-btn-add-program" src="/assets/img_btn/HOVA-16.png" alt="">
        </a>
      </div>
