@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-profil-home',
@@ -34,13 +37,23 @@ export class ProfilHomeComponent implements OnInit {
       name: 'Europe',
       data: [163, 203, 276, 408, 547, 729, 628]
   },
-   //{
-  //     name: 'America',
-  //     data: [18, 31, 54, 156, 339, 818, 1201]}
-  ]
-  }
-  constructor() { }
+  ]}
+
+  private history: string[] = [];
+
+  constructor(private router: Router, private location: Location) { }
+
   ngOnInit() {
     Highcharts.chart('container', this.options);
+  }
+
+
+  back(): void {
+    this.history.pop()
+    if (this.history.length > 0) {
+      this.location.back()
+    } else {
+      this.router.navigateByUrl('/')
+    }
   }
 }
