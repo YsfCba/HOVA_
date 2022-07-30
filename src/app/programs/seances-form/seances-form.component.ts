@@ -92,7 +92,7 @@ export class SeancesFormComponent implements OnInit {
 
 
   CustomProgramSubmit() {
-    debugger
+  
     if (this.formSeance.valid) {
       console.log(this.formSeance.value);
       this.service.createData(this.formSeance.value, API_PARAMS.SEANCE).subscribe((res) => {

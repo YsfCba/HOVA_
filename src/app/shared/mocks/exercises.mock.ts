@@ -2,9 +2,10 @@ import {ExerciseCategory, IExercise} from '../models/program.interface';
 
 const exerciceCategories = ExerciseCategory;
 
+
 export const mockExercises: {[key: string]: IExercise } = {
   benchPress: {
-    name: 'Couché développé',
+    name: 'Développé Couché ',
     category: ExerciseCategory.machine,
     muscleGroup: ['pectoral', 'shoulders'],
     repetitions: 8,
@@ -15,7 +16,7 @@ export const mockExercises: {[key: string]: IExercise } = {
     img: '/assets/img_slide/developpe-couche.gif'
   },
   pectoralPress: {
-    name: 'Pectoral Press',
+    name: 'Developpe incline',
     category: ExerciseCategory.machine,
     muscleGroup: ['pectoral', 'shoulders'],
     repetitions: 10,
@@ -24,11 +25,11 @@ export const mockExercises: {[key: string]: IExercise } = {
     time: null,
     detail: 'Cette machine vous permettra de réaliser des exercices de musculation pour cibler principalement les pectoraux, les triceps, mais également les deltoïdes.',
     img: '/assets/img_slide/developpe-incline-machine-convergente-exercice-musculation.gif'
-
-
   },
+
+  
   shoulderPress: {
-    name: 'Shoulders Press',
+    name: 'Développé épaules',
     category: ExerciseCategory.machine,
     muscleGroup: ['shoulders', 'biceps'],
     repetitions: 10,
@@ -41,7 +42,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   },
   tricepsPulley: {
-    name: 'Triceps Pulley',
+    name: 'Triceps à la Poulie',
     category: ExerciseCategory.pulley,
     muscleGroup: ['triceps', 'shoulders', 'biceps'],
     repetitions: 12,
@@ -108,7 +109,7 @@ export const mockExercises: {[key: string]: IExercise } = {
   },
 
   legPress: {
-    name: 'Leg Press',
+    name: 'La Presse',
     category: ExerciseCategory.machine,
     muscleGroup: ['quadriceps', 'calves'],
     repetitions: 8,
@@ -169,7 +170,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   
   walkingLunges: {
-    name: 'Walking Lunges ',
+    name: 'Fente ',
     category: ExerciseCategory.bodyWeight,
     muscleGroup: ['quadriceps', 'buttocks', 'calves'],
     repetitions: 20,
@@ -182,7 +183,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   },
   run: {
-    name: 'run ',
+    name: 'Courir ',
     category: ExerciseCategory.bodyWeight,
     muscleGroup: ['leg'],
     repetitions: null,
@@ -194,7 +195,7 @@ export const mockExercises: {[key: string]: IExercise } = {
 
   },
   bike: {
-    name: 'bike ',
+    name: 'Vélo ',
     category: ExerciseCategory.machine,
     muscleGroup: ['leg'],
     repetitions: null,

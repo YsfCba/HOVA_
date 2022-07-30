@@ -14,7 +14,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
 
   },
   backAndBiceps: {
-    name: 'Back et biceps',
+    name: 'Dos et biceps',
     exercises: [
       mockExercises.tractionEasyChinDip,
       mockExercises.lowRow,
@@ -25,7 +25,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   legs: {
-    name: 'Legs',
+    name: 'Jambes',
     exercises: [
       mockExercises.legPress,
       mockExercises.legExtension,
@@ -37,7 +37,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   CardioRun: {
-    name: 'Cardio Run',
+    name: 'Cardio - Course',
     exercises: [
       mockExercises.run,
       mockExercises.burpees,
@@ -49,7 +49,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   CardioBike: {
-    name: 'Cardio Bike',
+    name: 'Cardio - Vélo',
     exercises: [
       mockExercises.bike,
       mockExercises.burpees,
@@ -61,7 +61,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   pecAndArms: {
-    name: 'Pec et Arms',
+    name: 'Pec et Bras',
     exercises: [
       mockExercises.bicepsPulley,
       mockExercises.pullDown,
@@ -73,7 +73,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   backAndShoulders: {
-    name: 'Back and Shoulders ',
+    name: 'Dos et Epaule ',
     exercises: [
       mockExercises.bicepsPulley,
       mockExercises.pullDown,
@@ -85,7 +85,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
   },
 
   legsMachine: {
-    name: 'Legs',
+    name: 'Jambes',
     exercises: [
       mockExercises.legPress,
       mockExercises.legExtension,
@@ -97,7 +97,7 @@ export const mockSeancesProgram1: { [key: string]: ISeance } = {
 
   },
   abs:{
-    name: 'abs',
+    name: 'Abdo',
     exercises: [
       mockExercises.AbsScissors,
       mockExercises.AbsKickOut,

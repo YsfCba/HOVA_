@@ -6,7 +6,6 @@ import { ListSeancesFormComponent } from './list-seances-form/list-seances-form.
 import { ListSeancesComponent } from './list-seances/list-seances.component';
 import { ProgramsFormComponent } from './programs-form/programs-form.component';
 import {ProgramsHomeComponent} from './programs-home/programs-home.component';
-import { RecapFormComponent } from './recap-form/recap-form.component';
 import { SeancesFormComponent } from './seances-form/seances-form.component';
 
 const routes: Routes = [
@@ -17,10 +16,6 @@ const routes: Routes = [
   {
     path: 'createSeance',
     component: SeancesFormComponent
-  },
-  {
-    path: 'recapProgram',
-    component: RecapFormComponent
   },
   {
     path: '',

@@ -4,7 +4,7 @@ import { mockSeancesProgram1, } from './seances.mock';
 
 export const mockProgramMasseExpress: IProgram  = {
 
-    name: 'Masse Express',
+    name: 'Prise de masse',
     seances: [
       mockSeancesProgram1.pecAndShoulders,
       mockSeancesProgram1.backAndBiceps,
@@ -15,7 +15,7 @@ export const mockProgramMasseExpress: IProgram  = {
 };
 
 export const mockProgramWeightloss1: IProgram = {
-  name: 'weight loss1',
+  name: 'Perte de poids n°1',
   seances: [
     mockSeancesProgram1.CardioRun,
   ],
@@ -23,7 +23,7 @@ export const mockProgramWeightloss1: IProgram = {
 };
 
 export const mockProgramWeightloss2: IProgram = {
-  name: 'weight loss2',
+  name: 'Perte de poids n°2',
   seances: [
     mockSeancesProgram1.CardioBike,
   ],
@@ -32,7 +32,7 @@ export const mockProgramWeightloss2: IProgram = {
 
 export const mockProgramAbdominalMuscles: IProgram  = {
 
-  name: 'Abdominal muscles',
+  name: 'Abdo',
   seances: [
     mockSeancesProgram1.abs
   ],
@@ -42,7 +42,7 @@ export const mockProgramAbdominalMuscles: IProgram  = {
 
 export const mockProgramFullBody: IProgram  = {
 
-  name: 'Full body',
+  name: 'Haut et bas du corps',
   seances: [
     mockSeancesProgram1.pecAndArms,
     mockSeancesProgram1.backAndShoulders,

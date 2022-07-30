@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
     },
     {
-      label: 'Programs',
+      label: 'Programme',
       path: ['programs']
 
     }

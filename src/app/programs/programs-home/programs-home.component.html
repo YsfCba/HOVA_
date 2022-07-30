@@ -2,25 +2,23 @@
 
   <div class="title_seance_name">
     <button class="btn_back" (click)="back()">
-      <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
-      <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+      <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="demi-haltere">
     </button>
     <h1>Programme </h1>
   </div>
 
 
-  <!-- Function collapse -->
-
   <div class="btn_programs">
-    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark" id="basic"
+    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark" id="basic"
       (click)="tabChange('basic')">
       <span>BASIC</span>
     </ion-button>
-    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target1" color="dark" id="custom"
+    <ion-button class="btn" slot="secondary" data-toggle="collapse" data-target="#target2" color="dark" id="custom"
       (click)="tabChange('custom')">
       <span>CUSTOM</span>
     </ion-button>
   </div>
+  
 </header>
 
 <ion-content class="no-scroll">
@@ -28,7 +26,7 @@
     <div class="top-side">
 
 
-      <div id="target2" class="collapse" *ngIf="id ==='basic'">
+      <div id="target1" class="collapse" *ngIf="id ==='basic'">
         <ion-card *ngFor="let program of programsList">
           <ion-item>
             <ion-label>{{program.name}}</ion-label>
@@ -50,7 +48,7 @@
 
 
 
-      <div id="target1" class="collapse" *ngIf="id ==='custom'">
+      <div id="target2" class="collapse" *ngIf="id ==='custom'">
 
         <ion-card *ngFor="let program of readData">
           <ion-item>
