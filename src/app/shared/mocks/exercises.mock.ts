@@ -1,5 +1,4 @@
 import {ExerciseCategory, IExercise} from '../models/program.interface';
-
 const exerciceCategories = ExerciseCategory;
 
 

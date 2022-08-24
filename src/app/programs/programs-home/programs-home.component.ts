@@ -45,7 +45,7 @@ export class ProgramsHomeComponent implements OnInit {
   }
 
   id: any = "mission";
-  readData: any;
+  
 
 
   ngOnInit() {
@@ -64,6 +64,8 @@ export class ProgramsHomeComponent implements OnInit {
 
   }
 
+  readData: any;
+  
   getAllData() {
     this.service.getAllData(API_PARAMS.PROGRAMS).subscribe((res) => {
       console.log(res, "res==>");

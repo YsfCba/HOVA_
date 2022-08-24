@@ -247,9 +247,25 @@
         </form>
         <div class="top_info_exercice">
 
-          <ion-button class="bnt_ajout_exercice" color="light-shade" (click)="add()">
+          <!-- <ion-button class="bnt_ajout_exercice" color="light-shade" (click)="add()">
             <ion-text>Ajouter un exercice</ion-text>
-          </ion-button>
+          </ion-button> -->
+
+          <ion-fab horizontal="start" vertical="top" slot="fixed">
+            <ion-fab-button color="secondary">
+              <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-list side="end">
+              
+              <ion-fab-button color="light">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </ion-fab-button>
+              
+              <ion-fab-button color="light">
+                <ion-icon name="logo-google"></ion-icon>
+              </ion-fab-button>
+            </ion-fab-list>
+          </ion-fab>
 
         </div>
        </ion-slide>
