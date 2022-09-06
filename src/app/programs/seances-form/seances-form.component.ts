@@ -109,18 +109,6 @@ export class SeancesFormComponent implements OnInit {
     }
   }
 
-  // filteredFormSeance() {
-  //   const muscleGroupd = this.formSeance.get('muscleGroup').value;
-  //   const material = this.formSeance.get('material').value;
-
-  //   console.log(muscleGroupd);
-
-
-  //   // this.filteredArray = this.seancesList.filter(
-  //   //   seancesList[].muscleGroup == muscleGroupd && seancesList[].material == material );
-  //   // console.log(this.filteredArray);
-
-  // }
 
   add() {
     ++this.compteur_Exercice;

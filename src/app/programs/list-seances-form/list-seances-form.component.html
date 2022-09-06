@@ -11,8 +11,8 @@
 
 <ion-content>
   <div class="two-sides-top">
-    <div class="top-side" >
-
+    <div>
+<!-- class="top-side" -->
 
 
       <ion-card *ngFor="let seance of readData">
@@ -27,8 +27,12 @@
           <ion-icon name="barbell"> </ion-icon> | exercice
         </ion-card-content>
       </ion-card>
+    <div class="div_null">
 
     </div>
+    </div>
+
+    
 
     <div class="bottom-side">
       <a class="btn-add-program" [routerLink]="['/settings/settingsHome']">

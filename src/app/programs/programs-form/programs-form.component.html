@@ -2,34 +2,34 @@
   <div class="two-sides-top">
     <div >
 <!-- class="top-side" -->
-
       <div class="container">
         <button class="btn_back" (click)="back()">
-          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="">
+          <img class="img_btn_back" src="/assets/img/Btn_back.png" alt="demi-haltere">
         </button>
 
         <div class="container_info">
           <img src="/assets/img/OVA-9.png" alt="logo">
 
+          <form [formGroup]="formProgram">
+            <ion-item>
+              <ion-label color="dark" position="floating">Nom du programme</ion-label>
+              <ion-input type="text" formControlName="nameProgram"></ion-input>
+            </ion-item>
+          </form>
 
-         <form [formGroup]="formProgram">
-           
-              <ion-item>
-                <ion-label color="dark" position="floating">Nom du programme</ion-label>
-                <ion-input type="text" formControlName="nameProgram"  ></ion-input>
-              </ion-item>
-         </form>
-         
         </div>
       </div>
+
     </div>
     <div class="bottom-side">
-      <p class="btn-add-program"  (click)="next()" >
+      <p class="btn-add-program" (click)="next()">
         <img class="img-btn-add-program" src="/assets/img_btn/HOVA-18.png" alt="">
       </p>
     </div>
 
-    <!--  [routerLink]="['/programs/createSeance', nameProg]" -->
-
   </div>
 </ion-content>
+
+
+
+

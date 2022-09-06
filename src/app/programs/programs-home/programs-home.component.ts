@@ -16,7 +16,7 @@ import { UpdateProgramComponent } from '../update-Program/update-Program.compone
   styleUrls: ['./programs-home.component.scss'],
 })
 export class ProgramsHomeComponent implements OnInit {
-  public programsList: IProgram[] = [];
+  
   public inProgressPrograms: IProgram[] = [];
   public swiperConfig: SwiperOptions = {
     slidesPerView: 1,
@@ -74,18 +74,25 @@ export class ProgramsHomeComponent implements OnInit {
     });
   }
 
-
+  public programsList: IProgram[] = [];
+  
   getInProgressPrograms() {
-    this.programsList.push(mockProgramMasseExpress, mockProgramWeightloss1, mockProgramWeightloss2, mockProgramAbdominalMuscles, mockProgramFullBody);
-    console.log(mockProgramMasseExpress.name);
+    this.programsList.push(
+      mockProgramMasseExpress, 
+      mockProgramWeightloss1, 
+      mockProgramWeightloss2, 
+      mockProgramAbdominalMuscles, 
+      mockProgramFullBody);
   }
 
   onClickDetails(program: IProgram) {
     console.log(program);
-    this.router.navigate(['/programs/listSeances'], { state: { program } })
+    this.router.navigate(['/programs/listSeances'],
+    {state: {program} })
   }
   onClickDetail(readData: any) {
-    this.router.navigate(['/programs/listSeancesCustom'], { state: { readData } })
+    this.router.navigate(['/programs/listSeancesCustom'],
+    { state: { readData } })
   }
 
 
