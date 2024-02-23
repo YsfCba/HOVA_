@@ -1,4 +1,4 @@
-name: .NET Core Build
+name: Ionic Angular Build
 
 on:
   push:
@@ -8,17 +8,21 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
-        dotnet-version: '6.0.401'
+        node-version: '14'
+
+    - name: Install Ionic CLI
+      run: npm install -g @ionic/cli
+
     - name: Install dependencies
-      run: dotnet restore
+      run: npm install
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore 
+      run: ionic build --configuration=production
