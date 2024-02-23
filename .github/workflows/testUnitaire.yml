@@ -3,7 +3,7 @@ name: Ionic Angular Tests
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-test:
