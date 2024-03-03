@@ -55,7 +55,7 @@ VPS simplon
 
 
 
-## Règle_de_Gestion
+## Règle de Gestion
 
 Règle de Gestion des Comptes Utilisateurs 
 
