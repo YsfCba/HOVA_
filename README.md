@@ -1,4 +1,4 @@
-# Concepteur Développeur d'application
+# Conception de d'application HOVA
 
 ## À propos
 
@@ -10,7 +10,6 @@ Toutes ces données devront communiquer avec une base de données via une API RE
 ## Table des matières
 
 - 🪧 [À propos](#à-propos)
-- 📦 [Prérequis](#prérequis)
 - 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
 - 🤝 [Contribution](#contribution)
