@@ -7,8 +7,6 @@ HOVA est une application de sport qui propose à ses utilisateurs de pouvoir sui
 - Pouvoir personnaliser ses programmes, c’est-à-dire que l’utilisateur en fonction de son objectif, aura la possibilité de personnaliser ses séances en choisissant les exercices.
 Toutes ces données devront communiquer avec une base de données via une API REST pour recevoir la liste et les détails de chaque programme d’entrainement (machine à utiliser s’il y en a l’utilité, le nombre de séries et répétitions ainsi que quelques conseils et informations concernant l’exercice etc). L’application devra guider l’utilisateur tout au long de sa séance d’entrainement.
 
-## Table des matières
-
 - 🪧 [À propos](#à-propos)
 - 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
