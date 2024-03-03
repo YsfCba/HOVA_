@@ -13,7 +13,7 @@ Toutes ces données devront communiquer avec une base de données via une API RE
 - 🤝 [Contribution](#contribution)
 - 🏗️ [Construit avec](#construit-avec)
 - 📚 [Documentation](#documentation)
-- 🏷️ [Gestion des versions](#gestion-des-versions)
+- 🏷️ [Règle de Gestion](#Règle_de_Gestion)
 - 📝 [Licence](#licence)
 
 ## Prérequis
@@ -36,29 +36,26 @@ Toutes ces données devront communiquer avec une base de données via une API RE
 
 ### Langages & Frameworks
 
-[Liste de tout ce qui permet la confection du projet avec description + lien vers la documentation]
+- Angular
+- IONIC
+- Capacitor
+- Node JS
 
 ### Outils
 
 #### CI
 
-[Liste de tout ce qui permet l'intégration automatisée du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
+- Github Action
 
 #### Déploiement
 
-[Liste de tout ce qui permet le déploiement du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
+VPS simplon
 
 ## Documentation
 
-[Lien vers documentations externes ou documentation embarquée ici avec table des matières]
 
-## Gestion des versions
 
-Afin de maintenir un cycle de publication claire et de favoriser la rétrocompatibilité, la dénomination des versions suit la spécification décrite par la [Gestion sémantique de version](https://semver.org/lang/fr/)
-
-Les versions disponibles ainsi que les journaux décrivant les changements apportés sont disponibles depuis [la page des Releases][mettre le lien ici].
-
-## Licence
+## Règle_de_Gestion
 
 Règle de Gestion des Comptes Utilisateurs 
 
