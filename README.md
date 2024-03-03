@@ -133,13 +133,13 @@ Table User
 Table Program
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
-| ID            | ID              | Identifiant de l'utilisateur          |                                    | `1`                                     |
+| ID            | ID              | Identifiant de l'utilisateur          |   Clé primaire                                 | `1`                                     |
 | Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                               |
 
 Table Workout
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
-| ID            | ID              | Identifiant de seance                 |                                    | `1`                                     |
+| ID            | ID              | Identifiant de seance                 |    Clé primaire                                | `1`                                     |
 | Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                        |
 | NameMuscle    | VARCHAR         | Muscle                                | Non nul                            | `Pecs`                                  |
 | Material      | BOOL            | Materiel                              | Non nul                            | `True`                                  |
@@ -147,7 +147,7 @@ Table Workout
 Table Exercise
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
-| ID            | ID              | Identifiant de lexercice              |                                    | `1`                                     |
+| ID            | ID              | Identifiant de lexercice              |     Clé primaire                               | `1`                                     |
 | Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                        |
 | Repetition    | INT             | Repetition                            | Non nul                            | `5`                                  |
 | Serie         | INT             | Serie                                 | Non nul                            | `5`                                  |
@@ -157,11 +157,11 @@ Table Exercise
 Table Masse Corporelle
 | Champ        | Type de Données | Description                             | Contrainte                         | Exemple                                 |
 |--------------|-----------------|-----------------------------------------|------------------------------------|-----------------------------------------|
-| ID           | ID              | Identifiant                             | Clé étrangère -> Utilisateur       | `1`   |
+| ID           | ID              | Identifiant                             | CClé primaire       | `1`   |
 | Weight       | VARCHAR         | poids                                   | Non nul                            | `78`                                 |
 | Size         | VARCHAR         | Taille                                  | Non nul                            | `180`                               |
-| Date         | DATE            | date                                    |                                    | `2024-02-02 00:00:00`                              |
-| BirthDate    | DATETIME        | Date de naissance                       |                                    | `1975-05-15 00:00:00`                   |
+| Date         | DATE            | date                                    |   Non nul                                 | `2024-02-02 00:00:00`                              |
+| BirthDate    | DATETIME        | Date de naissance                       |   Non nul                                 | `1975-05-15 00:00:00`                   |
 
 
 
