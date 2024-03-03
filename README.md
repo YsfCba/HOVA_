@@ -67,27 +67,33 @@ Règles de Gestion des Profils Locataires et Propriétaires
 * Les profils de locataires créés par les propriétaires/agences nécessitent le consentement écrit du locataire, à obtenir via un mécanisme sécurisé intégré à l'application (par exemple, signature électronique).
 * Les propriétaires ne peuvent créer des profils de locataire que pour des individus avec lesquels ils ont eu ou ont actuellement une relation contractuelle de location.
 
-Règles de Gestion des Avis
+Règles de Gestion des Programmes
 
-* Les avis ne peuvent être soumis que pour des locations ayant existé pendant une durée minimale définie (6 mois).
-* Chaque avis doit être associé à une période de location spécifique et chaque locataire et/ou propriétaire ne peux créer qu'un seul et unique avis pour le bailleur/locatire.
-* Les avis doivent être modérables par les administrateurs de PraiseUs pour s'assurer qu'ils respectent les conditions d'utilisation de la plateforme.
+* Les Programmes ne peuvent être soumis que si le nom est renseigné
+* Chaque Programmes est associé a au minumum une séance
+* Les utilisteurs peuvent mettre en favorie les programmes
  
-Règles de Gestion des Notifications
+Règles de Gestion des Séances
 
-* Les utilisateurs doivent pouvoir activer ou désactiver les notifications pour les nouveaux avis les concernant via les paramètres de leur compte.
-* Une notification doit être envoyée automatiquement à un locataire ou propriétaire lorsque un nouvel avis sur son profil est publié ou lorsqu'un avis existant est modifié.
+* Les Séances ne peuvent être soumis que si le nom, le groupe musculaire ainsi que l'utilisation ou non de matériel sont renseignés
+* Chaque Séances est associé a au minumum un exercices
+* Les utilisteurs peuvent mettre en favorie les séances
 
-Règles de Gestion du Classement des Logements
+Règles de Gestion des Exercices
 
-* Le classement des logements est basé sur la moyenne des notes reçues dans les avis.
-* Pour être éligible au classement, un logement doit avoir reçu un nombre minimum d'avis (5 avis).
+* Les Exercices ne peuvent être soumis que si le nom, le nombre de répétition, le nombre de série et le temps de repos sont renseignés
+* Les utilisteurs peuvent mettre en favorie les exercices
 
-Règles de Gestion de l'Intégrité des Données
+Règles de Gestion du masse corporelle
 
-* Les utilisateurs doivent avoir la possibilité de contester un avis s'ils estiment qu'il est inexact ou injuste, déclenchant ainsi un processus de révision par les administrateurs.
-* Les données personnelles des utilisateurs ne peuvent être utilisées qu'aux fins de fonctionnement de PraiseUs et ne doivent pas être divulguées à des tiers sans consentement explicite.
+* Chaque utilisateur peut renseigner son poids et sa taille afin d'avoir un visuel sur son evolution corporelle
 
+Règles de Gestion de localisation de salle de sport
+
+* Les utilisateurs peuvent acceder au salle de sport a proximiter de leur position si besoin
+* Les utilisteurs peuvent mettre en favorie les salles sports
+
+  
 ## RBAC
 
 
