@@ -134,13 +134,13 @@ Table Program
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
 | ID            | ID              | Identifiant de l'utilisateur          |                                    | `1`                                     |
-| Name          | VARCHAR         | Prénom                                | Non nul                            | `Prise de Masse`                               |
+| Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                               |
 
 Table Workout
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
 | ID            | ID              | Identifiant de seance                 |                                    | `1`                                     |
-| Name          | VARCHAR         | Prénom                                | Non nul                            | `Prise de Masse`                        |
+| Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                        |
 | NameMuscle    | VARCHAR         | Muscle                                | Non nul                            | `Pecs`                                  |
 | Material      | BOOL            | Materiel                              | Non nul                            | `True`                                  |
 
@@ -148,7 +148,7 @@ Table Exercise
 | Champ         | Type de Données | Description                           | Contrainte                         | Exemple                                 |
 |---------------|-----------------|---------------------------------------|------------------------------------|-----------------------------------------|
 | ID            | ID              | Identifiant de lexercice              |                                    | `1`                                     |
-| Name          | VARCHAR         | Prénom                                | Non nul                            | `Prise de Masse`                        |
+| Name          | VARCHAR         | Nom                                | Non nul                            | `Prise de Masse`                        |
 | Repetition    | INT             | Repetition                            | Non nul                            | `5`                                  |
 | Serie         | INT             | Serie                                 | Non nul                            | `5`                                  |
 | TimeOff       | FLAOT           | Temps de repos                        | Non nul                            | `60`                                  |
