@@ -13,7 +13,7 @@ Toutes ces données devront communiquer avec une base de données via une API RE
 - 🤝 [Contribution](#contribution)
 - 🏗️ [Construit avec](#construit-avec)
 - 📚 [Documentation](#documentation)
-- 🏷️ [Règle de Gestion](#Règle_de_Gestion)
+- 🏷️ [Règle de Gestion](#Règle)
 - 📝 [Licence](#licence)
 
 ## Prérequis
@@ -55,7 +55,7 @@ VPS simplon
 
 
 
-## Règle de Gestion
+## Règle
 
 Règle de Gestion des Comptes Utilisateurs 
 
